@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Kap06-GPIO-01
+BUILD_ARTIFACT_NAME := NUCLEO_LED_100usTimer
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Kap06-GPIO-01.elf \
+NUCLEO_LED_100usTimer.elf \
 
 MAP_FILES += \
-Kap06-GPIO-01.map \
+NUCLEO_LED_100usTimer.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Kap06-GPIO-01.list \
+NUCLEO_LED_100usTimer.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Kap06-GPIO-01.elf secondary-outputs
+main-build: NUCLEO_LED_100usTimer.elf secondary-outputs
 
 # Tool invocations
-Kap06-GPIO-01.elf Kap06-GPIO-01.map: $(OBJS) $(USER_OBJS) D:\GITHUB\STM32\EDS_2023\Kap06-GPIO-01\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Kap06-GPIO-01.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2023\Kap06-GPIO-01\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Kap06-GPIO-01.map" -Wl,--gc-sections -static -L"D:\GITHUB\STM32\EDS_2023\MCAL_F40x\Debug" -L"\CMSIS\Debug" --specs=nano.specs -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+NUCLEO_LED_100usTimer.elf NUCLEO_LED_100usTimer.map: $(OBJS) $(USER_OBJS) C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NUCLEO_LED_100usTimer.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_LED_100usTimer.map" -Wl,--gc-sections -static -L"C:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"\CMSIS\Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Kap06-GPIO-01.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Kap06-GPIO-01.list"
+NUCLEO_LED_100usTimer.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "NUCLEO_LED_100usTimer.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Kap06-GPIO-01.elf Kap06-GPIO-01.list Kap06-GPIO-01.map default.size.stdout
+	-$(RM) NUCLEO_LED_100usTimer.elf NUCLEO_LED_100usTimer.list NUCLEO_LED_100usTimer.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
