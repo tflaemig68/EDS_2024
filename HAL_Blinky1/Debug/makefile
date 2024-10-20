@@ -60,8 +60,8 @@ all: main-build
 main-build: HAL_Blinky1.elf secondary-outputs
 
 # Tool invocations
-HAL_Blinky1.elf HAL_Blinky1.map: $(OBJS) $(USER_OBJS) D:\GITHUB\STM32\EDS_2023\HAL_Blinky1\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "HAL_Blinky1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2023\HAL_Blinky1\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HAL_Blinky1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+HAL_Blinky1.elf HAL_Blinky1.map: $(OBJS) $(USER_OBJS) C:\GITHUB\STM32\EDS_2024\HAL_Blinky1\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "HAL_Blinky1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\HAL_Blinky1\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HAL_Blinky1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
