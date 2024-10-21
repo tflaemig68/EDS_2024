@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\GITHUB\STM32\EDS_2024\NUCLEO_SYSTICK"/>
+			<item value="C:\GITHUB\STM32\EDS_2024\MCAL"/>
+			<item value="C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer"/>
+			<item value="C:\GITHUB\STM32\EDS_2024\CMSIS"/>
+			<item value="C:\GITHUB\STM32\EDS_2024\BLINK2_AZBoard"/>
+			<item value="C:\GITHUB\STM32\EDS_2024\HAL_Blinky1"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="596"/>
+		<item key="DIALOG_Y_ORIGIN" value="269"/>
+	</section>
+</section>

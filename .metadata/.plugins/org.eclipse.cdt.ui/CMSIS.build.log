@@ -1,0 +1,6 @@
+14:58:31 **** Build of configuration Debug for project CMSIS ****
+make -j12 all 
+make: Nothing to be done for 'all'.
+
+14:58:31 Build Finished. 0 errors, 0 warnings. (took 163ms)
+

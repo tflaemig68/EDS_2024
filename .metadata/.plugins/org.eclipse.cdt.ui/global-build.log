@@ -1,0 +1,13 @@
+15:15:42 **** Incremental Build of configuration Debug for project NUCLEO_LED_100usTimer ****
+make -j12 all 
+arm-none-eabi-gcc -o "NUCLEO_LED_100usTimer.elf" @"objects.list"  -lMCAL -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_LED_100usTimer.map" -Wl,--gc-sections -static -L"C:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"\CMSIS\Debug" --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUCLEO_LED_100usTimer.elf
+ 
+arm-none-eabi-size   NUCLEO_LED_100usTimer.elf 
+arm-none-eabi-objdump -h -S  NUCLEO_LED_100usTimer.elf  > "NUCLEO_LED_100usTimer.list"
+   text	   data	    bss	    dec	    hex	filename
+   1664	      8	   1568	   3240	    ca8	NUCLEO_LED_100usTimer.elf
+Finished building: default.size.stdout
+ 
+Finished building: NUCLEO_LED_100usTimer.list
+ 
