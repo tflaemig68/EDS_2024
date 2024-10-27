@@ -60,7 +60,7 @@ main-build: SYSTICK.elf secondary-outputs
 
 # Tool invocations
 SYSTICK.elf SYSTICK.map: $(OBJS) $(USER_OBJS) C:\GITHUB\STM32\EDS_2024\SYSTICK\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SYSTICK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\SYSTICK\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SYSTICK.map" -Wl,--gc-sections -static -L"\MCAL\DEBUG" -L"\CMSIS\DEBUG" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "SYSTICK.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\SYSTICK\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SYSTICK.map" -Wl,--gc-sections -static -L"C:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"C:\GITHUB\STM32\EDS_2024\CMSIS\Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
