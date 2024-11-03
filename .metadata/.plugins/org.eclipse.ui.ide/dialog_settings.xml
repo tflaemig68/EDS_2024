@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\GITHUB\STM32\EDS_2024\BALO"/>
 			<item value="C:\GITHUB\STM32\EDS_2024\NUCLEO_SYSTICK"/>
 			<item value="C:\GITHUB\STM32\EDS_2024\MCAL"/>
 			<item value="C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer"/>
