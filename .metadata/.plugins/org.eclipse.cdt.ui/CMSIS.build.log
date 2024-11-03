@@ -1,6 +1,6 @@
-16:04:02 **** Incremental Build of configuration Debug for project CMSIS ****
-make -j12 all 
+11:15:34 **** Incremental Build of configuration Debug for project CMSIS ****
+make -j8 all 
 make: Nothing to be done for 'all'.
 
-16:04:02 Build Finished. 0 errors, 0 warnings. (took 189ms)
+11:15:35 Build Finished. 0 errors, 0 warnings. (took 919ms)
 
