@@ -5816,3 +5816,21 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\GITHUB\STM32\
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-11-03 11:16:28.545
 !MESSAGE Indexed 'NUCLEO_LED_100usTimer' (3 sources, 64 headers) in 0,422 sec: 3.181 declarations; 5.167 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,024 %)
+!SESSION 2024-11-03 12:04:38.929 -----------------------------------------------
+eclipse.buildId=Version 1.12.0
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-11-03 12:04:40.866
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-11-03 12:04:44.495
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-11-03 12:04:44.496
+!MESSAGE Log4j2 initialized with config file D:\GITHUB\STM32\EDS_2024\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-11-03 12:04:50.463
+!MESSAGE Started RMI Server, listening on port 41337
