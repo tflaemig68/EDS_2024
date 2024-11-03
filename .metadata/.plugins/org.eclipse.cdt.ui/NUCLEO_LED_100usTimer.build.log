@@ -1,4 +1,4 @@
-09:06:21 **** Incremental Build of configuration Debug for project NUCLEO_LED_100usTimer ****
+10:36:07 **** Build of configuration Debug for project NUCLEO_LED_100usTimer ****
 make -j12 all 
 arm-none-eabi-size   NUCLEO_LED_100usTimer.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   NUCLEO_LED_100usTimer.elf
 Finished building: default.size.stdout
  
 
-09:06:22 Build Finished. 0 errors, 0 warnings. (took 529ms)
+10:36:08 Build Finished. 0 errors, 0 warnings. (took 741ms)
 
