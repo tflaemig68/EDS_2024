@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;NUCLEO_LED_100usTimer/Kap06-GPIO-01 Debug.launch&apos;" deleteContents="false" description="Delete resource &apos;NUCLEO_LED_100usTimer/Kap06-GPIO-01 Debug.launch&apos;" element1="/NUCLEO_LED_100usTimer/Kap06-GPIO-01 Debug.launch" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1729443971513"/>&#x0A;<refactoring comment="Delete resource &apos;BLINK2_AZBoard/INC&apos;" deleteContents="false" description="Delete resource &apos;BLINK2_AZBoard/INC&apos;" element1="/BLINK2_AZBoard/INC" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1729444870168"/>
-</session>
