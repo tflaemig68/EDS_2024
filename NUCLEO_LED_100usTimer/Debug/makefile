@@ -59,8 +59,8 @@ all: main-build
 main-build: NUCLEO_LED_100usTimer.elf secondary-outputs
 
 # Tool invocations
-NUCLEO_LED_100usTimer.elf NUCLEO_LED_100usTimer.map: $(OBJS) $(USER_OBJS) C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NUCLEO_LED_100usTimer.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_LED_100usTimer.map" -Wl,--gc-sections -static -L"\CMSIS\Debug" --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+NUCLEO_LED_100usTimer.elf NUCLEO_LED_100usTimer.map: $(OBJS) $(USER_OBJS) D:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NUCLEO_LED_100usTimer.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_LED_100usTimer.map" -Wl,--gc-sections -static -L"D:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"\CMSIS\Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
