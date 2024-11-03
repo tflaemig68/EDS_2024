@@ -1,4 +1,24 @@
-// PID - Control 
+
+/**
+ ******************************************************************************
+ * @file           : regler.c
+ * @author         : Prof Flaemig
+ * @brief          : Regler
+ ******************************************************************************
+ * @attention
+ * Functions for Closed Loop Control (PID) and filter signals (LowPass)
+ * Copyright (c) 2024 Prof T Flämig.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
+
+/* Includes ------------------------------------------------------------------*/
+#include <regler.h>
 
 
 
