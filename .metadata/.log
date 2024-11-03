@@ -4209,3 +4209,646 @@ java.lang.Exception: The project description file (.project) for 'SYSTICK' is mi
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-10-27 15:58:05.264
 !MESSAGE Indexed 'SYSTICK' (3 sources, 53 headers) in 1.23 sec: 1,949 declarations; 2,832 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2024-10-30 17:45:24.249 -----------------------------------------------
+eclipse.buildId=Version 1.12.0
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ecf 4 0 2024-10-30 17:45:26.220
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf [656]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+       org.eclipse.ecf.identity [658]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.filetransfer 4 0 2024-10-30 17:45:26.224
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.filetransfer [657]
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+       org.eclipse.ecf [656]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+              org.eclipse.ecf.identity [658]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.identity 4 0 2024-10-30 17:45:26.231
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.identity [658]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.provider.filetransfer 4 0 2024-10-30 17:45:26.232
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer [659]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.filetransfer; bundle-version="[5.0.0,6.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.ecf.filetransfer; bundle-version="5.1.103.v20230705-0614"; singleton:="true"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient5 4 0 2024-10-30 17:45:26.235
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient5 [660]
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.service; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer.service; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.internal.provider.filetransfer
+    -> Export-Package: org.eclipse.ecf.internal.provider.filetransfer; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="0.0.0"; x-internal:="true"
+       org.eclipse.ecf.provider.filetransfer [659]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.identity; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer.identity; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.provider.filetransfer.browse; version="3.2.0"
+    -> Export-Package: org.eclipse.ecf.provider.filetransfer.browse; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="3.2.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.events; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer.events; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient5.win32 4 0 2024-10-30 17:45:26.247
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient5.win32 [661]
+  Unresolved requirement: Import-Package: org.eclipse.ecf.internal.provider.filetransfer.httpclient5; version="[1.0.0,2.0.0)"
+    -> Export-Package: org.eclipse.ecf.internal.provider.filetransfer.httpclient5; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer.httpclient5"; bundle-version="1.1.0.v20230423-0417"; version="1.0.0"
+       org.eclipse.ecf.provider.filetransfer.httpclient5 [660]
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+              org.eclipse.ecf.filetransfer [657]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+                     org.eclipse.ecf [656]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                       Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                            org.eclipse.ecf.identity [658]
+                              Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.service; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer.service; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.internal.provider.filetransfer
+           -> Export-Package: org.eclipse.ecf.internal.provider.filetransfer; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="0.0.0"; x-internal:="true"
+              org.eclipse.ecf.provider.filetransfer [659]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.identity; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer.identity; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.provider.filetransfer.browse; version="3.2.0"
+           -> Export-Package: org.eclipse.ecf.provider.filetransfer.browse; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="3.2.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.events; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer.events; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer; version="[5.0.0,6.0.0)"
+    -> Export-Package: org.eclipse.ecf.filetransfer; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.provider.filetransfer.httpclient5; version="[1.0.0,2.0.0)"
+    -> Export-Package: org.eclipse.ecf.provider.filetransfer.httpclient5; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer.httpclient5"; bundle-version="1.1.0.v20230423-0417"; version="1.0.0"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.p2.discovery.compatibility 4 0 2024-10-30 17:45:32.500
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.p2.discovery.compatibility [1097]
+  Unresolved requirement: Require-Bundle: org.eclipse.equinox.p2.transport.ecf; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.equinox.p2.transport.ecf; bundle-version="1.3.200.v20210613-1953"
+       org.eclipse.equinox.p2.transport.ecf [1112]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="3.1.0"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.filetransfer; bundle-version="4.0.0"
+           -> Bundle-SymbolicName: org.eclipse.ecf.filetransfer; bundle-version="5.1.103.v20230705-0614"; singleton:="true"
+              org.eclipse.ecf.filetransfer [657]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.provider.filetransfer; bundle-version="3.1.0"
+           -> Bundle-SymbolicName: org.eclipse.ecf.provider.filetransfer; bundle-version="3.3.0.v20230422-0242"; singleton:="true"
+              org.eclipse.ecf.provider.filetransfer [659]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 0 2024-10-30 17:45:32.759
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.p2.transport.ecf [1112]
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="3.1.0"
+    -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+       org.eclipse.ecf [656]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+              org.eclipse.ecf.identity [658]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.filetransfer; bundle-version="4.0.0"
+    -> Bundle-SymbolicName: org.eclipse.ecf.filetransfer; bundle-version="5.1.103.v20230705-0614"; singleton:="true"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.provider.filetransfer; bundle-version="3.1.0"
+    -> Bundle-SymbolicName: org.eclipse.ecf.provider.filetransfer; bundle-version="3.3.0.v20230422-0242"; singleton:="true"
+       org.eclipse.ecf.provider.filetransfer [659]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-10-30 17:45:59.720
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-10-30 17:45:59.733
+!MESSAGE Log4j2 initialized with config file C:\GITHUB\STM32\EDS_2024\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-10-30 17:46:15.446
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2024-10-30 17:46:37.632
+!MESSAGE Exception in update check thread
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.handleRemoteIndexFile(AbstractRepositoryManager.java:738)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:732)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:674)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2024-11-01 15:03:36.032 -----------------------------------------------
+eclipse.buildId=Version 1.12.0
+java.version=11.0.17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\GITHUB\STM32\EDS_2024
+
+!ENTRY org.eclipse.ecf 4 0 2024-11-01 15:03:37.286
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf [656]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+       org.eclipse.ecf.identity [658]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.filetransfer 4 0 2024-11-01 15:03:37.290
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.filetransfer [657]
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+       org.eclipse.ecf [656]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+              org.eclipse.ecf.identity [658]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.identity 4 0 2024-11-01 15:03:37.292
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.identity [658]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.provider.filetransfer 4 0 2024-11-01 15:03:37.297
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer [659]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.filetransfer; bundle-version="[5.0.0,6.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.ecf.filetransfer; bundle-version="5.1.103.v20230705-0614"; singleton:="true"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient5 4 0 2024-11-01 15:03:37.305
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient5 [660]
+  Unresolved requirement: Import-Package: org.eclipse.ecf.internal.provider.filetransfer
+    -> Export-Package: org.eclipse.ecf.internal.provider.filetransfer; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="0.0.0"; x-internal:="true"
+       org.eclipse.ecf.provider.filetransfer [659]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.provider.filetransfer.browse; version="3.2.0"
+    -> Export-Package: org.eclipse.ecf.provider.filetransfer.browse; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="3.2.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.events; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer.events; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.service; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer.service; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.identity; version="5.0.0"
+    -> Export-Package: org.eclipse.ecf.filetransfer.identity; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient5.win32 4 0 2024-11-01 15:03:37.312
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient5.win32 [661]
+  Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer; version="[5.0.0,6.0.0)"
+    -> Export-Package: org.eclipse.ecf.filetransfer; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.provider.filetransfer.httpclient5; version="[1.0.0,2.0.0)"
+    -> Export-Package: org.eclipse.ecf.provider.filetransfer.httpclient5; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer.httpclient5"; bundle-version="1.1.0.v20230423-0417"; version="1.0.0"
+       org.eclipse.ecf.provider.filetransfer.httpclient5 [660]
+         Unresolved requirement: Import-Package: org.eclipse.ecf.internal.provider.filetransfer
+           -> Export-Package: org.eclipse.ecf.internal.provider.filetransfer; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="0.0.0"; x-internal:="true"
+              org.eclipse.ecf.provider.filetransfer [659]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.provider.filetransfer.browse; version="3.2.0"
+           -> Export-Package: org.eclipse.ecf.provider.filetransfer.browse; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer"; bundle-version="3.3.0.v20230422-0242"; version="3.2.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.events; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer.events; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.service; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer.service; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+         Unresolved requirement: Import-Package: org.eclipse.ecf.filetransfer.identity; version="5.0.0"
+           -> Export-Package: org.eclipse.ecf.filetransfer.identity; bundle-symbolic-name="org.eclipse.ecf.filetransfer"; bundle-version="5.1.103.v20230705-0614"; version="5.0.0"
+  Unresolved requirement: Import-Package: org.eclipse.ecf.internal.provider.filetransfer.httpclient5; version="[1.0.0,2.0.0)"
+    -> Export-Package: org.eclipse.ecf.internal.provider.filetransfer.httpclient5; bundle-symbolic-name="org.eclipse.ecf.provider.filetransfer.httpclient5"; bundle-version="1.1.0.v20230423-0417"; version="1.0.0"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.p2.discovery.compatibility 4 0 2024-11-01 15:03:38.038
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.p2.discovery.compatibility [1097]
+  Unresolved requirement: Require-Bundle: org.eclipse.equinox.p2.transport.ecf; bundle-version="1.0.0"
+    -> Bundle-SymbolicName: org.eclipse.equinox.p2.transport.ecf; bundle-version="1.3.200.v20210613-1953"
+       org.eclipse.equinox.p2.transport.ecf [1112]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="3.1.0"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+              org.eclipse.ecf [656]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+                     org.eclipse.ecf.identity [658]
+                       Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.filetransfer; bundle-version="4.0.0"
+           -> Bundle-SymbolicName: org.eclipse.ecf.filetransfer; bundle-version="5.1.103.v20230705-0614"; singleton:="true"
+              org.eclipse.ecf.filetransfer [657]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.provider.filetransfer; bundle-version="3.1.0"
+           -> Bundle-SymbolicName: org.eclipse.ecf.provider.filetransfer; bundle-version="3.3.0.v20230422-0242"; singleton:="true"
+              org.eclipse.ecf.provider.filetransfer [659]
+                Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 0 2024-11-01 15:03:38.055
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.p2.transport.ecf [1112]
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="3.1.0"
+    -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+       org.eclipse.ecf [656]
+         Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf.identity; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.ecf.identity; bundle-version="3.10.0.v20230422-0242"; singleton:="true"
+              org.eclipse.ecf.identity [658]
+                Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=17))"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.filetransfer; bundle-version="4.0.0"
+    -> Bundle-SymbolicName: org.eclipse.ecf.filetransfer; bundle-version="5.1.103.v20230705-0614"; singleton:="true"
+       org.eclipse.ecf.filetransfer [657]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.ecf.provider.filetransfer; bundle-version="3.1.0"
+    -> Bundle-SymbolicName: org.eclipse.ecf.provider.filetransfer; bundle-version="3.3.0.v20230422-0242"; singleton:="true"
+       org.eclipse.ecf.provider.filetransfer [659]
+         Unresolved requirement: Require-Bundle: org.eclipse.ecf; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.ecf; bundle-version="3.11.0.v20230507-1923"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1840)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1781)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1745)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1667)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-11-01 15:03:44.810
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-11-01 15:03:44.845
+!MESSAGE Log4j2 initialized with config file C:\GITHUB\STM32\EDS_2024\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-11-01 15:03:56.455
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.equinox.p2.updatechecker 4 0 2024-11-01 15:04:18.230
+!MESSAGE Exception in update check thread
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.handleRemoteIndexFile(AbstractRepositoryManager.java:738)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadIndexFile(AbstractRepositoryManager.java:732)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:674)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-01 18:02:48.752
+!MESSAGE Indexed 'BALO' (3 sources, 53 headers) in 1.13 sec: 1,949 declarations; 2,830 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.ui 4 0 2024-11-01 19:18:02.765
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalStateException: Need an underlying widget to be able to set the input.(Has the widget been disposed?)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1627)
+	at com.st.stm32cube.ide.mcu.buildanalyzer.MemUsageComposite.setInput(MemUsageComposite.java:97)
+	at elf_analyzer.ElfAnalyzerView.clearView(ElfAnalyzerView.java:285)
+	at elf_analyzer.ElfAnalyzerView.lambda$2(ElfAnalyzerView.java:278)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4035)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3635)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:166)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:368)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:470)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:230)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:560)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$2.run(IDEWorkbenchAdvisor.java:367)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:388)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2942)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1368)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1716)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1743)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1743)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1752)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:503)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:570)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:102)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:269)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1552)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4748)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4847)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2286)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5015)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)

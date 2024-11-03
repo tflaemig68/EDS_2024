@@ -1,0 +1,4 @@
+"./Src/BALO.o"
+"./Src/regler.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
