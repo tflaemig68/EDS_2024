@@ -11,6 +11,16 @@ language.settings.xml
 
 misra_rules.txt
 
+# cppcheck
+**/*cppcheck-build-dir/
+cppcheck-addon-ctu-file-list
+*.a1
+*.ctu-info
+*.s1
+lastResults.xml
+statistics.txt
+*.cppcheck
+
 ### macOS ###
 # General
 .DS_Store
