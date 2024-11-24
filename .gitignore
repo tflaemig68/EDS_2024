@@ -1,2 +1,5 @@
 /.metadata
 /.metadata/.plugins
+*.o
+*.elf
+*.xml
