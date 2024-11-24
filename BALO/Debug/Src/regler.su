@@ -1,4 +1,0 @@
-../Src/regler.c:46:13:getPID	16	static
-../Src/regler.c:51:6:setPID	16	static
-../Src/regler.c:61:6:initPID	24	static
-../Src/regler.c:70:7:runPID	16	static

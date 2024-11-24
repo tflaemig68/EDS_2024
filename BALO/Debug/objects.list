@@ -1,4 +1,5 @@
 "./Src/BALO.o"
-"./Src/regler.o"
-"./Src/syscalls.o"
-"./Src/sysmem.o"
+"./Src/RotaryPushButton.o"
+"./Src/ST7735.o"
+"./Src/i2cAMIS.o"
+"./Src/i2cRFID.o"

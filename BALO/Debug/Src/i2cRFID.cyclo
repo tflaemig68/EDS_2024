@@ -1,0 +1,5 @@
+i2cRFID.c:24:10:convDecByteToHex	3
+i2cRFID.c:55:6:RFID_LED	2
+i2cRFID.c:67:8:RFID_readCard	7
+i2cRFID.c:119:8:RFID_readFWVersion	6
+i2cRFID.c:172:6:low_pass	2

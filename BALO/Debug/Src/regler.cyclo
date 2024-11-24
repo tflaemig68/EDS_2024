@@ -1,4 +1,0 @@
-regler.c:46:13:getPID	1
-regler.c:51:6:setPID	2
-regler.c:61:6:initPID	1
-regler.c:70:7:runPID	1

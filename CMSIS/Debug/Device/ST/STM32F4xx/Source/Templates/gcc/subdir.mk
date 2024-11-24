@@ -82,7 +82,7 @@ S_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Device/ST/STM32F4xx/Source/Templates/gcc/%.o: ../Device/ST/STM32F4xx/Source/Templates/gcc/%.s Device/ST/STM32F4xx/Source/Templates/gcc/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
 
 clean: clean-Device-2f-ST-2f-STM32F4xx-2f-Source-2f-Templates-2f-gcc
 

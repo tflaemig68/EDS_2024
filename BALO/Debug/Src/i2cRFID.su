@@ -1,0 +1,5 @@
+../Src/i2cRFID.c:24:10:convDecByteToHex	24	static
+../Src/i2cRFID.c:55:6:RFID_LED	16	static
+../Src/i2cRFID.c:67:8:RFID_readCard	40	static
+../Src/i2cRFID.c:119:8:RFID_readFWVersion	40	static
+../Src/i2cRFID.c:172:6:low_pass	32	static
