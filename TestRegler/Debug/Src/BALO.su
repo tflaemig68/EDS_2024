@@ -1,4 +1,4 @@
-../Src/BALO.c:20:6:i2cActivate	24	static
+../Src/BALO.c:20:6:i2cActivate	16	static
 ../Src/BALO.c:71:6:ledActivate	8	static
 ../Src/BALO.c:90:6:BALOsetup	8	static
 ../Src/BALO.c:101:10:AlBeOszi	32	static

@@ -3,3 +3,4 @@
 "./Src/ST7735.o"
 "./Src/i2cAMIS.o"
 "./Src/i2cRFID.o"
+"./Src/regler.o"
