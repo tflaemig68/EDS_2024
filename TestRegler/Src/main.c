@@ -121,9 +121,17 @@ int main(void)
 			   }
 
 			   AlphaBeta[0] = (float)getRotaryPosition()/50;
-
+			   LED_blue_on;
 			   AlphaBeta[1] = runPID(&PID_Pos,AlphaBeta[0]);
-
+			   LED_blue_off;
+			   if ((AlphaBeta[1] < -1) || (AlphaBeta[1] > 1))
+			   {
+				   setRotaryColor(LED_RED);
+			   }
+			   else
+			   {
+				   setRotaryColor(LED_YELLOW);
+			   }
 			   AlBeOszi(AlphaBeta);
 
 
