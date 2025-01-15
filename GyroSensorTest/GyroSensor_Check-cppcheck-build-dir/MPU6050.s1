@@ -1,0 +1,5 @@
+initMPU call:[i2cSendByteToSlaveReg,i2cSetClkSpd]
+getAcceleration call:[i2cBurstRegRead,return]
+getAngleFromAcc call:[atan,getAcceleration]
+getGyro call:[i2cBurstRegRead,return]
+getTemperature call:[i2cBurstRegRead,return]

@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="9840167509798515670">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="32" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="33" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="35" column="0"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;port&apos; can be declared as pointer to const" verbose="Parameter &apos;port&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="42" column="35" info="Parameter &apos;port&apos; can be declared as pointer to const"/>
+            <symbol>port</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;port&apos; can be declared as pointer to const" verbose="Parameter &apos;port&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="829" column="36" info="Parameter &apos;port&apos; can be declared as pointer to const"/>
+            <symbol>port</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;port&apos; can be declared as pointer to const" verbose="Parameter &apos;port&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="864" column="39" info="Parameter &apos;port&apos; can be declared as pointer to const"/>
+            <symbol>port</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="178" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:176:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="237" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:235:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="295" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:293:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="357" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:355:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="412" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:410:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="451" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:449:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:829:6" call-funcname="gpioGetPinState" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="496" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:490:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="546" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:544:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="659" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:657:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="710" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:708:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:42:6" call-funcname="gpioVerifyPort" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="767" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:765:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:588:20" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="590" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:606:20" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="608" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:624:20" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="626" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:864:10" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="866" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:588:20" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="590" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:606:20" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="608" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:829:6" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="831" col="13" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c:864:10" my-argnr="1" my-argname="port" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" line="866" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyPort" lineNumber="42"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyPin" lineNumber="57"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyAltFunc" lineNumber="74"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyPinMode" lineNumber="92"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyOutputType" lineNumber="107"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyPushPullMode" lineNumber="122"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioVerifyOutputSpeed" lineNumber="136"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioInitPort" lineNumber="176"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSelectPort" lineNumber="235"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioDeselectPort" lineNumber="293"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSelectPinMode" lineNumber="355"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSetPin" lineNumber="410"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioResetPin" lineNumber="449"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioTogglePin" lineNumber="490"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSelectAltFunc" lineNumber="544"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSetLowerByte" lineNumber="588"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSetUpperByte" lineNumber="606"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSetWord" lineNumber="624"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSetOutputType" lineNumber="657"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSelectPushPullMode" lineNumber="708"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioSetOutputSpeed" lineNumber="765"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioGetPinState" lineNumber="829"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c" functionName="gpioGetPortVal" lineNumber="864"/>
+    <functioncall functionName="ALTFUNC"/>
+    <functioncall functionName="GPIO_INVALID_ALTFUNC"/>
+    <functioncall functionName="GPIO_INVALID_OUTPUT_SPEED"/>
+    <functioncall functionName="GPIO_INVALID_OUTPUT_TYPE"/>
+    <functioncall functionName="GPIO_INVALID_PIN"/>
+    <functioncall functionName="GPIO_INVALID_PINMODE"/>
+    <functioncall functionName="GPIO_INVALID_PORT"/>
+    <functioncall functionName="GPIO_INVALID_PUSH_PULL_MODE"/>
+    <functioncall functionName="GPIO_OK"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="gpioGetPinState"/>
+    <functioncall functionName="gpioResetPin"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSetPin"/>
+    <functioncall functionName="gpioVerifyAltFunc"/>
+    <functioncall functionName="gpioVerifyOutputSpeed"/>
+    <functioncall functionName="gpioVerifyOutputType"/>
+    <functioncall functionName="gpioVerifyPin"/>
+    <functioncall functionName="gpioVerifyPinMode"/>
+    <functioncall functionName="gpioVerifyPort"/>
+    <functioncall functionName="gpioVerifyPushPullMode"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="42" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="57" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="74" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="92" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="107" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="122" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="136" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="176" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="235" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="293" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="355" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="410" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="449" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="490" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="544" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="588" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="606" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="624" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="657" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="708" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="765" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="829" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="864" column="10"/>
+        </error>
+        <error id="misra-c2012-12.2" severity="style" msg="Rule Required The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand" verbose="Rule Required The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="609" column="24"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="47" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="64" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="81" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="96" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="111" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="126" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="140" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="204" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="239" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="297" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="359" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="363" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="367" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="414" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="418" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="453" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="457" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="494" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="548" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="552" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="556" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="661" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="665" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="669" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="712" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="716" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="720" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="769" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="773" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="777" column="9"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="203" column="9"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="265" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="323" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="734" column="3"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="793" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="44" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="44" column="29"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="44" column="48"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="45" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="45" column="29"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="45" column="48"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="59" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="59" column="28"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="59" column="46"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="59" column="64"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="60" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="60" column="28"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="60" column="46"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="60" column="64"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN8&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN8&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="61" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN9&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN9&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="61" column="28"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN10&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN10&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="61" column="46"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN11&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN11&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="61" column="64"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN12&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN12&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="62" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN13&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN13&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="62" column="28"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN14&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN14&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="62" column="46"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN15&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN15&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="62" column="64"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="76" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="76" column="26"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="76" column="42"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="76" column="58"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="76" column="74"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="77" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="77" column="26"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="77" column="42"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF8&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF8&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="77" column="58"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF9&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF9&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="77" column="74"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF10&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF10&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="78" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF11&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF11&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="78" column="26"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF12&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF12&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="78" column="42"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF13&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF13&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="78" column="58"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF14&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF14&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="78" column="74"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF15&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;AF15&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="79" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INPUT&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INPUT&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="94" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;OUTPUT&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;OUTPUT&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="94" column="32"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ALTFUNC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ALTFUNC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="94" column="55"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ANALOG&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ANALOG&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="94" column="79"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PUSHPULL&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PUSHPULL&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="109" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;OPENDRAIN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;OPENDRAIN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="109" column="35"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;NO_PULLUP_PULLDOWN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;NO_PULLUP_PULLDOWN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="124" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLUP&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLUP&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="124" column="42"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLDOWN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLDOWN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="124" column="62"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;LOW_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;LOW_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="138" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEDIUM_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEDIUM_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="138" column="34"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FAST_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FAST_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="138" column="61"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HIGH_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HIGH_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="138" column="86"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="180" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="184" column="18"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="188" column="18"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="192" column="18"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="196" column="18"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="200" column="18"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="242" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="246" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="250" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="254" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="258" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="262" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOA&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="300" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="304" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="308" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="312" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="316" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;GPIOH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="320" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INPUT&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INPUT&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="374" column="6"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PIN7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="562" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;OPENDRAIN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;OPENDRAIN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="673" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PUSHPULL&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PUSHPULL&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="725" column="25"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLUP&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLUP&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="727" column="7"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLDOWN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PULLDOWN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="731" column="12"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEDIUM_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEDIUM_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="782" column="6"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FAST_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FAST_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="786" column="11"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HIGH_SPEED&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HIGH_SPEED&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalGPIO.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalGPIO.c" line="790" column="11"/>
+        </error>
+</analyzerinfo>

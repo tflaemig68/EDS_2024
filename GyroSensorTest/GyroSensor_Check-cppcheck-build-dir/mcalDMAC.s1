@@ -1,0 +1,48 @@
+dmacVerifyDirection
+dmacVerifyDataFormat
+dmacVerifyIrqType
+dmacVerifyNumData
+dmacVerifyChannelNum
+dmacVerifyPriorityLevel
+dmacVerifyIncrementMode
+dmacVerifyNumBeats
+dmacVerifyDMAFlowController
+dmacVerifyPeripheralOffsetSize
+dmacVerifyCurrentTargetMem
+dmacVerifyFifoThresholdLvl
+dmacInitDMAC
+dmacSelectDMAC
+dmacEnableStream
+dmacDisableStream
+dmacSetStreamAndChannel call:[dmacVerifyDataFormat,dmacVerifyDirection,dmacVerifyIrqType,dmacVerifyNumData]
+dmacAssignStreamAndChannel call:[dmacVerifyChannelNum]
+dmacSetMemoryAddress
+dmacSetPeripheralAddress
+dmacSetDataFlowDirection call:[dmacVerifyDirection]
+dmacSetNumData call:[dmacVerifyNumData]
+dmacSetDataFormat call:[dmacVerifyDataFormat]
+dmacSetPeripheralDataFormat call:[dmacVerifyDataFormat]
+dmacSetMemoryDataFormat call:[dmacVerifyDataFormat]
+dmacClearAllStreamIrqFlags
+dmacClearInterruptFlag
+dmacSetMemoryIncrementMode call:[dmacVerifyIncrementMode]
+dmacSetPeripheralIncrementMode call:[dmacVerifyIncrementMode]
+dmacSetMemoryBurstBeats call:[dmacVerifyNumBeats]
+dmacSetPeripheralBurstBeats call:[dmacVerifyNumBeats]
+dmacSetPriorityLevel call:[dmacVerifyPriorityLevel]
+dmacEnableInterrupt call:[dmacVerifyIrqType]
+dmacEnableInterruptList call:[dmacEnableInterrupt] noreturn:[dmacEnableInterrupt]
+dmacDisableInterrupt call:[dmacVerifyIrqType]
+dmacDisableInterruptList call:[dmacDisableInterrupt] noreturn:[dmacDisableInterrupt]
+dmacGetLowInterruptStatus
+dmacGetHighInterruptStatus
+dmacSelectDMAFlowController call:[dmacVerifyDMAFlowController]
+dmacEnableCircularMode
+dmacDisableCircularMode
+dmacConfigPeriphOffsSize call:[dmacVerifyPeripheralOffsetSize]
+dmacEnableDoubleBufferMode
+dmacDisableDoubleBufferMode
+dmacSelectMem2MemTarget call:[dmacVerifyCurrentTargetMem]
+dmacEnableFifoMode
+dmacDisableFifoMode
+dmacSetFifoThreshold call:[dmacVerifyFifoThresholdLvl]

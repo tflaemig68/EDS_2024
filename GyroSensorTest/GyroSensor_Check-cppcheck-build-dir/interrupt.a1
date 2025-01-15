@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="9554111722996816841">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="9" column="0"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c:232:21" call-funcname="timerClearInterruptFlag" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c" line="41" col="12" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c:39:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c" functionName="timerClearIrqFlag" lineNumber="39"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c" functionName="timerEnableInterrupt" lineNumber="73"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c" functionName="timerDisableInterrupt" lineNumber="155"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c" functionName="timerClearInterruptFlag" lineNumber="232"/>
+    <functioncall functionName="TIMER_INVALID_IRQ_TYPE"/>
+    <functioncall functionName="TIMER_OK"/>
+    <functioncall functionName="timerClearInterruptFlag"/>
+    <functioncall functionName="timerVerifyIrqAssignment"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="39" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="73" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="155" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="232" column="21"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="77" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="159" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="236" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="81" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="163" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="240" column="5"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="75" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="157" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/interrupt.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\interrupt.c" line="234" column="9"/>
+        </error>
+</analyzerinfo>

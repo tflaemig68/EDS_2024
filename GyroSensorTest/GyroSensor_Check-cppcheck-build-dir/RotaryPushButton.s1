@@ -1,0 +1,8 @@
+initRotaryPushButton global:[initRotaryPushButtonDone] call:[NVIC_EnableIRQ,__disable_irq,__enable_irq,extiConfigIrq,extiEnableIrq,extiInit,extiSetTriggerEdge,gpioInitPort,gpioSelectPinMode,gpioSelectPushPullMode]
+initRotaryPushButtonLED global:[initRotaryPushButtonLEDDone] call:[gpioInitPort,gpioSelectPinMode,gpioSetPin]
+setRotaryColor global:[initRotaryPushButtonLEDDone] call:[gpioResetPin,gpioSetPin,initRotaryPushButtonLED] noreturn:[initRotaryPushButtonLED]
+getRotaryPushButton global:[initRotaryPushButtonDone,pushButtonFlag] call:[initRotaryPushButton]
+getRotaryPosition global:[initRotaryPushButtonDone,rotoryPosition]
+setRotaryPosition global:[initRotaryPushButtonDone,rotoryPosition]
+ROTARY_A_HANDLER global:[rotoryPosition] call:[gpioGetPinState]
+ROTARY_SW_HANDLER global:[pushButtonFlag]

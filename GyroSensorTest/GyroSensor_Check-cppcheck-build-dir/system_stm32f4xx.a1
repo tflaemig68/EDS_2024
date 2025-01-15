@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="6970044481262166474">
+        <error id="toomanyconfigs" severity="information" msg="Too many #ifdef configurations - cppcheck only checks 12 of 20 configurations. Use --force to check all configurations." verbose="The checking of the file will be interrupted because there are too many #ifdef configurations. Checking of all #ifdef configurations can be forced by --force command line option or from GUI preferences. However that may increase the checking time." cwe="398">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="0" column="0"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &quot;stm32f4xx.h&quot; not found." verbose="Include file: &quot;stm32f4xx.h&quot; not found.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="48" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemInit" lineNumber="167"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemCoreClockUpdate" lineNumber="220"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemInit" lineNumber="167"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemCoreClockUpdate" lineNumber="220"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemInit_ExtMemCtl" lineNumber="279"/>
+    <functioncall functionName="AHB1ENR"/>
+    <functioncall functionName="AHB3ENR"/>
+    <functioncall functionName="RCC_AHB1ENR_GPIOCEN"/>
+    <functioncall functionName="RCC_AHB3ENR_FMCEN"/>
+    <functioncall functionName="READ_BIT"/>
+    <functioncall functionName="SDRTR"/>
+    <functioncall functionName="SystemInit_ExtMemCtl"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemInit" lineNumber="167"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" functionName="SystemCoreClockUpdate" lineNumber="220"/>
+    <functioncall functionName="SystemInit_ExtMemCtl"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="167" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="220" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="137" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="139" column="15"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="138" column="15"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="243" column="21"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="Rule Advisory The comma operator should not be used" verbose="Rule Advisory The comma operator should not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="222" column="19"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="383" column="3"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="591" column="3"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="294" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="296" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="298" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="305" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="306" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="308" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="310" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="317" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="318" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="320" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="322" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="329" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="330" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="332" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="334" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="342" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="344" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="346" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="353" column="20"/>
+        </error>
+        <error id="misra-c2012-7.2" severity="style" msg="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" verbose="Rule Required A \342\200\234u\342\200\235 or \342\200\234U\342\200\235 suffix shall be applied to all integer constants that are represented in an unsigned type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="418" column="36"/>
+        </error>
+        <error id="misra-c2012-10.1" severity="style" msg="Rule Required Operands shall not be of an inappropriate essential type" verbose="Rule Required Operands shall not be of an inappropriate essential type" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="414" column="45"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="377" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="389" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="398" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="407" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="414" column="32"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="Rule Advisory The comma operator should not be used" verbose="Rule Advisory The comma operator should not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="283" column="31"/>
+        </error>
+        <error id="misra-c2012-13.5" severity="style" msg="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" verbose="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="377" column="23"/>
+        </error>
+        <error id="misra-c2012-13.5" severity="style" msg="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" verbose="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="389" column="23"/>
+        </error>
+        <error id="misra-c2012-13.5" severity="style" msg="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" verbose="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="398" column="23"/>
+        </error>
+        <error id="misra-c2012-13.5" severity="style" msg="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" verbose="Rule Required The right hand operand of a logical &amp;&amp; or || operator shall not contain persistent side effects" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="407" column="23"/>
+        </error>
+        <error id="misra-c2012-14.2" severity="style" msg="Rule Required A for loop shall be well-formed" verbose="Rule Required A for loop shall be well-formed" file0="C:/myWorkspace/ARM/EDS_2024_fork/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" line="383" column="3"/>
+        </error>
+</analyzerinfo>

@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="11537954341374152125">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;sys/stat.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;sys/stat.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="24" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdlib.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="25" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;errno.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;errno.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="26" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="27" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;signal.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;signal.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="28" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="29" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;sys/time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;sys/time.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="30" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;sys/times.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;sys/times.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="31" column="0"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ptr&apos; can be declared as pointer to const" verbose="Parameter &apos;ptr&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="80" column="50" info="Parameter &apos;ptr&apos; can be declared as pointer to const"/>
+            <symbol>ptr</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c:99:5" my-argnr="2" my-argname="st" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" line="102" col="3" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c:148:5" my-argnr="2" my-argname="st" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" line="151" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="initialise_monitor_handles" lineNumber="44"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_getpid" lineNumber="48"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_kill" lineNumber="53"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_exit" lineNumber="61"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_read" lineNumber="67"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_write" lineNumber="80"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_close" lineNumber="92"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_fstat" lineNumber="99"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_isatty" lineNumber="106"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_lseek" lineNumber="112"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_open" lineNumber="120"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_wait" lineNumber="128"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_unlink" lineNumber="135"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_times" lineNumber="142"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_stat" lineNumber="148"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_link" lineNumber="155"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_fork" lineNumber="163"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c" functionName="_execve" lineNumber="169"/>
+    <functioncall functionName="EAGAIN"/>
+    <functioncall functionName="ECHILD"/>
+    <functioncall functionName="EINVAL"/>
+    <functioncall functionName="EMLINK"/>
+    <functioncall functionName="ENOENT"/>
+    <functioncall functionName="ENOMEM"/>
+    <functioncall functionName="S_IFCHR"/>
+    <functioncall functionName="__io_getchar"/>
+    <functioncall functionName="__io_putchar"/>
+    <functioncall functionName="_kill"/>
+  </FileInfo>
+        <error id="misra-c2012-8.2" severity="style" msg="Rule Required Function types shall be in prototype form with named parameters" verbose="Rule Required Function types shall be in prototype form with named parameters" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="44" column="32"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="44" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="48" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="53" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="61" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="67" column="27"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="80" column="27"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="92" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="99" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="106" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="112" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="120" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="128" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="135" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="142" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="148" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="155" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="163" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="169" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="40" column="8"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="39" column="7"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="74" column="12"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="Rule Required The value returned by a function having non-void return type shall be used" verbose="Rule Required The value returned by a function having non-void return type shall be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="63" column="8"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="Rule Required The value returned by a function having non-void return type shall be used" verbose="Rule Required The value returned by a function having non-void return type shall be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="87" column="17"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="74" column="9"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="87" column="22"/>
+        </error>
+        <error id="misra-c2012-21.5" severity="style" msg="Rule Required The standard header le &lt;signal.h&gt; shall not be used" verbose="Rule Required The standard header le &lt;signal.h&gt; shall not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="28" column="0"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="Rule Required The Standard Library input/output functions shall not be used" verbose="Rule Required The Standard Library input/output functions shall not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="27" column="0"/>
+        </error>
+        <error id="misra-c2012-21.10" severity="style" msg="Rule Required The Standard Library time and date functions shall not be used" verbose="Rule Required The Standard Library time and date functions shall not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/syscalls.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\syscalls.c" line="29" column="0"/>
+        </error>
+</analyzerinfo>

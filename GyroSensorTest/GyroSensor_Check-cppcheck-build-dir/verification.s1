@@ -1,0 +1,8 @@
+timerVerifyChannelNum
+timerVerifyIrqAssignment
+timerVerifyDmaAssignment
+timerVerifyCaptureCompareChannelAssignment
+timerVerifyTimerMSM
+timerVerifyTimerTriggerActionType
+timerVerifyTimerTrigger
+timerVerifyDmaBurstStartingRegister

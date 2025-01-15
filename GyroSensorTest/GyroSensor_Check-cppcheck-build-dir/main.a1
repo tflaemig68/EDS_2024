@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="6987740808792592371">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="19" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="20" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="21" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;string.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="22" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="23" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="25" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="27" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="28" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalSPI.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalSPI.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="29" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalI2C.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalI2C.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="30" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;RotaryPushButton.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;RotaryPushButton.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="31" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;MPU6050.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;MPU6050.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="32" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/main.c" functionName="i2cActivate" lineNumber="38"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/main.c" functionName="main" lineNumber="62"/>
+    <functioncall functionName="AF4"/>
+    <functioncall functionName="ALTFUNC"/>
+    <functioncall functionName="GPIOB"/>
+    <functioncall functionName="I2C1"/>
+    <functioncall functionName="I2C_CLOCK_50"/>
+    <functioncall functionName="I2C_DUTY_CYCLE_2"/>
+    <functioncall functionName="LED_BLACK"/>
+    <functioncall functionName="LED_GREEN"/>
+    <functioncall functionName="LED_RED"/>
+    <functioncall functionName="MPU6050_ACCEL_RANGE_4"/>
+    <functioncall functionName="MPU6050_GYRO_FSCALE_500"/>
+    <functioncall functionName="OPENDRAIN"/>
+    <functioncall functionName="PIN8"/>
+    <functioncall functionName="PIN9"/>
+    <functioncall functionName="getAngleFromAcc"/>
+    <functioncall functionName="getGyro"/>
+    <functioncall functionName="getTemperature"/>
+    <functioncall functionName="gpioInitPort"/>
+    <functioncall functionName="gpioSelectAltFunc"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSetOutputType"/>
+    <functioncall functionName="i2cActivate"/>
+    <functioncall functionName="i2cAddr_MPU6050"/>
+    <functioncall functionName="i2cEnableDevice"/>
+    <functioncall functionName="i2cInitI2C"/>
+    <functioncall functionName="i2cSelectI2C"/>
+    <functioncall functionName="initMPU"/>
+    <functioncall functionName="initRotaryPushButton"/>
+    <functioncall functionName="initRotaryPushButtonLED"/>
+    <functioncall functionName="setRotaryColor"/>
+  </FileInfo>
+        <error id="misra-c2012-8.2" severity="style" msg="Rule Required Function types shall be in prototype form with named parameters" verbose="Rule Required Function types shall be in prototype form with named parameters" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/main.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="38" column="17"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/main.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="38" column="6"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="Rule Required The Standard Library input/output functions shall not be used" verbose="Rule Required The Standard Library input/output functions shall not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/main.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\main.c" line="21" column="0"/>
+        </error>
+</analyzerinfo>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="16683812547250829992">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalFlash.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalFlash.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="21" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="22" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="23" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stddef.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="24" column="0"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="0" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;sysclk&gt;30&apos; is always true" verbose="Condition &apos;sysclk&gt;30&apos; is always true" cwe="571" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="67" column="22" info="Condition &apos;sysclk&gt;30&apos; is always true"/>
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="63" column="16" info="Assuming that condition &apos;sysclk&lt;=30&apos; is not redundant"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c" functionName="flashConfigWaitStates" lineNumber="55"/>
+    <functioncall functionName="FLASH_ACR_PRFTEN"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="55" column="6"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="63" column="16"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="67" column="22"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="71" column="22"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="75" column="22"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="79" column="22"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="83" column="22"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalFlash.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalFlash.c" line="86" column="5"/>
+        </error>
+</analyzerinfo>

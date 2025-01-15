@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="8036904080396187582">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="9" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerSelectMasterSlaveTriggerAction" lineNumber="34"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerSelectMasterSlaveMode" lineNumber="84"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerSelectMasterSlaveTriggerSyncInput" lineNumber="160"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerSetMasterSlaveExternalTriggerPolarity" lineNumber="232"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerEnableMasterSlaveExternalTriggerClock" lineNumber="279"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerDisableMasterSlaveExternalTriggerClock" lineNumber="313"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerSelectMasterSlaveExternalTriggerPrescaler" lineNumber="348"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c" functionName="timerSelectMasterSlaveExternalTriggerFilter" lineNumber="402"/>
+    <functioncall functionName="TIMER_INVALID_MASTER_SLAVE_MODE_TYPE"/>
+    <functioncall functionName="TIMER_INVALID_TIMER"/>
+    <functioncall functionName="TIMER_INVALID_TRIGGER"/>
+    <functioncall functionName="TIMER_INVALID_TRIGGER_ACTION"/>
+    <functioncall functionName="TIMER_OK"/>
+    <functioncall functionName="TIM_SMCR_ETF_0"/>
+    <functioncall functionName="TIM_SMCR_ETF_1"/>
+    <functioncall functionName="TIM_SMCR_ETF_2"/>
+    <functioncall functionName="TIM_SMCR_ETPS_0"/>
+    <functioncall functionName="TIM_SMCR_SMS_0"/>
+    <functioncall functionName="TIM_SMCR_SMS_1"/>
+    <functioncall functionName="TIM_SMCR_TS_0"/>
+    <functioncall functionName="TIM_SMCR_TS_1"/>
+    <functioncall functionName="timerVerifyTimerMSM"/>
+    <functioncall functionName="timerVerifyTimerTrigger"/>
+    <functioncall functionName="timerVerifyTimerTriggerActionType"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="34" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="84" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="160" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="232" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="279" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="313" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="348" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="402" column="22"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="38" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="88" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="164" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="236" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="283" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="317" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="352" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="406" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="239" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="356" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="410" column="5"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="36" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="86" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="162" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="234" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="234" column="27"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="234" column="44"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="234" column="61"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="234" column="78"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="281" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="281" column="27"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="281" column="44"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="281" column="61"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="281" column="78"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="315" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="315" column="27"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="315" column="44"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="315" column="61"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="315" column="78"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="350" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="350" column="27"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="350" column="44"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="350" column="61"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="350" column="78"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="404" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="404" column="27"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="404" column="44"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="404" column="61"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/masterSlave.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\masterSlave.c" line="404" column="78"/>
+        </error>
+</analyzerinfo>

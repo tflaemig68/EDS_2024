@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="4179405564105877543">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="9" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureCompareChannelMapping" lineNumber="36"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerGetCaptureCompareChannelMapping" lineNumber="182"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerEnableCaptureCompareChannel" lineNumber="236"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerDisableCaptureCompareChannel" lineNumber="287"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerEnableCaptureCompareComplementaryChannel" lineNumber="341"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerDisableCaptureCompareComplementaryChannel" lineNumber="395"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureCompareOutputActiveLevel" lineNumber="450"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureCompareComplementaryPinActiveLevel" lineNumber="534"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureComparePreloadValue" lineNumber="608"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerGetCaptureComparePreloadValue" lineNumber="663"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureComparePreloadCtrlBits" lineNumber="716"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerUpdateCaptureCompareCtrlBits" lineNumber="763"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureCompareIdleStateOutput" lineNumber="813"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c" functionName="timerSetCaptureCompareClkRatio" lineNumber="929"/>
+    <functioncall functionName="TIMER_INVALID_CHANNEL"/>
+    <functioncall functionName="TIMER_INVALID_TIMER"/>
+    <functioncall functionName="TIMER_INVALID_TIMER_CHANNEL_ASSIGNMENT"/>
+    <functioncall functionName="TIMER_OK"/>
+    <functioncall functionName="TIM_CCMR1_CC1S_0"/>
+    <functioncall functionName="TIM_CCMR1_CC2S_0"/>
+    <functioncall functionName="TIM_CCMR2_CC3S_0"/>
+    <functioncall functionName="TIM_CCMR2_CC4S_0"/>
+    <functioncall functionName="timerVerifyCaptureCompareChannelAssignment"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="36" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="182" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="236" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="287" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="341" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="395" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="450" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="534" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="608" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="663" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="716" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="763" column="24"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="813" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="929" column="21"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="41" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="187" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="240" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="291" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="345" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="399" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="455" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="539" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="613" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="667" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="720" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="767" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="818" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="936" column="13"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="945" column="13"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="258" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="309" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="363" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="417" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="501" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="578" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="685" column="5"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="72" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="44" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="49" column="13"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="75" column="13"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="102" column="13"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="129" column="13"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="190" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="723" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="770" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="821" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="951" column="5"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="39" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="185" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="238" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="289" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="343" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="397" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="453" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="537" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="611" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="665" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="243" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="247" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="251" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="255" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="294" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="298" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="302" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="306" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="348" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="352" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="356" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="360" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="402" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="406" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="410" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="414" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="458" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="460" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="469" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="471" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="480" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="482" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="491" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="493" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="542" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="544" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="553" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="555" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="564" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ACTIVE_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="566" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="575" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="616" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="620" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="624" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="670" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="674" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="678" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="682" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="718" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="765" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="816" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="824" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="835" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="846" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="857" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="868" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="879" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IDLE_STATE_OFF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="890" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM10&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM10&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="932" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM11&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM11&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="932" column="28"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="934" column="19"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM9&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIM9&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="941" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TIMIO_CH2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/commonCapComp.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\commonCapComp.c" line="943" column="19"/>
+        </error>
+</analyzerinfo>

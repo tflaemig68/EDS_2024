@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="13844111928041297078">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="10" column="0"/>
+        </error>
+        <error id="duplicateExpression" severity="style" msg="Same expression on both sides of &apos;|&apos;." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="246" column="40"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c:417:21" my-argnr="1" my-argname="tim" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" line="419" col="48" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" functionName="timerEnableDMA" lineNumber="36"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" functionName="timerDisableDMA" lineNumber="101"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" functionName="timerSelectDMATriggerMode" lineNumber="171"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" functionName="timerSelectDmaTriggerOutput" lineNumber="217"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" functionName="timerSetDmaBurstStartingRegister" lineNumber="289"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c" functionName="timerSetDmaBurstLength" lineNumber="417"/>
+    <functioncall functionName="TIMER_INVALID_DMA_ASSIGNMENT"/>
+    <functioncall functionName="TIMER_INVALID_DMA_BURST_LENGTH"/>
+    <functioncall functionName="TIMER_INVALID_DMA_BURST_STARTING_REGISTER"/>
+    <functioncall functionName="TIMER_INVALID_TIMER"/>
+    <functioncall functionName="TIMER_OK"/>
+    <functioncall functionName="TIM_CR2_MMS_0"/>
+    <functioncall functionName="TIM_CR2_MMS_2"/>
+    <functioncall functionName="TIM_DCR_DBA_0"/>
+    <functioncall functionName="TIM_DCR_DBA_1"/>
+    <functioncall functionName="TIM_DCR_DBA_2"/>
+    <functioncall functionName="TIM_DCR_DBL_0"/>
+    <functioncall functionName="TIM_DCR_DBL_1"/>
+    <functioncall functionName="TIM_DCR_DBL_2"/>
+    <functioncall functionName="timerVerifyDmaAssignment"/>
+    <functioncall functionName="timerVerifyDmaBurstStartingRegister"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="36" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="101" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="171" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="217" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="289" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="417" column="21"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="Rule Advisory The precedence of operators within expressions should be made explicit" verbose="Rule Advisory The precedence of operators within expressions should be made explicit" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="431" column="24"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="40" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="105" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="293" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="423" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="428" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="433" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="43" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="108" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="297" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="437" column="5"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="38" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="103" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="291" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="421" column="9"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="426" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MAX_NUM_TIMER_REGISTERS&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MAX_NUM_TIMER_REGISTERS&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/dma.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\dma.c" line="431" column="27"/>
+        </error>
+</analyzerinfo>

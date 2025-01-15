@@ -1,0 +1,6 @@
+timerEnableDMA call:[timerVerifyDmaAssignment]
+timerDisableDMA call:[timerVerifyDmaAssignment]
+timerSelectDMATriggerMode
+timerSelectDmaTriggerOutput
+timerSetDmaBurstStartingRegister call:[timerVerifyDmaAssignment]
+timerSetDmaBurstLength call:[timerVerifyDmaAssignment,timerVerifyDmaBurstStartingRegister]

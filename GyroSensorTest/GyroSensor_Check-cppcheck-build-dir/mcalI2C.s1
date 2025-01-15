@@ -1,0 +1,24 @@
+__i2c_start
+__i2c_stop
+__i2c_dummy_read_SR1_SR2
+__i2c_Chk_TX_empty
+i2cVerifyI2C
+i2cVerifyDutyCycle
+i2cSelectI2C
+i2cDeselectI2C call:[i2cVerifyI2C]
+i2cSetClkSpd
+i2cInitI2C call:[i2cSetClkSpd,i2cVerifyDutyCycle,rccGetPclk1Freq]
+i2cSendByte call:[__i2c_Chk_TX_empty,__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cSendByteToSlaveReg call:[__i2c_Chk_TX_empty,__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cBurstWrite call:[__i2c_Chk_TX_empty,__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cReadByte call:[__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cReadByteFromSlaveReg call:[__i2c_Chk_TX_empty,__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cBurstRegRead call:[__i2c_Chk_TX_empty,__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cBurstRead call:[__i2c_dummy_read_SR1_SR2,__i2c_start,__i2c_stop]
+i2cEnableDevice
+i2cDisableDevice
+i2cSetPeripheralClockFreq call:[rccGetPclk1Freq]
+i2cSetDutyCycle
+i2cSetRiseTime
+i2cFindSlaveAddr call:[__i2c_dummy_read_SR1_SR2,__i2c_start]
+i2cResetDevice

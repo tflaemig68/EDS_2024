@@ -1,0 +1,676 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="16929152473401263753">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalDMAC.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalDMAC.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="37" column="0"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;dmac&apos; can be declared as pointer to const" verbose="Parameter &apos;dmac&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="224" column="46" info="Parameter &apos;dmac&apos; can be declared as pointer to const"/>
+            <symbol>dmac</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;dmac&apos; can be declared as pointer to const" verbose="Parameter &apos;dmac&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="260" column="48" info="Parameter &apos;dmac&apos; can be declared as pointer to const"/>
+            <symbol>dmac</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;stream&apos; can be declared as pointer to const" verbose="Parameter &apos;stream&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="779" column="72" info="Parameter &apos;stream&apos; can be declared as pointer to const"/>
+            <symbol>stream</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;stream&apos; can be declared as pointer to const" verbose="Parameter &apos;stream&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="853" column="67" info="Parameter &apos;stream&apos; can be declared as pointer to const"/>
+            <symbol>stream</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;irqList&apos; can be declared as pointer to const" verbose="Parameter &apos;irqList&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1407" column="84" info="Parameter &apos;irqList&apos; can be declared as pointer to const"/>
+            <symbol>irqList</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;irqList&apos; can be declared as pointer to const" verbose="Parameter &apos;irqList&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1500" column="85" info="Parameter &apos;irqList&apos; can be declared as pointer to const"/>
+            <symbol>irqList</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;dma&apos; can be declared as pointer to const" verbose="Parameter &apos;dma&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1536" column="49" info="Parameter &apos;dma&apos; can be declared as pointer to const"/>
+            <symbol>dma</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;dma&apos; can be declared as pointer to const" verbose="Parameter &apos;dma&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1563" column="50" info="Parameter &apos;dma&apos; can be declared as pointer to const"/>
+            <symbol>dma</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1351:20" call-funcname="dmacEnableInterrupt" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1415" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1407:20" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1444:20" call-funcname="dmacDisableInterrupt" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1508" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1500:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:299:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="301" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:331:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="333" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:556:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="558" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1536:10" my-argnr="1" my-argname="dma" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1538" col="12" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1563:10" my-argnr="1" my-argname="dma" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1565" col="12" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1633:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1635" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1661:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1663" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1732:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1734" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1760:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1762" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1842:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1844" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1877:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1879" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:299:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="301" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:331:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="333" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1536:10" my-argnr="1" my-argname="dma" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1538" col="12" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1563:10" my-argnr="1" my-argname="dma" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1565" col="12" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1633:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1635" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1661:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1663" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1732:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1734" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1760:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1762" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1792:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1794" col="11" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1842:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1844" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c:1877:20" my-argnr="1" my-argname="stream" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" line="1879" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyDirection" lineNumber="44"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyDataFormat" lineNumber="59"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyIrqType" lineNumber="74"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyNumData" lineNumber="90"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyChannelNum" lineNumber="105"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyPriorityLevel" lineNumber="120"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyIncrementMode" lineNumber="132"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyNumBeats" lineNumber="144"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyDMAFlowController" lineNumber="156"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyPeripheralOffsetSize" lineNumber="168"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyCurrentTargetMem" lineNumber="180"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacVerifyFifoThresholdLvl" lineNumber="192"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacInitDMAC" lineNumber="224"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSelectDMAC" lineNumber="260"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacEnableStream" lineNumber="299"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacDisableStream" lineNumber="331"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetStreamAndChannel" lineNumber="402"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacAssignStreamAndChannel" lineNumber="482"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetMemoryAddress" lineNumber="520"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetPeripheralAddress" lineNumber="556"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetDataFlowDirection" lineNumber="585"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetNumData" lineNumber="620"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetDataFormat" lineNumber="663"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetPeripheralDataFormat" lineNumber="703"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetMemoryDataFormat" lineNumber="741"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacClearAllStreamIrqFlags" lineNumber="779"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacClearInterruptFlag" lineNumber="853"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetMemoryIncrementMode" lineNumber="1081"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetPeripheralIncrementMode" lineNumber="1127"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetMemoryBurstBeats" lineNumber="1181"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetPeripheralBurstBeats" lineNumber="1242"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetPriorityLevel" lineNumber="1299"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacEnableInterrupt" lineNumber="1351"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacEnableInterruptList" lineNumber="1407"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacDisableInterrupt" lineNumber="1444"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacDisableInterruptList" lineNumber="1500"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacGetLowInterruptStatus" lineNumber="1536"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacGetHighInterruptStatus" lineNumber="1563"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSelectDMAFlowController" lineNumber="1591"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacEnableCircularMode" lineNumber="1633"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacDisableCircularMode" lineNumber="1661"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacConfigPeriphOffsSize" lineNumber="1690"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacEnableDoubleBufferMode" lineNumber="1732"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacDisableDoubleBufferMode" lineNumber="1760"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSelectMem2MemTarget" lineNumber="1792"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacEnableFifoMode" lineNumber="1842"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacDisableFifoMode" lineNumber="1877"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c" functionName="dmacSetFifoThreshold" lineNumber="1906"/>
+    <functioncall functionName="DMAC_INVALID_CHANNEL"/>
+    <functioncall functionName="DMAC_INVALID_DATA_FORMAT"/>
+    <functioncall functionName="DMAC_INVALID_DATA_LEN"/>
+    <functioncall functionName="DMAC_INVALID_DEST_DATA_FORMAT"/>
+    <functioncall functionName="DMAC_INVALID_DIR"/>
+    <functioncall functionName="DMAC_INVALID_FLOW_CONTROLLER"/>
+    <functioncall functionName="DMAC_INVALID_INCREMENT"/>
+    <functioncall functionName="DMAC_INVALID_INCREMENTAL_MODE"/>
+    <functioncall functionName="DMAC_INVALID_IRQ_TYPE"/>
+    <functioncall functionName="DMAC_INVALID_NUM_BEATS"/>
+    <functioncall functionName="DMAC_INVALID_OFFSET_SIZE"/>
+    <functioncall functionName="DMAC_INVALID_PRIORITY_SETTING"/>
+    <functioncall functionName="DMAC_INVALID_SRC_DATA_FORMAT"/>
+    <functioncall functionName="DMAC_INVALID_TARGET_MEMORY"/>
+    <functioncall functionName="DMAC_INVALID_THRESHOLD_LEVEL"/>
+    <functioncall functionName="DMAC_NOT_IN_DOUBLE_BUFFER_MODE"/>
+    <functioncall functionName="DMAC_OK"/>
+    <functioncall functionName="DMA_HIFCR_CTCIF4"/>
+    <functioncall functionName="DMA_HIFCR_CTCIF5"/>
+    <functioncall functionName="DMA_HIFCR_CTCIF6"/>
+    <functioncall functionName="DMA_HIFCR_CTCIF7"/>
+    <functioncall functionName="DMA_LIFCR_CTCIF0"/>
+    <functioncall functionName="DMA_LIFCR_CTCIF1"/>
+    <functioncall functionName="DMA_LIFCR_CTCIF2"/>
+    <functioncall functionName="DMA_LIFCR_CTCIF3"/>
+    <functioncall functionName="DMA_SxCR_MBURST_0"/>
+    <functioncall functionName="DMA_SxCR_PBURST_0"/>
+    <functioncall functionName="DMA_SxCR_PL_1"/>
+    <functioncall functionName="DMA_SxFCR_FTH_0"/>
+    <functioncall functionName="dmacDisableInterrupt"/>
+    <functioncall functionName="dmacEnableInterrupt"/>
+    <functioncall functionName="dmacVerifyChannelNum"/>
+    <functioncall functionName="dmacVerifyCurrentTargetMem"/>
+    <functioncall functionName="dmacVerifyDMAFlowController"/>
+    <functioncall functionName="dmacVerifyDataFormat"/>
+    <functioncall functionName="dmacVerifyDirection"/>
+    <functioncall functionName="dmacVerifyFifoThresholdLvl"/>
+    <functioncall functionName="dmacVerifyIncrementMode"/>
+    <functioncall functionName="dmacVerifyIrqType"/>
+    <functioncall functionName="dmacVerifyNumBeats"/>
+    <functioncall functionName="dmacVerifyNumData"/>
+    <functioncall functionName="dmacVerifyPeripheralOffsetSize"/>
+    <functioncall functionName="dmacVerifyPriorityLevel"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="224" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="260" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="299" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="331" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="402" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="482" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="520" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="556" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="585" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="620" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="663" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="703" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="741" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="779" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="853" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1081" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1127" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1181" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1242" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1299" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1351" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1407" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1444" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1500" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1536" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1563" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1591" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1633" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1661" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1690" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1732" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1760" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1792" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1842" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1877" column="20"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1906" column="20"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="48" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="63" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="79" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="94" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="110" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="124" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="136" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="148" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="160" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="172" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="184" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="196" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="415" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="419" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="423" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="427" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="431" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="486" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="589" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="624" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="667" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="707" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="745" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1085" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1131" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1185" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1246" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1303" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1355" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1448" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1595" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1694" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1796" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1801" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1910" column="9"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="233" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="269" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="529" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1055" column="5"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1606" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="857" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="883" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="908" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="933" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="958" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="983" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1008" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1033" column="9"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1358" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1451" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1598" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1697" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1803" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1916" column="5"/>
+        </error>
+        <error id="misra-c2012-16.6" severity="style" msg="Rule Required Every switch statement shall have at least two switch-clauses" verbose="Rule Required Every switch statement shall have at least two switch-clauses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1598" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PER_2_MEM&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PER_2_MEM&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="46" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_2_PER&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_2_PER&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="46" column="32"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_2_MEM&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_2_MEM&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="46" column="54"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BYTE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BYTE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="61" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HALFWORD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HALFWORD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="61" column="30"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;WORD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;WORD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="61" column="54"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DIRECT_MODE_ERR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DIRECT_MODE_ERR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="76" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TX_ERR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TX_ERR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="76" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TX_HALF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TX_HALF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="76" column="57"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TX_COMPLETE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;TX_COMPLETE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="77" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FIFO_ERROR_ENABLE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FIFO_ERROR_ENABLE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="77" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_MAX_DATA_LEN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_MAX_DATA_LEN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="92" column="19"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="107" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="107" column="32"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="107" column="54"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="107" column="76"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="108" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="108" column="32"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="108" column="54"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CHANNEL_7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="108" column="76"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_LOW&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_LOW&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="122" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_MEDIUM&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_MEDIUM&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="122" column="32"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="122" column="57"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_VERY_HIGH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PRIO_VERY_HIGH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="122" column="80"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INCR_ENABLE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INCR_ENABLE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="134" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INCR_DISABLE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;INCR_DISABLE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="134" column="35"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="146" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="146" column="35"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_8&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_8&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="146" column="60"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_16&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;BEATSIZE_16&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="146" column="85"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_IS_CTRL&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_IS_CTRL&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="158" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PERIPHERAL_IS_CTRL&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PERIPHERAL_IS_CTRL&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="158" column="39"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PSIZE_VAL&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PSIZE_VAL&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="170" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FIXED_TO_WORD&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FIXED_TO_WORD&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="170" column="35"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CT_IS_MEM_0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CT_IS_MEM_0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="182" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CT_IS_MEM_1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CT_IS_MEM_1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="182" column="34"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ONE_FOURTH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ONE_FOURTH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="194" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HALF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;HALF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="194" column="32"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;THREE_FOURTH&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;THREE_FOURTH&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="194" column="48"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FULL&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;FULL&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="194" column="72"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="226" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="230" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="262" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="266" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_SxCR_EN&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_SxCR_EN&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="334" column="25"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="522" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MEM_1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="526" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="782" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="782" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="788" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="788" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="794" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="794" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="800" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="800" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="806" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="806" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="812" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="812" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="818" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="818" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="824" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="824" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="855" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream0&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream0&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="855" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="881" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="881" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="906" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="906" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="931" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="931" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="956" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream4&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream4&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="956" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="981" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream5&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream5&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="981" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1006" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream6&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream6&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1006" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA1_Stream7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1031" column="15"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream7&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA2_Stream7&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1031" column="43"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_SxCR_DBM&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;DMA_SxCR_DBM&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalDMAC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalDMAC.c" line="1794" column="24"/>
+        </error>
+</analyzerinfo>

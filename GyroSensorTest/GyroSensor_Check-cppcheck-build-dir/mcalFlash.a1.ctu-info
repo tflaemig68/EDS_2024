@@ -1,0 +1,3 @@
+{"data":[{"column":6,"decl":false,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/MCAL\/Src\/mcalFlash.c","line":55,"name":"flashConfigWaitStates"}],"summary":"MisraExternalIdentifiers"}
+{"data":[],"summary":"MisraInternalIdentifiers"}
+{"data":[{"column":37,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/MCAL\/Src\/mcalFlash.c","line":55,"name":"sysclk"}],"summary":"MisraLocalIdentifiers"}

@@ -1,0 +1,33 @@
+usartVerifyUsart
+usartVerifyIrqType
+usartVerifyParity
+usartVerifyWordlen
+usartVerifyNumStopBits
+usartVerifyOverSampling
+usartVerifyRxEnableMode
+usartVerifyTxEnableMode
+usartVerifyDmaTxMode
+usartVerifyDmaRxMode
+usartEnableUsart call:[usartVerifyUsart]
+usartStartUsart call:[usartVerifyUsart]
+usartDisableUsart call:[usartVerifyUsart]
+usartSelectUsart call:[usartVerifyUsart]
+usartDeselectUsart call:[usartVerifyUsart]
+usartSetFlowCtrlMode
+usartEnableIrq call:[usartVerifyIrqType,usartVerifyUsart]
+usartDisableIrq call:[usartVerifyIrqType,usartVerifyUsart]
+usartSetBaudrate call:[SystemCoreClockUpdate,rccGetSysClock,usartVerifyUsart]
+usartSetCommParams call:[usartEnableReceiver,usartEnableTransmitter,usartEnableUsart,usartSelectUsart,usartSetBaudrate,usartSetNumStopBits,usartSetParity,usartSetWordlength,usartVerifyNumStopBits,usartVerifyParity,usartVerifyUsart,usartVerifyWordlen]
+usartSetWordlength call:[usartVerifyUsart,usartVerifyWordlen]
+usartSetParity call:[usartVerifyParity,usartVerifyUsart]
+usartSetNumStopBits call:[usartVerifyNumStopBits,usartVerifyUsart]
+usartSetOversampling call:[usartVerifyOverSampling,usartVerifyUsart]
+usartEnableReceiver call:[usartVerifyRxEnableMode,usartVerifyUsart]
+usartEnableTransmitter call:[usartVerifyTxEnableMode,usartVerifyUsart]
+usartEnableIrqList call:[usartEnableIrq,usartVerifyUsart] noreturn:[usartEnableIrq]
+usartSendByte call:[while]
+usartSendString call:[while] noreturn:[while]
+usartInitBuffer
+usartResetIrqFlag call:[usartVerifyIrqType,usartVerifyUsart]
+usartSetDmaTxMode call:[usartVerifyDmaTxMode,usartVerifyUsart]
+usartSetDmaRxMode call:[usartVerifyDmaRxMode,usartVerifyUsart]

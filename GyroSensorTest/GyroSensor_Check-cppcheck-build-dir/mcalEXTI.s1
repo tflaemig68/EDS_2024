@@ -1,0 +1,8 @@
+extiVerifyIrqNum
+extiVerifyTrigger
+extiInit
+extiConfigIrq call:[gpioVerifyPin,gpioVerifyPort]
+extiEnableIrq call:[extiVerifyIrqNum]
+extiDisableIrq call:[extiVerifyIrqNum]
+extiSetTriggerEdge call:[extiVerifyIrqNum,extiVerifyTrigger]
+extiResetPendingIRQ

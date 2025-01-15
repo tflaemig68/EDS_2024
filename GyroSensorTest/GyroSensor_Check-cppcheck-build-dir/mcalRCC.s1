@@ -1,0 +1,22 @@
+rccSetAPBPrescaler
+rccGetSysClock
+rccGetHclkFreq global:[APBAHBPrescTable] call:[POSITION_VAL,rccGetSysClock]
+rccGetPclk1Freq global:[APBAHBPrescTable] call:[POSITION_VAL,rccGetHclkFreq,return] noreturn:[return]
+rccGetPclk2Freq global:[APBAHBPrescTable] call:[POSITION_VAL,rccGetHclkFreq,return] noreturn:[return]
+rccEnableHSE
+rccEnableHSI
+rccEnableMainPLL
+rccDisableMainPLL
+rccEnableI2SPLL
+rccDisableI2SPLL
+rccEnableClockSecuritySystem
+rccDisableClockSecuritySystem
+rccSetHSITrimmingValue
+rccGetHSICalibrationValue
+rccSelectPLLClockSource
+rccSelectSysclkSrc
+rccSetSysclkFreq
+rccAssignClk2MCO call:[gpioInitPort,gpioSelectAltFunc,gpioSelectPinMode,gpioSetOutputSpeed] noreturn:[gpioSetOutputSpeed]
+rccSetAHBPrescaler
+rccSetAPB1Prescaler
+rccSetAPB2Prescaler

@@ -1,0 +1,17 @@
+timerSelectTimer
+timerDeselectTimer
+timerEnableAutoReloadPreload
+timerDisableAutoReloadPreload
+timerSetPrescaler
+timerGetPrescaler
+timerSetAutoReloadValue
+timerGetAutoReloadValue call:[return] noreturn:[return]
+timerSetCounter
+timerGetCounter call:[return] noreturn:[return]
+timerResetCounter
+timerStartTimer
+timerStopTimer
+timerEnableOneShot
+timerDisableOneShot
+timerGetOneShotMode
+timerSetCountingDir

@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="16827093008604942660">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="32" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="33" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="34" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalRCC.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalRCC.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="35" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalI2C.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalI2C.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="36" column="0"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="0" column="0"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="81" column="21"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;i2c-&gt;CR1&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;i2c-&gt;CR1&apos; is reassigned a value before the old one has been used." cwe="563" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="240" column="14" info="i2c-&gt;CR1 is overwritten"/>
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="239" column="14" info="i2c-&gt;CR1 is assigned"/>
+            <symbol>i2c-&gt;CR1</symbol>
+        </error>
+        <error id="unsignedPositive" severity="style" msg="Unsigned expression &apos;riseTime&apos; can&apos;t be negative so it is unnecessary to test it." verbose="Unsigned expression &apos;riseTime&apos; can&apos;t be negative so it is unnecessary to test it." cwe="570" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="735" column="18" info="Unsigned positive"/>
+            <symbol>riseTime</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;i2c&apos; can be declared as pointer to const" verbose="Parameter &apos;i2c&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="79" column="58" info="Parameter &apos;i2c&apos; can be declared as pointer to const"/>
+            <symbol>i2c</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;i2c&apos; can be declared as pointer to const" verbose="Parameter &apos;i2c&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="88" column="52" info="Parameter &apos;i2c&apos; can be declared as pointer to const"/>
+            <symbol>i2c</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;i2c&apos; can be declared as pointer to const" verbose="Parameter &apos;i2c&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="101" column="39" info="Parameter &apos;i2c&apos; can be declared as pointer to const"/>
+            <symbol>i2c</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;i2c&apos; can be declared as pointer to const" verbose="Parameter &apos;i2c&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="130" column="45" info="Parameter &apos;i2c&apos; can be declared as pointer to const"/>
+            <symbol>i2c</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;data&apos; can be declared as pointer to const" verbose="Parameter &apos;data&apos; can be declared as pointer to const" cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="363" column="75" info="Parameter &apos;data&apos; can be declared as pointer to const"/>
+            <symbol>data</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:101:13" call-funcname="i2cVerifyI2C" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="156" col="9" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:154:19" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:67:20" call-funcname="__i2c_start" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="772" col="5" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:768:9" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:67:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="69" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:73:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="75" col="3" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:79:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="81" col="11" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:411:19" my-argnr="3" my-argname="data" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="426" col="6" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:613:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="615" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:640:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="642" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:668:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="671" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:701:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="703" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:731:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="733" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:67:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="69" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:73:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="75" col="3" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:79:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="81" col="11" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:88:20" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="92" col="10" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:277:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="281" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:320:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="322" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:363:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="367" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:411:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="413" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:453:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="455" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:453:19" my-argnr="4" my-argname="data" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="481" col="6" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:505:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="507" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:556:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="558" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:613:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="615" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:640:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="642" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:668:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="671" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:701:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="703" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:731:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="733" col="5" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c:805:19" my-argnr="1" my-argname="i2c" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" line="807" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="__i2c_start" lineNumber="67"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="__i2c_stop" lineNumber="73"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="__i2c_dummy_read_SR1_SR2" lineNumber="79"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="__i2c_Chk_TX_empty" lineNumber="88"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cVerifyI2C" lineNumber="101"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cVerifyDutyCycle" lineNumber="113"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSelectI2C" lineNumber="130"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cDeselectI2C" lineNumber="154"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSetClkSpd" lineNumber="181"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cInitI2C" lineNumber="231"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSendByte" lineNumber="277"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSendByteToSlaveReg" lineNumber="320"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cBurstWrite" lineNumber="363"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cReadByte" lineNumber="411"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cReadByteFromSlaveReg" lineNumber="453"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cBurstRegRead" lineNumber="505"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cBurstRead" lineNumber="556"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cEnableDevice" lineNumber="613"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cDisableDevice" lineNumber="640"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSetPeripheralClockFreq" lineNumber="668"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSetDutyCycle" lineNumber="701"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cSetRiseTime" lineNumber="731"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cFindSlaveAddr" lineNumber="768"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c" functionName="i2cResetDevice" lineNumber="805"/>
+    <functioncall functionName="I2C_CR1_SWRST"/>
+    <functioncall functionName="I2C_INVALID_CLOCK_SPEED"/>
+    <functioncall functionName="I2C_INVALID_DUTY_CYCLE"/>
+    <functioncall functionName="I2C_INVALID_TYPE"/>
+    <functioncall functionName="I2C_OK"/>
+    <functioncall functionName="__i2c_Chk_TX_empty"/>
+    <functioncall functionName="__i2c_dummy_read_SR1_SR2"/>
+    <functioncall functionName="__i2c_start"/>
+    <functioncall functionName="__i2c_stop"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="i2cSetClkSpd"/>
+    <functioncall functionName="i2cVerifyDutyCycle"/>
+    <functioncall functionName="i2cVerifyI2C"/>
+    <functioncall functionName="rccGetPclk1Freq"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+        <error id="misra-c2012-2.7" severity="style" msg="Rule Advisory There should be no unused parameters in functions" verbose="Rule Advisory There should be no unused parameters in functions" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="231" column="79"/>
+        </error>
+        <error id="misra-c2012-2.7" severity="style" msg="Rule Advisory There should be no unused parameters in functions" verbose="Rule Advisory There should be no unused parameters in functions" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="668" column="71"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="130" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="154" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="181" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="231" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="277" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="320" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="363" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="411" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="453" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="505" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="556" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="613" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="640" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="668" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="701" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="731" column="19"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="768" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="805" column="19"/>
+        </error>
+        <error id="misra-c2012-10.1" severity="style" msg="Rule Required Operands shall not be of an inappropriate essential type" verbose="Rule Required Operands shall not be of an inappropriate essential type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="248" column="24"/>
+        </error>
+        <error id="misra-c2012-10.1" severity="style" msg="Rule Required Operands shall not be of an inappropriate essential type" verbose="Rule Required Operands shall not be of an inappropriate essential type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="249" column="21"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="244" column="23"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="419" column="26"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="472" column="26"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="525" column="23"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="530" column="13"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="563" column="26"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="570" column="16"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="673" column="23"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="735" column="18"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="Rule Advisory The precedence of operators within expressions should be made explicit" verbose="Rule Advisory The precedence of operators within expressions should be made explicit" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="735" column="23"/>
+        </error>
+        <error id="misra-c2012-12.2" severity="style" msg="Rule Required The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand" verbose="Rule Required The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="249" column="21"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="380" column="17"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="481" column="13"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="538" column="12"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="545" column="14"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="578" column="21"/>
+        </error>
+        <error id="misra-c2012-13.3" severity="style" msg="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" verbose="Rule Advisory A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="584" column="23"/>
+        </error>
+        <error id="misra-c2012-14.4" severity="style" msg="Rule Required The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type" verbose="Rule Required The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="81" column="8"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="105" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="117" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="158" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="226" column="6"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="236" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="797" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="801" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="49" column="49"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="51" column="49"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="52" column="49"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="53" column="49"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="57" column="49"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="59" column="49"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="70" column="2"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="76" column="3"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="92" column="2"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="144" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="173" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="70" column="22"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="76" column="23"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_TXE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_TXE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="92" column="21"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="103" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="103" column="27"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="103" column="44"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_DUTY_CYCLE_2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_DUTY_CYCLE_2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="115" column="10"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IC2_DUTY_CYCLE_16_9&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;IC2_DUTY_CYCLE_16_9&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="115" column="38"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="133" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="137" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="141" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="162" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="166" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C3&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C3&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="170" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_50&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_50&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="183" column="11"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_100&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_100&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="183" column="36"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_200&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_200&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="184" column="8"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_400&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_400&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="184" column="33"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_1Mz&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_CLOCK_1Mz&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="184" column="59"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="186" column="6"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="281" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="284" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="288" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="295" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="322" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="325" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="328" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="338" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="367" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="371" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="374" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="381" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="386" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="413" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="416" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="420" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="424" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="455" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="458" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="461" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="470" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="473" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="480" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="507" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="511" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="514" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_BTF&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="521" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_SB&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="524" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="526" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="536" column="4"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="544" column="4"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="558" column="2"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="564" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="577" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_RXNE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="583" column="13"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR1_ADDR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="795" column="20"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;I2C_SR2_BUSY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="807" column="5"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="380" column="24"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="481" column="10"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="538" column="9"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="545" column="10"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="546" column="7"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="578" column="18"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="584" column="19"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="585" column="16"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="49" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="51" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="52" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="53" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="55" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="56" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="57" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="59" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="60" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="61" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="62" column="0"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalI2C.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalI2C.c" line="63" column="0"/>
+        </error>
+</analyzerinfo>

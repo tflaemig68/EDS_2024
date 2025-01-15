@@ -1,0 +1,4 @@
+timerClearIrqFlag call:[timerClearInterruptFlag] noreturn:[timerClearInterruptFlag]
+timerEnableInterrupt call:[timerVerifyIrqAssignment]
+timerDisableInterrupt call:[timerVerifyIrqAssignment]
+timerClearInterruptFlag call:[timerVerifyIrqAssignment]

@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="12945110802877211204">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="41" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="42" column="0"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &quot;mcalRCC.h&quot; not found." verbose="Include file: &quot;mcalRCC.h&quot; not found.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="44" column="0"/>
+        </error>
+        <error id="unsignedPositive" severity="style" msg="Unsigned expression &apos;trim&apos; can&apos;t be negative so it is unnecessary to test it." verbose="Unsigned expression &apos;trim&apos; can&apos;t be negative so it is unnecessary to test it." cwe="570" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="640" column="15" info="Unsigned positive"/>
+            <symbol>trim</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPBPrescaler" lineNumber="101"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetSysClock" lineNumber="163"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHclkFreq" lineNumber="222"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk1Freq" lineNumber="241"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk2Freq" lineNumber="260"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSE" lineNumber="295"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSI" lineNumber="338"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableMainPLL" lineNumber="374"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableMainPLL" lineNumber="409"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableI2SPLL" lineNumber="517"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableI2SPLL" lineNumber="552"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableClockSecuritySystem" lineNumber="584"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableClockSecuritySystem" lineNumber="609"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetHSITrimmingValue" lineNumber="638"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHSICalibrationValue" lineNumber="668"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectPLLClockSource" lineNumber="706"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectSysclkSrc" lineNumber="746"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetSysclkFreq" lineNumber="816"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccAssignClk2MCO" lineNumber="933"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAHBPrescaler" lineNumber="1035"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB1Prescaler" lineNumber="1104"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB2Prescaler" lineNumber="1158"/>
+    <functioncall functionName="AF0"/>
+    <functioncall functionName="ALTFUNC"/>
+    <functioncall functionName="GPIOA"/>
+    <functioncall functionName="GPIOC"/>
+    <functioncall functionName="HIGH_SPEED"/>
+    <functioncall functionName="HSE_VALUE"/>
+    <functioncall functionName="HSI_VALUE"/>
+    <functioncall functionName="PIN8"/>
+    <functioncall functionName="PIN9"/>
+    <functioncall functionName="POSITION_VAL"/>
+    <functioncall functionName="RCC_CFGR_HPRE"/>
+    <functioncall functionName="RCC_CFGR_MCO1_1"/>
+    <functioncall functionName="RCC_CFGR_MCO2_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE2"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_1"/>
+    <functioncall functionName="RCC_CFGR_SW_0"/>
+    <functioncall functionName="RCC_CR_HSEON_Msk"/>
+    <functioncall functionName="RCC_CR_HSION_Msk"/>
+    <functioncall functionName="SystemCoreClock"/>
+    <functioncall functionName="gpioInitPort"/>
+    <functioncall functionName="gpioSelectAltFunc"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSetOutputSpeed"/>
+    <functioncall functionName="rccGetHclkFreq"/>
+    <functioncall functionName="rccGetSysClock"/>
+  </FileInfo>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="0" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPBPrescaler" lineNumber="101"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetSysClock" lineNumber="163"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHclkFreq" lineNumber="222"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk1Freq" lineNumber="241"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk2Freq" lineNumber="260"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSE" lineNumber="295"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSI" lineNumber="338"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableMainPLL" lineNumber="374"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableMainPLL" lineNumber="409"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableI2SPLL" lineNumber="517"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableI2SPLL" lineNumber="552"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableClockSecuritySystem" lineNumber="584"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableClockSecuritySystem" lineNumber="609"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetHSITrimmingValue" lineNumber="638"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHSICalibrationValue" lineNumber="668"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectPLLClockSource" lineNumber="706"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectSysclkSrc" lineNumber="746"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetSysclkFreq" lineNumber="816"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccAssignClk2MCO" lineNumber="933"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAHBPrescaler" lineNumber="1035"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB1Prescaler" lineNumber="1104"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB2Prescaler" lineNumber="1158"/>
+    <functioncall functionName="AF0"/>
+    <functioncall functionName="ALTFUNC"/>
+    <functioncall functionName="GPIOA"/>
+    <functioncall functionName="GPIOC"/>
+    <functioncall functionName="HIGH_SPEED"/>
+    <functioncall functionName="HSE_VALUE"/>
+    <functioncall functionName="HSI_VALUE"/>
+    <functioncall functionName="PIN8"/>
+    <functioncall functionName="PIN9"/>
+    <functioncall functionName="POSITION_VAL"/>
+    <functioncall functionName="RCC_CFGR_HPRE"/>
+    <functioncall functionName="RCC_CFGR_MCO1_1"/>
+    <functioncall functionName="RCC_CFGR_MCO2_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE2"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_1"/>
+    <functioncall functionName="RCC_CFGR_SW_0"/>
+    <functioncall functionName="RCC_CR_HSEON_Msk"/>
+    <functioncall functionName="RCC_CR_HSION_Msk"/>
+    <functioncall functionName="SystemCoreClock"/>
+    <functioncall functionName="gpioInitPort"/>
+    <functioncall functionName="gpioSelectAltFunc"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSetOutputSpeed"/>
+    <functioncall functionName="rccGetHclkFreq"/>
+    <functioncall functionName="rccGetSysClock"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPBPrescaler" lineNumber="101"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetSysClock" lineNumber="163"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHclkFreq" lineNumber="222"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk1Freq" lineNumber="241"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk2Freq" lineNumber="260"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSE" lineNumber="295"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSI" lineNumber="338"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableMainPLL" lineNumber="374"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableMainPLL" lineNumber="409"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableI2SPLL" lineNumber="517"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableI2SPLL" lineNumber="552"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableClockSecuritySystem" lineNumber="584"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableClockSecuritySystem" lineNumber="609"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetHSITrimmingValue" lineNumber="638"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHSICalibrationValue" lineNumber="668"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectPLLClockSource" lineNumber="706"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectSysclkSrc" lineNumber="746"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetSysclkFreq" lineNumber="816"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccAssignClk2MCO" lineNumber="933"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAHBPrescaler" lineNumber="1035"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB1Prescaler" lineNumber="1104"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB2Prescaler" lineNumber="1158"/>
+    <functioncall functionName="AF0"/>
+    <functioncall functionName="ALTFUNC"/>
+    <functioncall functionName="GPIOA"/>
+    <functioncall functionName="GPIOC"/>
+    <functioncall functionName="HIGH_SPEED"/>
+    <functioncall functionName="HSE_VALUE"/>
+    <functioncall functionName="HSI_VALUE"/>
+    <functioncall functionName="PIN8"/>
+    <functioncall functionName="PIN9"/>
+    <functioncall functionName="POSITION_VAL"/>
+    <functioncall functionName="RCC_CFGR_HPRE"/>
+    <functioncall functionName="RCC_CFGR_MCO1_1"/>
+    <functioncall functionName="RCC_CFGR_MCO2_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE2"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_1"/>
+    <functioncall functionName="RCC_CFGR_SW_0"/>
+    <functioncall functionName="RCC_CR_HSEON_Msk"/>
+    <functioncall functionName="RCC_CR_HSION_Msk"/>
+    <functioncall functionName="SystemCoreClock"/>
+    <functioncall functionName="gpioInitPort"/>
+    <functioncall functionName="gpioSelectAltFunc"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSetOutputSpeed"/>
+    <functioncall functionName="rccGetHclkFreq"/>
+    <functioncall functionName="rccGetSysClock"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPBPrescaler" lineNumber="101"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetSysClock" lineNumber="163"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHclkFreq" lineNumber="222"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk1Freq" lineNumber="241"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetPclk2Freq" lineNumber="260"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSE" lineNumber="295"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableHSI" lineNumber="338"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableMainPLL" lineNumber="374"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableMainPLL" lineNumber="409"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableI2SPLL" lineNumber="517"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableI2SPLL" lineNumber="552"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccEnableClockSecuritySystem" lineNumber="584"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccDisableClockSecuritySystem" lineNumber="609"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetHSITrimmingValue" lineNumber="638"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccGetHSICalibrationValue" lineNumber="668"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectPLLClockSource" lineNumber="706"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSelectSysclkSrc" lineNumber="746"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetSysclkFreq" lineNumber="816"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccAssignClk2MCO" lineNumber="933"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAHBPrescaler" lineNumber="1035"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB1Prescaler" lineNumber="1104"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c" functionName="rccSetAPB2Prescaler" lineNumber="1158"/>
+    <functioncall functionName="AF0"/>
+    <functioncall functionName="ALTFUNC"/>
+    <functioncall functionName="GPIOA"/>
+    <functioncall functionName="GPIOC"/>
+    <functioncall functionName="HIGH_SPEED"/>
+    <functioncall functionName="HSE_VALUE"/>
+    <functioncall functionName="HSI_VALUE"/>
+    <functioncall functionName="PIN8"/>
+    <functioncall functionName="PIN9"/>
+    <functioncall functionName="POSITION_VAL"/>
+    <functioncall functionName="RCC_CFGR_HPRE"/>
+    <functioncall functionName="RCC_CFGR_MCO1_1"/>
+    <functioncall functionName="RCC_CFGR_MCO2_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE1_1"/>
+    <functioncall functionName="RCC_CFGR_PPRE2"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_0"/>
+    <functioncall functionName="RCC_CFGR_PPRE2_1"/>
+    <functioncall functionName="RCC_CFGR_SW_0"/>
+    <functioncall functionName="RCC_CR_HSEON_Msk"/>
+    <functioncall functionName="RCC_CR_HSION_Msk"/>
+    <functioncall functionName="SystemCoreClock"/>
+    <functioncall functionName="gpioInitPort"/>
+    <functioncall functionName="gpioSelectAltFunc"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSetOutputSpeed"/>
+    <functioncall functionName="rccGetHclkFreq"/>
+    <functioncall functionName="rccGetSysClock"/>
+  </FileInfo>
+        <error id="misra-c2012-3.1" severity="style" msg="Rule Required The character sequences /* and // shall not be used within a comment" verbose="Rule Required The character sequences /* and // shall not be used within a comment" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="445" column="1"/>
+        </error>
+        <error id="misra-c2012-3.1" severity="style" msg="Rule Required The character sequences /* and // shall not be used within a comment" verbose="Rule Required The character sequences /* and // shall not be used within a comment" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="481" column="1"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="101" column="7"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="163" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="222" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="241" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="260" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="295" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="338" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="374" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="409" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="517" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="552" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="584" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="609" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="638" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="668" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="706" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="746" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="816" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="933" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1035" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1104" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1158" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="49" column="15"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="640" column="15"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="858" column="18"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="862" column="23"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="866" column="23"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="876" column="18"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="892" column="14"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="896" column="14"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="Rule Advisory The precedence of operators within expressions should be made explicit" verbose="Rule Advisory The precedence of operators within expressions should be made explicit" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="880" column="44"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="Rule Advisory The precedence of operators within expressions should be made explicit" verbose="Rule Advisory The precedence of operators within expressions should be made explicit" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="883" column="44"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="Rule Advisory The comma operator should not be used" verbose="Rule Advisory The comma operator should not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="935" column="27"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="Rule Advisory The comma operator should not be used" verbose="Rule Advisory The comma operator should not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="936" column="22"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="715" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" verbose="Rule Required All if \342\200\246 else if constructs shall be terminated with an else statement Switch statements" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1007" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="104" column="6"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="748" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1038" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1107" column="5"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="1161" column="5"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="183" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PLLCFGR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PLLCFGR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="183" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_PLLCFGR_PLLSRC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_PLLCFGR_PLLSRC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="183" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_PLLCFGR_PLLSRC_HSI&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_PLLCFGR_PLLSRC_HSI&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="183" column="50"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="298" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="298" column="19"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_HSERDY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_HSERDY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="298" column="24"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="342" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="342" column="19"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_HSIRDY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_HSIRDY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="342" column="24"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="377" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="377" column="19"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLRDY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLRDY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="377" column="24"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="412" column="12"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="412" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLRDY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLRDY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="412" column="22"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="520" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="520" column="19"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLI2SRDY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLI2SRDY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="520" column="24"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="555" column="12"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;CR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="555" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLI2SRDY&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;RCC_CR_PLLI2SRDY&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="555" column="22"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PLL_SRC_HSE&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PLL_SRC_HSE&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="708" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PLL_SRC_HSI&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PLL_SRC_HSI&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="712" column="14"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MCO1&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MCO1&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="945" column="9"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MCO2&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;MCO2&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="977" column="14"/>
+        </error>
+        <error id="misra-c2012-21.1" severity="style" msg="Rule Required #de ne and #undef shall not be used on a reserved identier or reserved macro name" verbose="Rule Required #de ne and #undef shall not be used on a reserved identier or reserved macro name" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="46" column="0"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="824" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="847" column="14"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="826" column="17"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="849" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="839" column="17"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="841" column="17"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="832" column="17"/>
+        </error>
+        <error id="misra-c2012-17.8" severity="style" msg="Rule Advisory A function parameter should not be modified" verbose="Rule Advisory A function parameter should not be modified" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalRCC.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalRCC.c" line="834" column="17"/>
+        </error>
+</analyzerinfo>

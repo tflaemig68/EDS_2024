@@ -1,0 +1,6 @@
+"./Src/BALO.o"
+"./Src/MPU6050.o"
+"./Src/RotaryPushButton.o"
+"./Src/ST7735.o"
+"./Src/main.o"
+"./Startup/startup_stm32f401retx.o"

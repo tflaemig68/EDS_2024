@@ -1,0 +1,5 @@
+timerSetRepetitionCounter
+timerSetBreakAndDeadTime
+timerBdtrClearRegister
+timerBdtrEnableMainOutput
+timerBdtrEnableBreakInput

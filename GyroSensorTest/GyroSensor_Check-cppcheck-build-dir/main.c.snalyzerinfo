@@ -1,0 +1,2 @@
+i2cActivate call:[gpioInitPort,gpioSelectAltFunc,gpioSelectPinMode,gpioSetOutputType,i2cEnableDevice,i2cInitI2C,i2cSelectI2C] noreturn:[i2cEnableDevice]
+main call:[getAngleFromAcc,getGyro,getTemperature,i2cActivate,initMPU,initRotaryPushButton,initRotaryPushButtonLED,setRotaryColor] noreturn:[setRotaryColor]

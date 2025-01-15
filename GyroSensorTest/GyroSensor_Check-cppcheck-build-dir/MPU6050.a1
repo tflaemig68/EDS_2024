@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="11538095953459000014">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalI2C.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalI2C.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="9" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;math.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="10" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;MPU6050.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;MPU6050.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="12" column="0"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c:144:9" call-funcname="getAcceleration" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" line="177" col="24" my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c:176:9" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c:26:8" my-argnr="1" my-argname="sensor" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" line="28" col="2" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c:144:9" my-argnr="1" my-argname="sensor" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" line="149" col="31" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c:212:9" my-argnr="1" my-argname="sensor" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" line="217" col="31" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c:253:9" my-argnr="1" my-argname="sensor" file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" line="257" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" functionName="initMPU" lineNumber="26"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" functionName="getAcceleration" lineNumber="144"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" functionName="getAngleFromAcc" lineNumber="176"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" functionName="getGyro" lineNumber="212"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c" functionName="getTemperature" lineNumber="253"/>
+    <functioncall functionName="I2C_CLOCK_1Mz"/>
+    <functioncall functionName="MPU6050_ACCEL_CONFIG"/>
+    <functioncall functionName="MPU6050_ACCEL_RANGE_10"/>
+    <functioncall functionName="MPU6050_ACCEL_RANGE_2"/>
+    <functioncall functionName="MPU6050_ACCEL_RANGE_4"/>
+    <functioncall functionName="MPU6050_ACCEL_RANGE_8"/>
+    <functioncall functionName="MPU6050_AccXYZ"/>
+    <functioncall functionName="MPU6050_CONFIG"/>
+    <functioncall functionName="MPU6050_GYRO_CONFIG"/>
+    <functioncall functionName="MPU6050_GYRO_FSCALE_1000"/>
+    <functioncall functionName="MPU6050_GYRO_FSCALE_2000"/>
+    <functioncall functionName="MPU6050_GYRO_FSCALE_250"/>
+    <functioncall functionName="MPU6050_GYRO_FSCALE_500"/>
+    <functioncall functionName="MPU6050_GyroXYZ"/>
+    <functioncall functionName="MPU6050_MST_CTRL"/>
+    <functioncall functionName="MPU6050_MST_P_NSR"/>
+    <functioncall functionName="MPU6050_PWR1_CLKSEL"/>
+    <functioncall functionName="MPU6050_PWR2_ACConXY_GYonZ"/>
+    <functioncall functionName="MPU6050_PWR_MGMT_1"/>
+    <functioncall functionName="MPU6050_PWR_MGMT_2"/>
+    <functioncall functionName="MPU6050_SWRESET"/>
+    <functioncall functionName="MPU6050_Temp"/>
+    <functioncall functionName="atan"/>
+    <functioncall functionName="getAcceleration"/>
+    <functioncall functionName="i2cBurstRegRead"/>
+    <functioncall functionName="i2cSendByteToSlaveReg"/>
+    <functioncall functionName="i2cSetClkSpd"/>
+  </FileInfo>
+        <error id="misra-c2012-3.1" severity="style" msg="Rule Required The character sequences /* and // shall not be used within a comment" verbose="Rule Required The character sequences /* and // shall not be used within a comment" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="14" column="1"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="26" column="8"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="144" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="176" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="212" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="253" column="9"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="30" column="13"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="77" column="15"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="183" column="8"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="184" column="9"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="191" column="8"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="192" column="9"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="258" column="41"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="Rule Advisory The precedence of operators within expressions should be made explicit" verbose="Rule Advisory The precedence of operators within expressions should be made explicit" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="259" column="40"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="Rule Advisory The comma operator should not be used" verbose="Rule Advisory The comma operator should not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="147" column="11"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="Rule Advisory The comma operator should not be used" verbose="Rule Advisory The comma operator should not be used" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="214" column="11"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="129" column="3"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="159" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="163" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="167" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="171" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="227" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="231" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="235" column="2"/>
+        </error>
+        <error id="misra-c2012-16.3" severity="style" msg="Rule Required An unconditional break statement shall terminate every switch-clause" verbose="Rule Required An unconditional break statement shall terminate every switch-clause" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="239" column="2"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="154" column="2"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="222" column="2"/>
+        </error>
+        <error id="misra-c2012-16.6" severity="style" msg="Rule Required Every switch statement shall have at least two switch-clauses" verbose="Rule Required Every switch statement shall have at least two switch-clauses" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="154" column="2"/>
+        </error>
+        <error id="misra-c2012-16.6" severity="style" msg="Rule Required Every switch statement shall have at least two switch-clauses" verbose="Rule Required Every switch statement shall have at least two switch-clauses" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/MPU6050.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\MPU6050.c" line="222" column="2"/>
+        </error>
+</analyzerinfo>

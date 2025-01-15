@@ -1,0 +1,28 @@
+__spi_Chk_TX_empty
+__spi_Chk_RX_empty
+__spi_Chk_notBSY
+spiVerifySPI
+spiVerifyClkDivider
+spiVerifySSM
+spiVerifyOpMode
+spiVerifyPhase
+spiVerifyIdlePolarity
+spiSetDataLen
+spiInitSPI call:[spiEnableSPI,spiVerifyClkDivider,spiVerifyIdlePolarity,spiVerifyOpMode,spiVerifyPhase,spiVerifySSM]
+spiSelectSPI
+spiDeselectSPI call:[spiVerifySPI]
+spiEnableSPI call:[spiVerifySPI]
+spiDisableSPI call:[spiVerifySPI]
+spiWriteByte call:[__spi_Chk_TX_empty,__spi_Chk_notBSY,gpioResetPin,gpioSetPin,gpioVerifyPin]
+spiWriteWord call:[gpioResetPin,gpioSetPin,gpioVerifyPin]
+spiSendData call:[__spi_Chk_TX_empty,gpioResetPin,gpioSetPin,gpioVerifyPin,spiWriteWord] noreturn:[gpioSetPin,spiWriteWord]
+spiReadByte call:[__spi_Chk_RX_empty,__spi_Chk_notBSY,gpioResetPin,gpioSetPin]
+spiReadRegByte call:[__spi_Chk_RX_empty,__spi_Chk_TX_empty,__spi_Chk_notBSY,gpioResetPin,gpioSetPin]
+spiReadRegWord call:[__spi_Chk_RX_empty,__spi_Chk_TX_empty,__spi_Chk_notBSY,gpioResetPin,gpioSetPin]
+spiReadRegBurst call:[__spi_Chk_RX_empty,__spi_Chk_TX_empty,__spi_Chk_notBSY,gpioResetPin,gpioSetPin]
+spiEnableInterruptType
+spiDisableInterruptType
+spiClearInterruptType
+spiEnableDmaType
+spiDisableDmaType
+spiSetOpMode

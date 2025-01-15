@@ -1,0 +1,4 @@
+timerBusClkOn call:[timerSelectTimer]
+timerBusClkOff call:[timerDeselectTimer] noreturn:[timerDeselectTimer]
+timerSetPreloadValue call:[timerSetCaptureComparePreloadValue]
+timerGetPreloadValue call:[timerGetPreloadValue]

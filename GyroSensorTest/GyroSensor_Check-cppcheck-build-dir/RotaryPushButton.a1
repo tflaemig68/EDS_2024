@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="6680838196635481336">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="15" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdbool.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="16" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="18" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="19" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalGPIO.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="20" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalEXTI.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalEXTI.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="21" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="22" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalRCC.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalRCC.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="23" column="0"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &quot;RotaryPushButton.h&quot; not found." verbose="Include file: &quot;RotaryPushButton.h&quot; not found.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="25" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="initRotaryPushButton" lineNumber="48"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="initRotaryPushButtonLED" lineNumber="99"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="setRotaryColor" lineNumber="134"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="getRotaryPushButton" lineNumber="209"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="getRotaryPosition" lineNumber="237"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="setRotaryPosition" lineNumber="248"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="ROTARY_A_HANDLER" lineNumber="273"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c" functionName="ROTARY_SW_HANDLER" lineNumber="300"/>
+    <functioncall functionName="ERROR_VALUE"/>
+    <functioncall functionName="FALLING_EDGE"/>
+    <functioncall functionName="GPIOA"/>
+    <functioncall functionName="GPIOB"/>
+    <functioncall functionName="GPIOC"/>
+    <functioncall functionName="GPIOD"/>
+    <functioncall functionName="INPUT"/>
+    <functioncall functionName="LED_BLUE_ADR"/>
+    <functioncall functionName="LED_GREEN_ADR"/>
+    <functioncall functionName="LED_RED_ADR"/>
+    <functioncall functionName="NVIC_EnableIRQ"/>
+    <functioncall functionName="OUTPUT"/>
+    <functioncall functionName="PULLUP"/>
+    <functioncall functionName="RISING_EDGE"/>
+    <functioncall functionName="ROTARY_A_ADR"/>
+    <functioncall functionName="ROTARY_A_IRQ"/>
+    <functioncall functionName="ROTARY_A_IRQn"/>
+    <functioncall functionName="ROTARY_B_ADR"/>
+    <functioncall functionName="ROTARY_SW_ADR"/>
+    <functioncall functionName="ROTARY_SW_IRQ"/>
+    <functioncall functionName="ROTARY_SW_IRQn"/>
+    <functioncall functionName="__disable_irq"/>
+    <functioncall functionName="__enable_irq"/>
+    <functioncall functionName="extiConfigIrq"/>
+    <functioncall functionName="extiEnableIrq"/>
+    <functioncall functionName="extiInit"/>
+    <functioncall functionName="extiSetTriggerEdge"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="gpioGetPinState"/>
+    <functioncall functionName="gpioInitPort"/>
+    <functioncall functionName="gpioResetPin"/>
+    <functioncall functionName="gpioSelectPinMode"/>
+    <functioncall functionName="gpioSelectPushPullMode"/>
+    <functioncall functionName="gpioSetPin"/>
+    <functioncall functionName="initRotaryPushButton"/>
+    <functioncall functionName="initRotaryPushButtonLED"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+        <error id="misra-c2012-8.2" severity="style" msg="Rule Required Function types shall be in prototype form with named parameters" verbose="Rule Required Function types shall be in prototype form with named parameters" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="48" column="26"/>
+        </error>
+        <error id="misra-c2012-8.2" severity="style" msg="Rule Required Function types shall be in prototype form with named parameters" verbose="Rule Required Function types shall be in prototype form with named parameters" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="209" column="24"/>
+        </error>
+        <error id="misra-c2012-8.2" severity="style" msg="Rule Required Function types shall be in prototype form with named parameters" verbose="Rule Required Function types shall be in prototype form with named parameters" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="237" column="22"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="48" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="99" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="134" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="209" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="237" column="5"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="248" column="10"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="273" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="300" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="29" column="9"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="32" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="35" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="36" column="6"/>
+        </error>
+        <error id="misra-c2012-10.5" severity="style" msg="Rule Advisory The value of an expression should not be cast to an inappropriate essential type" verbose="Rule Advisory The value of an expression should not be cast to an inappropriate essential type" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="218" column="19"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="214" column="3"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="241" column="3"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="252" column="3"/>
+        </error>
+        <error id="misra-c2012-16.4" severity="style" msg="Rule Required Every switch statement shall have a default label" verbose="Rule Required Every switch statement shall have a default label" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="141" column="2"/>
+        </error>
+        <error id="misra-c2012-17.3" severity="style" msg="Rule Mandatory A function shall not be declared implicitly" verbose="Rule Mandatory A function shall not be declared implicitly" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="276" column="6"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ROTARY_B_ADR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ROTARY_B_ADR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="276" column="22"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;EXTI&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;EXTI&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="286" column="6"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="286" column="12"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ROTARY_A_PR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ROTARY_A_PR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="286" column="17"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;EXTI&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;EXTI&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="306" column="6"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;PR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="306" column="12"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ROTARY_SW_PR&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;ROTARY_SW_PR&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/GyroSensorTest/Src/RotaryPushButton.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\GyroSensorTest\Src\RotaryPushButton.c" line="306" column="17"/>
+        </error>
+</analyzerinfo>

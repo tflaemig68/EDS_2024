@@ -1,0 +1,24 @@
+adcVerifyResolution
+adcVerifyInterruptType
+adcVerifyChannelNum
+adcVerifyNumSamplingCycles
+adcVerifyAnalogWatchdogType
+adcInitADC call:[adcSelectADC]
+adcDeinitADC call:[adcDeselectADC]
+adcSelectADC
+adcDeselectADC
+adcEnableADC
+adcDisableADC
+adcIsAdcRunning call:[return] noreturn:[return]
+adcGetConversionResult call:[return] noreturn:[return]
+adcSetResolution call:[adcVerifyResolution]
+adcGetResolution
+adcEnableInterrupt call:[adcVerifyInterruptType]
+adcDisableInterrupt call:[adcVerifyInterruptType]
+adcEnableWatchdogForSingleChannel call:[adcVerifyChannelNum]
+adcDisableWatchdogForSingleChannel call:[adcVerifyChannelNum]
+adcSelectAnalogWatchdogType call:[adcVerifyAnalogWatchdogType]
+adcSetSampleCycles call:[adcVerifyChannelNum,adcVerifyNumSamplingCycles]
+adcSetChannelSequence
+adcStartConversion
+adcIsConversionFinished call:[return] noreturn:[return]

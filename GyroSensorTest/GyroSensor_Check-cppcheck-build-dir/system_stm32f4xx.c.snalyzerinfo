@@ -1,0 +1,3 @@
+SystemInit call:[SystemInit_ExtMemCtl] noreturn:[SystemInit_ExtMemCtl]
+SystemCoreClockUpdate global:[AHBPrescTable,SystemCoreClock]
+SystemInit_ExtMemCtl call:[READ_BIT]

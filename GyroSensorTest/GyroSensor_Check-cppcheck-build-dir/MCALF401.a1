@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="11631747207383268472">
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/MCALF401.c" functionName="myFunction" lineNumber="23"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/MCALF401.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\MCALF401.c" line="23" column="6"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/MCALF401.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\MCALF401.c" line="26" column="2"/>
+        </error>
+</analyzerinfo>

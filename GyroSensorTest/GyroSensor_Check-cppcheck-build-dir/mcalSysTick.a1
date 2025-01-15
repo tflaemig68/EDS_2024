@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="14932027005243238909">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="39" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;system_stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;system_stm32f4xx.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="40" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalSysTick.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="41" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;timer&apos; can be reduced." verbose="The scope of the variable &apos;timer&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="191" column="12"/>
+            <symbol>timer</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:70:6" call-funcname="systickSetMillis" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" line="218" col="5" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:216:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:70:6" my-argnr="1" my-argname="timer" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" line="72" col="6" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:91:6" my-argnr="1" my-argname="timer" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" line="93" col="6" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:125:6" my-argnr="1" my-argname="timer" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" line="127" col="6" value="0"/>
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:169:6" my-argnr="1" my-argname="timer" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" line="171" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c:169:6" my-argnr="1" my-argname="timer" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" line="171" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickSetMillis" lineNumber="70"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickSetMicros" lineNumber="91"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickInit" lineNumber="107"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickSetTicktime" lineNumber="125"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="isSystickExpired" lineNumber="138"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="SysTick_Handler" lineNumber="158"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickUpdateTimer" lineNumber="169"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickUpdateTimerList" lineNumber="189"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c" functionName="systickDelay" lineNumber="216"/>
+    <functioncall functionName="SysTick_Config"/>
+    <functioncall functionName="SystemCoreClockUpdate"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="isSystickExpired"/>
+    <functioncall functionName="systickSetMillis"/>
+    <functioncall functionName="systickUpdateTimer"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="70" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="91" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="107" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="125" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="138" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="158" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="169" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="189" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="216" column="6"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" verbose="Rule Required Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="142" column="8"/>
+        </error>
+        <error id="misra-c2012-11.4" severity="style" msg="Rule Advisory A conversion should not be performed between a pointer to object and an integer type" verbose="Rule Advisory A conversion should not be performed between a pointer to object and an integer type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="196" column="11"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" verbose="Rule Required The body of an iteration-statement or a selection-statement shall be a compound-statement" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="45" column="81"/>
+        </error>
+        <error id="misra-config" severity="error" msg="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;timerTrigger&apos; is unknown" verbose="Because of missing configuration, misra checking is incomplete. There can be false negatives! Variable &apos;timerTrigger&apos; is unknown" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="221" column="13"/>
+        </error>
+        <error id="misra-c2012-20.7" severity="style" msg="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" verbose="Rule Required Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalSysTick.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalSysTick.c" line="45" column="0"/>
+        </error>
+</analyzerinfo>

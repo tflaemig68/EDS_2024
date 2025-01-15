@@ -1,0 +1,4 @@
+{"data":[{"column":6,"decl":false,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","line":38,"name":"i2cActivate"},{"column":5,"decl":false,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","line":62,"name":"main"}],"summary":"MisraExternalIdentifiers"}
+{"data":[],"summary":"MisraInternalIdentifiers"}
+{"data":[{"column":17,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","line":40,"name":"i2c"},{"column":17,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","line":42,"name":"portB"},{"column":9,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","line":72,"name":"testVal"},{"column":12,"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","line":71,"name":"MPU1"}],"summary":"MisraLocalIdentifiers"}
+{"data":[{"file":"C:\/myWorkspace\/ARM\/EDS_2024_fork\/GyroSensorTest\/Src\/main.c","name":"i2cActivate"}],"summary":"MisraUsage"}

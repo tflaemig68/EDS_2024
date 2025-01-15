@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="18067646470105590042">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;errno.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;errno.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="24" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdint.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="25" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c" functionName="_sbrk" lineNumber="53"/>
+    <functioncall functionName="ENOMEM"/>
+    <functioncall functionName="NULL"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="53" column="7"/>
+        </error>
+        <error id="misra-c2012-8.9" severity="style" msg="Rule Advisory An object should be de ned at block scope if its identi er only appears in a single function" verbose="Rule Advisory An object should be de ned at block scope if its identi er only appears in a single function" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="30" column="17"/>
+        </error>
+        <error id="misra-c2012-10.3" severity="style" msg="Rule Required The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category" verbose="Rule Required The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="76" column="19"/>
+        </error>
+        <error id="misra-c2012-11.4" severity="style" msg="Rule Advisory A conversion should not be performed between a pointer to object and an integer type" verbose="Rule Advisory A conversion should not be performed between a pointer to object and an integer type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="58" column="32"/>
+        </error>
+        <error id="misra-c2012-11.4" severity="style" msg="Rule Advisory A conversion should not be performed between a pointer to object and an integer type" verbose="Rule Advisory A conversion should not be performed between a pointer to object and an integer type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="59" column="29"/>
+        </error>
+        <error id="misra-c2012-11.6" severity="style" msg="Rule Required A cast shall not be performed between pointer to void and an arithmetic type" verbose="Rule Required A cast shall not be performed between pointer to void and an arithmetic type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="72" column="12"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="Rule Advisory The precedence of operators within expressions should be made explicit" verbose="Rule Advisory The precedence of operators within expressions should be made explicit" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="69" column="30"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="Rule Advisory A function should have a single point of exit at the end" verbose="Rule Advisory A function should have a single point of exit at the end" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="72" column="5"/>
+        </error>
+        <error id="misra-c2012-18.4" severity="style" msg="Rule Advisory The +, -, += and -= operators should not be applied to an expression of pointer type" verbose="Rule Advisory The +, -, += and -= operators should not be applied to an expression of pointer type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="69" column="23"/>
+        </error>
+        <error id="misra-c2012-18.4" severity="style" msg="Rule Advisory The +, -, += and -= operators should not be applied to an expression of pointer type" verbose="Rule Advisory The +, -, += and -= operators should not be applied to an expression of pointer type" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/sysmem.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\sysmem.c" line="76" column="19"/>
+        </error>
+</analyzerinfo>

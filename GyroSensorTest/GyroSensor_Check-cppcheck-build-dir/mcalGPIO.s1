@@ -1,0 +1,23 @@
+gpioVerifyPort
+gpioVerifyPin
+gpioVerifyAltFunc
+gpioVerifyPinMode
+gpioVerifyOutputType
+gpioVerifyPushPullMode
+gpioVerifyOutputSpeed
+gpioInitPort call:[gpioVerifyPort]
+gpioSelectPort call:[gpioVerifyPort]
+gpioDeselectPort call:[gpioVerifyPort]
+gpioSelectPinMode call:[gpioVerifyPin,gpioVerifyPinMode,gpioVerifyPort]
+gpioSetPin call:[gpioVerifyPin,gpioVerifyPort]
+gpioResetPin call:[gpioVerifyPin,gpioVerifyPort]
+gpioTogglePin call:[gpioGetPinState,gpioResetPin,gpioSetPin,gpioVerifyPin] noreturn:[gpioResetPin,gpioSetPin]
+gpioSelectAltFunc call:[gpioSelectPinMode,gpioVerifyAltFunc,gpioVerifyPin,gpioVerifyPort]
+gpioSetLowerByte
+gpioSetUpperByte
+gpioSetWord
+gpioSetOutputType call:[gpioVerifyOutputType,gpioVerifyPin,gpioVerifyPort]
+gpioSelectPushPullMode call:[gpioVerifyPin,gpioVerifyPort,gpioVerifyPushPullMode]
+gpioSetOutputSpeed call:[gpioVerifyOutputSpeed,gpioVerifyPin,gpioVerifyPort]
+gpioGetPinState call:[return]
+gpioGetPortVal call:[return] noreturn:[return]

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<analyzerinfo hash="14404239767856001310">
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;mcalTimer/mcalTimer.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\deprecated.c" line="9" column="0"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c:60:22" call-funcname="timerGetPreloadValue" call-argnr="1" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c" line="62" col="5" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c:60:22" my-argnr="1"/>
+<function-call call-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c:60:22" call-funcname="timerGetPreloadValue" call-argnr="3" file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c" line="62" col="5" my-id="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c:60:22" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c" functionName="timerBusClkOn" lineNumber="17"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c" functionName="timerBusClkOff" lineNumber="29"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c" functionName="timerSetPreloadValue" lineNumber="44"/>
+    <functiondecl file="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c" functionName="timerGetPreloadValue" lineNumber="60"/>
+    <functioncall functionName="TIMER_OK"/>
+    <functioncall functionName="timerDeselectTimer"/>
+    <functioncall functionName="timerSelectTimer"/>
+    <functioncall functionName="timerSetCaptureComparePreloadValue"/>
+  </FileInfo>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\deprecated.c" line="17" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\deprecated.c" line="29" column="6"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\deprecated.c" line="44" column="21"/>
+        </error>
+        <error id="misra-c2012-8.4" severity="style" msg="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" verbose="Rule Required A compatible declaration shall be visible when an object or function with external linkage is de ned" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\deprecated.c" line="60" column="22"/>
+        </error>
+        <error id="misra-c2012-17.2" severity="style" msg="Rule Required Functions shall not call themselves, either directly or indirectly" verbose="Rule Required Functions shall not call themselves, either directly or indirectly" file0="C:/myWorkspace/ARM/EDS_2024_fork/MCAL/Src/mcalTimer/deprecated.c">
+            <location file="C:\myWorkspace\ARM\EDS_2024_fork\MCAL\Src\mcalTimer\deprecated.c" line="62" column="5"/>
+        </error>
+</analyzerinfo>
