@@ -1,6 +1,8 @@
-../Src/MPU6050.c:65:8:mpuInit	32	static
-../Src/MPU6050.c:314:9:mpuGetAcceleration	48	static
-../Src/MPU6050.c:375:9:mpuGetAngleFromAcceleration	32	static
-../Src/MPU6050.c:417:9:mpuGetGyro	40	static
-../Src/MPU6050.c:460:9:mpuGetTemperature	32	static
-../Src/MPU6050.c:492:6:mpuInitLowpassFilter	16	static
+../Src/MPU6050.c:66:8:mpuInit	32	static
+../Src/MPU6050.c:318:9:mpuGetAccel	32	static
+../Src/MPU6050.c:362:9:mpuGetRPfromAccel	48	static
+../Src/MPU6050.c:425:9:mpuGetGyro	32	static
+../Src/MPU6050.c:445:9:mpuGetRPY	80	static
+../Src/MPU6050.c:525:7:mpuGetTemp	32	static
+../Src/MPU6050.c:536:7:mpuTemp	24	static
+../Src/MPU6050.c:569:6:mpuSetLpFilt	16	static

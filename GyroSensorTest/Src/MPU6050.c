@@ -3,6 +3,7 @@
  *
  *  Created on: Nov 25, 2024
  *      Author: Müller, Berenspöhler
+ *       updated: T Flaemig
  */
 #include <mcalGPIO.h>
 #include <mcalI2C.h>
@@ -66,6 +67,12 @@ int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddr, uint8_t 
 
 	sensor->i2c = i2cBus;
 
+	// default Orientation
+	sensor->RPY[0] = 1;
+	sensor->RPY[1] = 2;
+	sensor->RPY[2] = -3;					// -3 means Sensor Y-Axis goes into top direction
+	sensor->pitchZero = 0;					// assemble offset MPU vs chassis
+	sensor->pitch = 0;					// assemble offset MPU vs chassis
 	if(i2cAddr == i2cAddr_MPU6050) {
 		sensor->i2c_address = i2cAddr;
 	}
@@ -95,7 +102,7 @@ int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddr, uint8_t 
 		break;
 	case 3:
 		sensor->gyro_scale = (uint8_t) MPU6050_GYRO_FSCALE_1000;
-		sensor->gyro_scale_factor = (float) 1 / 32.8;	// 35.8 LSB/°/s
+		sensor->gyro_scale_factor = (float)	0.0305175 ;	// 35.8 LSB/°/s
 		gyroReturn = 0;
 		break;
 	case 4:
@@ -190,9 +197,6 @@ int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddr, uint8_t 
 		break;
 	}
 
-	sensor->temperature_factor = (float) 1 / 340;
-	sensor->temperature_offset = (float) 36.35;
-
 	static int8_t step = -6;
 
 	//TF for (int8_t i = step; i < 0; i++) {
@@ -254,7 +258,7 @@ int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddr, uint8_t 
 			break;
 
 		case -1:	// LowPass Config
-			mpuInitLowpassFilter(sensor);
+			mpuSetLpFilt(sensor);
 			step = 0;
 			break;
 
@@ -311,35 +315,18 @@ int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddr, uint8_t 
  * - Ensure the MPU6050 sensor has been properly initialized using `initMPU` before calling this function.
  * - This function assumes the accelerometer is properly configured during initialization.
  */
-int16_t mpuGetAcceleration(MPU6050_t* sensor) {
+int16_t mpuGetAccel(MPU6050_t* sensor) {
 	I2C_RETURN_CODE_t i2c_return;
 	uint8_t readBuffer[6];
-	int16_t XYZ[3], *xyz;
-	xyz = &XYZ[0];
-
-	if (sensor->accel_range != (uint8_t) DISABLE) {
-
-	i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_AccXYZ,readBuffer, 6);
-	*xyz = (readBuffer[0]<<8) + readBuffer[1];
-	xyz++;
-	*xyz = (readBuffer[2]<<8) + readBuffer[3];
-	xyz++;
-	*xyz = (readBuffer[4]<<8) + readBuffer[5];
-
-	/*
-
-		I2C_RETURN_CODE_t i2c_return;
-		uint8_t readBuffer[6];
-		int16_t X, Y, Z;
-
-		i2c_return = i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_AccXYZ, readBuffer, 6);
-		X = ((readBuffer[0]<<8) | readBuffer[1]);
-		Y = ((readBuffer[2]<<8) | readBuffer[3]);
-		Z = ((readBuffer[4]<<8) | readBuffer[5]);
-*/
-		sensor->accel_xyz[0] = (float) XYZ[0] * sensor->accel_range_factor;
-		sensor->accel_xyz[1] = (float) XYZ[1] * sensor->accel_range_factor;
-		sensor->accel_xyz[2] = (float) XYZ[2] * sensor->accel_range_factor;
+	if (sensor->accel_range != (uint8_t) DISABLE)
+	{
+		i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_AccXYZ,readBuffer, 6);
+		sensor->accel_raw[0] = (readBuffer[0]<<8) + readBuffer[1];
+		sensor->accel_raw[1] = (readBuffer[2]<<8) + readBuffer[3];
+		sensor->accel_raw[2] = (readBuffer[4]<<8) + readBuffer[5];
+		sensor->accel[0] = (float) sensor->accel_raw[0] * sensor->accel_range_factor;
+		sensor->accel[1] = (float) sensor->accel_raw[1] * sensor->accel_range_factor;
+		sensor->accel[2] = (float) sensor->accel_raw[2] * sensor->accel_range_factor;
 	}
 	else
 	{
@@ -372,11 +359,32 @@ int16_t mpuGetAcceleration(MPU6050_t* sensor) {
  *    - `AlphaBeta[1]`: Tilt angle in the Y-Z plane (beta) using the formula `atan2(Y, Z)`.
  * 3. The calculated angles are stored in the `alpha_beta` array for further use.
  */
-int16_t mpuGetAngleFromAcceleration(MPU6050_t* sensor) {
-	int16_t returnValue = mpuGetAcceleration(sensor);
+int16_t mpuGetRPfromAccel(MPU6050_t* sensor) {
+	int16_t returnValue = mpuGetAccel(sensor);
+	int argYaw;
+	float yawAxis;
+	float longAxis = sensor->accel_raw[sensor->RPY[0]-1];
+	float latAxis = sensor->accel_raw[sensor->RPY[1]-1];
+	if (sensor->RPY[2] < 0)
+	{
+		argYaw = abs(sensor->RPY[2])-1;
+		yawAxis =  (sensor->accel_raw[argYaw])*-1;
 
-	sensor->alpha_beta[0] = atan2(sensor->accel_xyz[0], sensor->accel_xyz[2]);
-	sensor->alpha_beta[1] = atan2(sensor->accel_xyz[1], sensor->accel_xyz[2]);
+	}
+	else
+	{
+		yawAxis =  sensor->accel_raw[sensor->RPY[2]-1];
+	}
+//#define RP_SQRT
+#ifdef RP_SQRT		// This variant reduce the calc failure at dynamic movements , first tests and measurements had no benefits
+	float sqrt_yawlat = sqrt(yawAxis*yawAxis+latAxis*latAxis);
+	sensor->pitch = atan2(longAxis, sqrt_yawlat);
+	float sqrt_yawlon = sqrt(yawAxis*yawAxis+longAxis*longAxis);
+	sensor->roll = atan2(latAxis, sqrt_yawlon);
+#else
+	sensor->pitch = atan2(longAxis, yawAxis);
+	sensor->roll = atan2(latAxis, yawAxis);
+#endif
 
 	return returnValue;
 }
@@ -417,16 +425,16 @@ int16_t mpuGetAngleFromAcceleration(MPU6050_t* sensor) {
 int16_t mpuGetGyro(MPU6050_t* sensor) {
 	if (sensor->gyro_scale != (uint8_t) DISABLE) {
 		uint8_t readBuffer[6];
-		int16_t X, Y, Z;
+
 		I2C_RETURN_CODE_t i2c_return;
 		i2c_return = i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_GyroXYZ, readBuffer, 6);
-		X = ((readBuffer[0]<<8) | readBuffer[1]);
-		Y = ((readBuffer[2]<<8) | readBuffer[3]);
-		Z = ((readBuffer[4]<<8) | readBuffer[5]);
+		sensor->gyro_raw[0] = (readBuffer[0]<<8) + readBuffer[1];
+		sensor->gyro_raw[1] = (readBuffer[2]<<8) + readBuffer[3];
+		sensor->gyro_raw[2] = (readBuffer[4]<<8) + readBuffer[5];
 
-		sensor->gyro_xyz[0] = (float) X * sensor->gyro_scale_factor;
-		sensor->gyro_xyz[1] = (float) Y * sensor->gyro_scale_factor;
-		sensor->gyro_xyz[2] = (float) Z * sensor->gyro_scale_factor;
+		sensor->gyro[0] = (float) sensor->gyro_raw[0] * sensor->gyro_scale_factor;
+		sensor->gyro[1] = (float) sensor->gyro_raw[1] * sensor->gyro_scale_factor;
+		sensor->gyro[2] = (float) sensor->gyro_raw[2] * sensor->gyro_scale_factor;
 		return (int16_t) i2c_return;
 	}
 	else {
@@ -434,8 +442,65 @@ int16_t mpuGetGyro(MPU6050_t* sensor) {
 	}
 }
 
+int16_t mpuGetRPY(MPU6050_t* sensor) {
+	I2C_RETURN_CODE_t i2c_return;
+	uint8_t readBuffer[14];
+
+	if (sensor->accel_range != (uint8_t) DISABLE)
+	{
+		i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_AccXYZ,readBuffer, 14);
+		sensor->accel_raw[0] = (readBuffer[0]<<8) + readBuffer[1];
+		sensor->accel_raw[1] = (readBuffer[2]<<8) + readBuffer[3];
+		sensor->accel_raw[2] = (readBuffer[4]<<8) + readBuffer[5];
+
+		sensor->accel[0] = (float) sensor->accel_raw[0] * sensor->accel_range_factor;
+		sensor->accel[1] = (float) sensor->accel_raw[1] * sensor->accel_range_factor;
+		sensor->accel[2] = (float) sensor->accel_raw[2] * sensor->accel_range_factor;
+
+		sensor->temp_raw = (int16_t) (readBuffer[6]<<8) + readBuffer[7];
+
+
+		sensor->gyro_raw[0] = (readBuffer[8]<<8) + readBuffer[9];
+		sensor->gyro_raw[1] = (readBuffer[10]<<8) + readBuffer[11];
+		sensor->gyro_raw[2] = (readBuffer[12]<<8) + readBuffer[13];
+
+		sensor->gyro[0] = (float) sensor->gyro_raw[0] * sensor->gyro_scale_factor;
+		sensor->gyro[1] = (float) sensor->gyro_raw[1] * sensor->gyro_scale_factor;
+		sensor->gyro[2] = (float) sensor->gyro_raw[2] * sensor->gyro_scale_factor;
+	}
+	else
+	{
+		i2c_return = 1;
+	}
+	int argYaw;
+	float yawAxis;
+	float longAxis = sensor->accel_raw[sensor->RPY[0]-1];
+	float latAxis = sensor->accel_raw[sensor->RPY[1]-1];
+	if (sensor->RPY[2] < 0)
+	{
+		argYaw = abs(sensor->RPY[2])-1;
+		yawAxis =  (sensor->accel_raw[argYaw])*-1;
+
+	}
+	else
+	{
+		yawAxis =  sensor->accel_raw[sensor->RPY[2]-1];
+	}
+	float accelPitch = atan2(longAxis, yawAxis);
+
+	float gyroPitch =  0.2*_deg2rad * sensor->gyro[sensor->RPY[1]-1];			// rad/s
+	sensor->pitch = (0.95 * (sensor->pitch + gyroPitch * sensor->timebase)) + (0.05 * accelPitch);
+	sensor->roll = accelPitch;
+
+	return i2c_return;
+
+}
+
+
+
+
 /**
- * @function mpuGetTemperature
+ * @function mpuGetTemp
  *
  * @brief Reads the temperature data from the MPU6050 sensor.
  *
@@ -457,15 +522,27 @@ int16_t mpuGetGyro(MPU6050_t* sensor) {
  * - Ensure the MPU6050 sensor has been properly initialized using `MPU_init` before calling this function.
  * - The temperature measurement reflects the internal sensor temperature, which may not correspond to the ambient temperature.
  */
-int16_t mpuGetTemperature(MPU6050_t* sensor) {
+float mpuGetTemp(MPU6050_t* sensor)
+{
 	uint8_t readBuffer[2];
-	int16_t rawTemp;
-	I2C_RETURN_CODE_t i2cReturn;
-	i2cReturn = i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_Temp, readBuffer, 2);
-	rawTemp = (int16_t) (readBuffer[0]<<8) + readBuffer[1];
-	sensor->temperature_out = (float) rawTemp * sensor->temperature_factor + sensor->temperature_offset;
-	return (int16_t) i2cReturn;
+	I2C_RETURN_CODE_t i2c_return;
+	i2c_return = i2cBurstRegRead(sensor->i2c, sensor->i2c_address, MPU6050_Temp, readBuffer, 2);
+	sensor->temp_raw = (int16_t) (readBuffer[0]<<8) + readBuffer[1];
+	sensor->temperature = mpuTemp(sensor);
+	return (sensor->temperature);
 }
+
+
+float mpuTemp(MPU6050_t* sensor)
+{
+	const float temp_factor = (float)1.0 / 340;
+	const float temp_offset = 36.35;
+
+	sensor->temperature = (float) (sensor->temp_raw) * temp_factor + temp_offset;
+	return (sensor->temperature);
+}
+
+
 
 /**
  * @function mpuInitLowpassFilter
@@ -489,6 +566,6 @@ int16_t mpuGetTemperature(MPU6050_t* sensor) {
  * - Ensure the MPU6050 sensor is properly initialized and powered before calling this function.
  * - Refer to the MPU6050 datasheet for valid DLPF configuration values and their corresponding cutoff frequencies.
  */
-void mpuInitLowpassFilter(MPU6050_t* sensor) {
+void mpuSetLpFilt(MPU6050_t* sensor) {
 	i2cSendByteToSlaveReg(sensor->i2c, sensor->i2c_address, MPU6050_CONFIG, sensor->low_pass_filt_config);
 }

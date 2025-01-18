@@ -1,8 +1,10 @@
 /*
  * MPU6050.h
+ * Version: 1.1
  *
  *  Created on: Nov 25, 2024
  *      Author: Müller, Berenspöhler
+ *      updated: T Flaemig
  */
 
 #ifndef MPU6050_H_
@@ -10,8 +12,9 @@
 
 //********** Defines for Preset Values **********
 
-#define _pi 3.141
+#define _pi 3.141592
 #define _g 9.81
+#define _deg2rad 0.017453
 
 #define i2cAddr_MPU6050         0x68
 
@@ -24,8 +27,9 @@
 #define MPU6050_FIFO_EN         0x23
 #define MPU6050_MST_CTRL        0x24
 #define MPU6050_AccXYZ          0x3B
-#define MPU6050_GyroXYZ         0x43
 #define MPU6050_Temp            0x41
+#define MPU6050_GyroXYZ         0x43
+
 
 // Bit masks
 #define MPU6050_SWRESET                 0b10000000
@@ -81,26 +85,49 @@ typedef struct MPU6050 {
     uint8_t accel_range;
     float accel_range_factor;
     uint8_t low_pass_filt_config;
-    float temperature_out;
-    float temperature_factor;
-    float temperature_offset;
-    float gyro_xyz[3];
-    float accel_xyz[3];
-    float alpha_beta[2];
+    int8_t RPY[3];
+    int16_t accel_raw[3];
+    int16_t gyro_raw[3];
+    int16_t temp_raw;
+    float timebase;
+    float temperature;
+    float gyro[3];
+    float accel[3];
+    float pitch;
+    float pitchZero;
+    float roll;
+
 } MPU6050_t;
+
+/* PPY
+ * RollPitchYaw assembly position of MPU6050 Axis
+ * x - 1
+ * y - 2
+ * z - 3
+ *
+ * RPY [2,3,1] means RollAxis = y,PitchAxis = z,YawAxis = x of the xyz-Sensor orientation
+ *
+ * https://de.wikipedia.org/wiki/Roll-Nick-Gier-Winkel
+ * https://en.wikipedia.org/wiki/Aircraft_principal_axes
+ *
+ */
+
 
 //--------------------------- Function Declarations ---------------------------
 
-int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddress, uint8_t gyroScale, uint8_t accelRange, uint8_t lPconfig, uint8_t restart);
+extern int8_t mpuInit(MPU6050_t* sensor, I2C_TypeDef* i2cBus, uint8_t i2cAddress, uint8_t gyroScale, uint8_t accelRange, uint8_t lPconfig, uint8_t restart);
 
-int16_t mpuGetAcceleration(MPU6050_t* sensor);
+extern int16_t mpuGetAccel(MPU6050_t* sensor);
 
-int16_t mpuGetAngleFromAcceleration(MPU6050_t* sensor);
+extern int16_t mpuGetRPfromAccel(MPU6050_t* sensor);
 
-int16_t mpuGetGyro(MPU6050_t* sensor);
+extern int16_t mpuGetRPY(MPU6050_t* sensor);
 
-int16_t mpuGetTemperature(MPU6050_t* sensor);
+extern int16_t mpuGetGyro(MPU6050_t* sensor);
 
-void mpuInitLowpassFilter(MPU6050_t* sensor);
+extern float mpuGetTemp(MPU6050_t* sensor);
+extern float mpuTemp(MPU6050_t* sensor);
+
+void mpuSetLpFilt(MPU6050_t* sensor);
 
 #endif /* MPU6050_H_ */

@@ -1,6 +1,8 @@
-MPU6050.c:65:8:mpuInit	35
-MPU6050.c:314:9:mpuGetAcceleration	2
-MPU6050.c:375:9:mpuGetAngleFromAcceleration	1
-MPU6050.c:417:9:mpuGetGyro	2
-MPU6050.c:460:9:mpuGetTemperature	1
-MPU6050.c:492:6:mpuInitLowpassFilter	1
+MPU6050.c:66:8:mpuInit	35
+MPU6050.c:318:9:mpuGetAccel	2
+MPU6050.c:362:9:mpuGetRPfromAccel	2
+MPU6050.c:425:9:mpuGetGyro	2
+MPU6050.c:445:9:mpuGetRPY	3
+MPU6050.c:525:7:mpuGetTemp	1
+MPU6050.c:536:7:mpuTemp	1
+MPU6050.c:569:6:mpuSetLpFilt	1
