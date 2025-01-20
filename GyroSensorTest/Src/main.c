@@ -39,7 +39,7 @@
  * corresponding documentation.
  ******************************************************************************
  */
-
+#define Oszi
 // Include necessary header files
 #include <stdint.h>
 #include <stdbool.h>
@@ -54,12 +54,12 @@
 #include <RotaryPushButton.h>
 #include <BALO.h>
 #include <ST7735.h>
-#include <MPU6050.h>
-
+#include <i2cMPU.h>
+/*
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized. Initialize the FPU before using floating-point operations."
 #endif
-
+*/
 #ifdef BALA2024
 // MPU6050 I2C Bus
 	#define 	MPUi2c		I2C2
@@ -142,7 +142,7 @@ int main(void)
 
 			// Reset I2C timer
 			systickSetTicktime(&I2C_Timer, i2cTaskTime);
-			ReturnVal = mpuInit(&MPU1, MPUi2c, i2cAddr_MPU6050, 3, 2, MPU6050_LPBW_94, RESTART);
+			ReturnVal = mpuInit(&MPU1, MPUi2c, i2cAddr_MPU6050, FSCALE_250, ACCEL_2g, LPBW_184, RESTART);
 		}
 	} while (ReturnVal < 0);
 	// Sensor Init finished
@@ -162,11 +162,12 @@ int main(void)
 #endif
 
 
-#define Oszi
+
+
 #ifdef Oszi
-	MPU1.timebase = (float) i2cTaskTime* 10e-2;  // CycleTime for calc from Gyro to angle
+	MPU1.timebase = (float) i2cTaskTime* 10e-3;  // CycleTime for calc from Gyro to angle
 #else
-	MPU1.timebase = (float) DispTaskTime * 10e-2;  // CycleTime for calc from Gyro to angle
+	MPU1.timebase = (float) DispTaskTime * 10e-3;  // CycleTime for calc from Gyro to angle
 #endif
 
 
@@ -195,10 +196,10 @@ int main(void)
 
             // Read angles from MPU6050
             //ReturnVal = mpuGetRPfromAccel(&MPU1);
-            ReturnVal = mpuGetRPY(&MPU1);
+            ReturnVal = mpuGetPitch(&MPU1);
             AlphaBeta[0] = MPU1.pitch;
 
-            AlphaBeta[1] = MPU1.roll;
+            AlphaBeta[1] = MPU1.pitchAccel;
 
 
             // Update LED color based on angle thresholds
@@ -230,7 +231,7 @@ int main(void)
 			tftPrintColor((char *)outStr, 0, 30, tft_YELLOW);
 			sprintf(outStr, "%3.2f %3.2f %3.2f", MPU1.gyro[0], MPU1.gyro[1],MPU1.gyro[2]);
 			tftPrintColor((char *)outStr, 0, 42, tft_RED);
-			sprintf(outStr, "P: %3.2f R: %3.2f ", MPU1.pitch, MPU1.roll);
+			sprintf(outStr, "P: %3.2f R: %3.2f ", MPU1.pitch, MPU1.pitchAccel);
 			tftPrintColor((char *)outStr, 0, 54, tft_GREEN);
 
 #endif

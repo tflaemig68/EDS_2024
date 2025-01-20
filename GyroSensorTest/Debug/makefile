@@ -58,9 +58,12 @@ all: main-build
 # Main-build Target
 main-build: GyroSensorTest.elf secondary-outputs
 
+dependents:
+	-cd D:/GITHUB/STM32/EDS_2024/BALO/Debug && $(MAKE) all
+
 # Tool invocations
-GyroSensorTest.elf GyroSensorTest.map: $(OBJS) $(USER_OBJS) D:\GITHUB\STM32\EDS_2024\GyroSensorTest\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "GyroSensorTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2024\GyroSensorTest\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GyroSensorTest.map" -Wl,--gc-sections -Wl,--verbose -static -L"D:\GITHUB\STM32\EDS_2024\CMSIS\Debug" -L"D:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"D:\GITHUB\STM32\EDS_2024\MCAL\Debug\Src" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+GyroSensorTest.elf GyroSensorTest.map: $(OBJS) $(USER_OBJS) D:/GITHUB/STM32/EDS_2024/BALO/Debug/libBALO.a D:\GITHUB\STM32\EDS_2024\GyroSensorTest\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "GyroSensorTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\STM32\EDS_2024\GyroSensorTest\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GyroSensorTest.map" -Wl,--gc-sections -Wl,--verbose -static -L"D:\GITHUB\STM32\EDS_2024\BALO\Debug" -L"D:\GITHUB\STM32\EDS_2024\CMSIS\Debug" -L"D:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"D:\GITHUB\STM32\EDS_2024\MCAL\Debug\Src" -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -89,5 +92,6 @@ warn-no-linker-script-specified:
 	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
 
 .PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
+D:/GITHUB/STM32/EDS_2024/BALO/Debug/libBALO.a:
 
 -include ../makefile.targets

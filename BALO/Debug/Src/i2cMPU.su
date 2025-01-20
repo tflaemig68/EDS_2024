@@ -1,0 +1,9 @@
+../Src/i2cMPU.c:20:6:filterAccData	32	static
+../Src/i2cMPU.c:74:8:mpuInit	32	static
+../Src/i2cMPU.c:258:9:mpuGetAccel	48	static
+../Src/i2cMPU.c:310:9:mpuGetRPfromAccel	48	static
+../Src/i2cMPU.c:373:9:mpuGetGyro	32	static
+../Src/i2cMPU.c:393:9:mpuGetPitch	80	static
+../Src/i2cMPU.c:473:7:mpuGetTemp	32	static
+../Src/i2cMPU.c:490:7:mpuTemp	24	static
+../Src/i2cMPU.c:523:6:mpuSetLpFilt	16	static

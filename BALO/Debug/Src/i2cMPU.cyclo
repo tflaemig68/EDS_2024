@@ -1,0 +1,9 @@
+i2cMPU.c:20:6:filterAccData	2
+i2cMPU.c:74:8:mpuInit	18
+i2cMPU.c:258:9:mpuGetAccel	2
+i2cMPU.c:310:9:mpuGetRPfromAccel	2
+i2cMPU.c:373:9:mpuGetGyro	2
+i2cMPU.c:393:9:mpuGetPitch	3
+i2cMPU.c:473:7:mpuGetTemp	2
+i2cMPU.c:490:7:mpuTemp	1
+i2cMPU.c:523:6:mpuSetLpFilt	1

@@ -1,9 +1,0 @@
-core_cm4.h:1688:22:__NVIC_EnableIRQ	2
-RotaryPushButton.c:48:6:initRotaryPushButton	1
-RotaryPushButton.c:99:6:initRotaryPushButtonLED	1
-RotaryPushButton.c:134:6:setRotaryColor	10
-RotaryPushButton.c:209:5:getRotaryPushButton	3
-RotaryPushButton.c:237:5:getRotaryPosition	2
-RotaryPushButton.c:248:10:setRotaryPosition	2
-RotaryPushButton.c:273:6:EXTI0_IRQHandler	3
-RotaryPushButton.c:300:6:EXTI15_10_IRQHandler	2

@@ -5,5 +5,5 @@
 
 USER_OBJS :=
 
-LIBS := -lMCAL -lCMSIS
+LIBS := -lBALO -lMCAL -lCMSIS
 
