@@ -169,9 +169,9 @@ int main(void)
 
 
 #ifdef Oszi
-	MPU1.timebase = (float) i2cTaskTime* 10e-4;  // CycleTime for calc from Gyro to angle
+	MPU1.timebase = (float) i2cTaskTime* 10e-3;  // CycleTime for calc from Gyro to angle
 #else
-	MPU1.timebase = (float) DispTaskTime * 10e-4;  // CycleTime for calc from Gyro to angle
+	MPU1.timebase = (float) DispTaskTime * 10e-3;  // CycleTime for calc from Gyro to angle
 #endif
 
 
