@@ -43,7 +43,7 @@ uint32_t    I2C_Timer = 0UL;
 #ifdef Oszi
 	#define StepTaskTime 20
 #else
-	#define StepTaskTime 6
+	#define StepTaskTime 6			// the communicatin to stepper takes 2,3ms therfor one ms in addition
 #endif
 #define DispTaskTime 700
 
@@ -136,7 +136,7 @@ PIDContr_t 	PID_phi, 		// Pitch controll
 
 
 char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "poKP",	"poKI",		"poKD",	"Rot "};
-float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.92, 	0.056, 	0.27, 		0.6, 	0.002, 	0.0,		4};
+float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.75, 	0.056, 	0.27, 		0.6, 	0.002, 	0.0,		4};
 //								{ -0.05, 	0.9,		6, 		0.2,  	0.6, 	0, 	1.75, 	2};
 float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  100,		100, 	500,  	100, 	4};			//  increment stepsize is 1/Value
 
@@ -314,8 +314,8 @@ int main(void)
 		   {
 		   	   case 0:  //I2C Scan
 		   	   {
-		   		   i2cSetClkSpd(i2c,  I2C_CLOCK_400);  // for RFID Reader reduced to 100
-		   		   i2cSetClkSpd(i2c2,  I2C_CLOCK_1Mz);
+		   		   i2cSetClkSpd(i2c,  I2C_CLOCK_1Mz);  // for RFID Reader reduced to 100KHz AMIS also clock streching down to 100kHz
+		   		   i2cSetClkSpd(i2c2,  I2C_CLOCK_1Mz);  // Sensor runs fast
 		   		   RunMode  = 1;
 		   	   }
 		   	   case 1:  //I2C Scan
@@ -408,10 +408,6 @@ int main(void)
 
 					if  (MPU6050ret == 0)									// MPU6050 init-procedure finished
 					{
-						// set MPU assemble
-						MPU1.RPY[0]= 2;				// MPU y Axis goes to the front
-						MPU1.RPY[1]= 3;				// MPU z-Axis goes to the left side
-						MPU1.RPY[2]= -1;			// MPU x-Axis goes down
 						if ((StepRenable)&& (StepLenable))
 						{
 							RunMode = 8;
@@ -470,14 +466,17 @@ int main(void)
 						targetPos[0] = 0;
 						targetPos[1] = 0;
 						SetRegParameter(&MPU1);
-
-						MPU1.timebase = (float) StepTaskTime* 10e-4;  			// CycleTime for calc from Gyro to angle  fitting statt 10-3 wird 10-4 gesetzt
+						// set MPU assemble
+						MPU1.RPY[0]= 2;				// MPU y Axis goes to the front
+						MPU1.RPY[1]= 3;				// MPU z-Axis goes to the left side
+						MPU1.RPY[2]= -1;			// MPU x-Axis goes down
+						MPU1.timebase = (float) (StepTaskTime+1) * 10e-4;  			// CycleTime for calc from Gyro to angle  fitting statt 10-3 wird 10-4 gesetzt
 						initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
 						initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
 						initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
 						RunInit = false;
 					}
-
+					gpioResetPin(LED_RED_ADR);
 					mpuGetPitch(&MPU1);
 					AlphaBeta[1] = MPU1.pitch;
 					AlphaBeta[0] = MPU1.pitchAccel;
@@ -485,11 +484,12 @@ int main(void)
             // Display angle values on the oscilloscope
             AlBeOszi(AlphaBeta);
 #endif
-        			targetPos[0] += BalaRot;
+            		gpioSetPin(LED_RED_ADR);
+            		targetPos[0] += BalaRot;
         			targetPos[1] -= BalaRot;
             		//BalaRegler(SetPos, targetPos, MPU1.pitch, StepperGetPos(&StepL), StepperGetPos(&StepR));			// Achsen-Regler des Balancers ()
 
-
+        			gpioResetPin(LED_RED_ADR);
 					if (fabs(AlphaBeta[1]) > 0.35)  // tilt angle more than  0.2 pi/4 = 30deg  -shut off Stepper control and reduce the IHold current and power consumption -> save the planet ;-)
 					{
 						restart = false;
@@ -524,12 +524,14 @@ int main(void)
 							if (StepRenable)
 							{
 								//pos_motR = StepperGetPos(&StepR) + BalaPos - BalaRot;
-								pos_motR = StepperGetPos(&StepR);
+								gpioSetPin(LED_RED_ADR);
+								pos_motR = StepperGetPos(&StepR);							// 1,177ms
+								gpioResetPin(LED_RED_ADR);
 								float setMotR = runPID(&PID_PosR, targetPos[1]-pos_motR);
 								if (setMotR > stepThreshold) ( setMotR = stepThreshold);
 								if (setMotR < -stepThreshold) ( setMotR = -stepThreshold);
 								pos_motR += (int16_t)(setPitch+setMotR);
-
+								//gpioResetPin(LED_RED_ADR);
 								/*
 								if (abs(setMotR + setPitch) > stepThreshold)
 								{
@@ -558,6 +560,7 @@ int main(void)
 						}
 					}
 					ParamEdit();  // run routine if Push Buttom activated
+					gpioSetPin(LED_RED_ADR);
 				}
 				break;
 		   		case 9:  // Stepper Position follow the tilt angle
