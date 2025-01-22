@@ -35,19 +35,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_ranges 00000620  00000000  00000000  00029e90  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_line   00007080  00000000  00000000  0002a4b0  2**0
+ 16 .debug_line   000070d0  00000000  00000000  0002a4b0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_str    00056f78  00000000  00000000  00031530  2**0
+ 17 .debug_str    00056f80  00000000  00000000  00031580  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .comment      00000050  00000000  00000000  000884a8  2**0
+ 18 .comment      00000050  00000000  00000000  00088500  2**0
                   CONTENTS, READONLY
- 19 .debug_frame  000031ac  00000000  00000000  000884f8  2**2
+ 19 .debug_frame  000031ac  00000000  00000000  00088550  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_macro  0000ff02  00000000  00000000  0008b6a4  2**0
+ 20 .debug_macro  0000ff02  00000000  00000000  0008b6fc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .stab         000000cc  00000000  00000000  0009b5a8  2**2
+ 21 .stab         000000cc  00000000  00000000  0009b600  2**2
                   CONTENTS, READONLY, DEBUGGING
- 22 .stabstr      000001b9  00000000  00000000  0009b674  2**0
+ 22 .stabstr      000001b9  00000000  00000000  0009b6cc  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1428,7 +1428,7 @@ int main(void)
 
 
 #ifdef Oszi
-	MPU1.timebase = (float) i2cTaskTime* 10e-4;  // CycleTime for calc from Gyro to angle
+	MPU1.timebase = (float) i2cTaskTime* 10e-3;  // CycleTime for calc from Gyro to angle
  8001052:	f8d7 30a4 	ldr.w	r3, [r7, #164]	; 0xa4
  8001056:	ee07 3a90 	vmov	s15, r3
  800105a:	eef8 7a67 	vcvt.f32.u32	s15, s15
@@ -1444,7 +1444,7 @@ int main(void)
  8001078:	f7ff fd9e 	bl	8000bb8 <__aeabi_d2f>
  800107c:	4603      	mov	r3, r0
  800107e:	663b      	str	r3, [r7, #96]	; 0x60
-	MPU1.timebase = (float) DispTaskTime * 10e-4;  // CycleTime for calc from Gyro to angle
+	MPU1.timebase = (float) DispTaskTime * 10e-3;  // CycleTime for calc from Gyro to angle
 #endif
 
 
@@ -1604,8 +1604,8 @@ int main(void)
     	if (timerTrigger == true)
  80011ac:	e771      	b.n	8001092 <main+0x132>
  80011ae:	bf00      	nop
- 80011b0:	d2f1a9fc 	.word	0xd2f1a9fc
- 80011b4:	3f50624d 	.word	0x3f50624d
+ 80011b0:	47ae147b 	.word	0x47ae147b
+ 80011b4:	3f847ae1 	.word	0x3f847ae1
  80011b8:	08008b40 	.word	0x08008b40
  80011bc:	42652ee4 	.word	0x42652ee4
  80011c0:	40020400 	.word	0x40020400
