@@ -45,7 +45,7 @@ uint32_t    I2C_Timer = 0UL;
 #else
 	#define StepTaskTime 6			// the communicatin to stepper takes 2,3ms therfor one ms in addition
 #endif
-#define DispTaskTime 700
+#define DispTaskTime 300
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -136,9 +136,9 @@ PIDContr_t 	PID_phi, 		// Pitch controll
 
 
 char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "poKP",	"poKI",		"poKD",	"Rot "};
-float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.75, 	0.056, 	0.27, 		0.6, 	0.002, 	0.0,		4};
+float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.5, 	0.056, 	0.27, 		0.01, 	0.02, 	0.0,		100};
 //								{ -0.05, 	0.9,		6, 		0.2,  	0.6, 	0, 	1.75, 	2};
-float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  100,		100, 	500,  	100, 	4};			//  increment stepsize is 1/Value
+float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  100,		100, 	500,  	100, 	0.5};			//  increment stepsize is 1/Value
 
 
 
@@ -241,9 +241,10 @@ int main(void)
 
 	bool StepLenable = false;
 	bool StepRenable = false;
-    const int stepThreshold = 20;
-	float BalaRot = 0;
-
+    const int16_t stepThreshold = 120;
+    const int16_t endPos = 20000;
+    float BalaRot = 0;
+    uint8_t MotionVar = 0;
 	char strX[8],strY[8],strZ[8],strT[32];
 	float Temp;
 	//int16_t XYZraw[3],XYZMPU[3]; //XYZgMPU[3];
@@ -257,8 +258,8 @@ int main(void)
 	//int16_t SetPos[2];
 
 	//float XYZ[3];
-	int pxPos, pyPos, DispVar=0;
-	bool restart = false;
+	int pxPos, pyPos;
+	bool activeMove = false;
 	uint16_t tft_color;
 	float AlphaBeta[2];
 
@@ -478,21 +479,19 @@ int main(void)
 					}
 					gpioResetPin(LED_RED_ADR);
 					mpuGetPitch(&MPU1);
+					gpioSetPin(LED_RED_ADR);
 					AlphaBeta[1] = MPU1.pitch;
 					AlphaBeta[0] = MPU1.pitchAccel;
+
 #ifdef Oszi
             // Display angle values on the oscilloscope
             AlBeOszi(AlphaBeta);
 #endif
-            		gpioSetPin(LED_RED_ADR);
-            		targetPos[0] += BalaRot;
-        			targetPos[1] -= BalaRot;
-            		//BalaRegler(SetPos, targetPos, MPU1.pitch, StepperGetPos(&StepL), StepperGetPos(&StepR));			// Achsen-Regler des Balancers ()
 
         			gpioResetPin(LED_RED_ADR);
 					if (fabs(AlphaBeta[1]) > 0.35)  // tilt angle more than  0.2 pi/4 = 30deg  -shut off Stepper control and reduce the IHold current and power consumption -> save the planet ;-)
 					{
-						restart = false;
+						activeMove = false;
 						initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
 						initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
 						initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
@@ -509,7 +508,7 @@ int main(void)
 						if (fabs((AlphaBeta[1])) < 0.05)
 						{
 							setRotaryColor(LED_GREEN);
-							restart = true;
+							activeMove = true;
 						}
 						else
 						{
@@ -518,42 +517,28 @@ int main(void)
 						}
 
 						BalaRot = ParamValue[ParamCount-1];
-						if (restart == true)
+						if (activeMove == true)
 						{
 							float setPitch = (rad2step)* runPID(&PID_phi, MPU1.pitch);
 							if (StepRenable)
 							{
-								//pos_motR = StepperGetPos(&StepR) + BalaPos - BalaRot;
-								gpioSetPin(LED_RED_ADR);
+								gpioSetPin(LED_RED_ADR);									// RED LED OFF
 								pos_motR = StepperGetPos(&StepR);							// 1,177ms
-								gpioResetPin(LED_RED_ADR);
-								float setMotR = runPID(&PID_PosR, targetPos[1]-pos_motR);
+								float setMotR = runPID(&PID_PosR, (int16_t) targetPos[1]-pos_motR);
 								if (setMotR > stepThreshold) ( setMotR = stepThreshold);
 								if (setMotR < -stepThreshold) ( setMotR = -stepThreshold);
 								pos_motR += (int16_t)(setPitch+setMotR);
-								//gpioResetPin(LED_RED_ADR);
-								/*
-								if (abs(setMotR + setPitch) > stepThreshold)
-								{
-									pos_motR= (int16_t)(setMotR + setPitch);
-								}
-								else
-								{
-									pos_motR= (int16_t)setPitch;
-								}*/
 								StepperSetPos(&StepR, pos_motR); //setPosition;
 								StepRenable = false;
+								gpioResetPin(LED_RED_ADR);									//RED LED ON
 							}
 							else
 							{
-								//pos_motL = SetPos[0]; //		StepperGetPos(&StepL) + BalaPos + BalaRot;
-								//pos_motL= (int16_t)	(rad2step)* runPID(&PID_phi, MPU1.pitch) + runPID(&PID_PosL, targetPos[0]-StepperGetPos(&StepL));
 								pos_motL = StepperGetPos(&StepL);
-								float setMotL = runPID(&PID_PosL, targetPos[0]-pos_motL);
+								float setMotL = runPID(&PID_PosL, (int16_t) targetPos[0]-pos_motL);
 								if (setMotL > stepThreshold) ( setMotL = stepThreshold);
 								if (setMotL < -stepThreshold) ( setMotL = -stepThreshold);
 								pos_motL += (int16_t)(setPitch+setMotL);
-
 								StepperSetPos(&StepL, pos_motL); //setPosition;
 								StepRenable = true;
 							}
@@ -577,46 +562,59 @@ int main(void)
 	   } // end if systickexp
 	   if (isSystickExpired(DispTaskTimer))
 	   {
-		  systickSetTicktime(&DispTaskTimer, DispTaskTime);
-		  if ((restart == false) && (RunMode == 8 ))
+		  systickSetTicktime(&DispTaskTimer, DispTaskTime);   // Reset Disp timer
+
+		  if ((activeMove == true) && (RunMode == 8 ))
 		  {
-				  // Reset Disp timer
-				switch (DispVar)
-				{
+			  switch (MotionVar)
+			  {
 					case 0:
 					{
-						sprintf(strT, "%+6i", pos_motL);
-						pxPos = 0;
-						pyPos = 60;
-						tft_color = tft_WHITE;
-						tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
-					}
-					//break;
+	            		targetPos[0] += (int16_t)BalaRot;
+	            		targetPos[1] -= (int16_t)BalaRot;
+	            		if ((pos_motR < -endPos) ||(pos_motL > endPos))
+	            		{
+	            			MotionVar = 1;
+	            		}
+					}break;
 					case 1:
 					{
-						sprintf(strT, "%+6i", pos_motR);
-						pxPos = ST7735_TFTWIDTH - 30;
-						pyPos = 60;
-						tft_color = tft_WHITE;
-						tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
-					}
-					//break;
-					case 2:
-					{
-						Temp = mpuTemp(&MPU1);
-						sprintf(strT, "%+3.1f", Temp);
-						pxPos = 10;// ST7735_TFTWIDTH/2-10;
-						pyPos = 30;
-						tft_color = tft_GREEN;
-						tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
-					}
-					//break;
+						targetPos[0] -= (int16_t)BalaRot;
+						targetPos[1] += (int16_t)BalaRot;
+						if ((pos_motR > endPos)||(pos_motL < -endPos))
+						{
+							MotionVar = 0;
+						}
+					}break;
 					default:
-						DispVar = 0;
-				}
+					{
+						MotionVar = 0;
+					}
+			   }
+		  }
+	        if ((activeMove == false) && (RunMode == 8 ))
+	      	{
 
+				sprintf(strT, "%+6i", pos_motL);
+				pxPos = 0;
+				pyPos = 60;
+				tft_color = tft_WHITE;
+				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 
+				sprintf(strT, "%+6i", pos_motR);
+				pxPos = ST7735_TFTWIDTH - 30;
+				pyPos = 60;
+				tft_color = tft_WHITE;
+				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
+
+				Temp = mpuTemp(&MPU1);
+				sprintf(strT, "%+3.1f", Temp);
+				pxPos = 10;// ST7735_TFTWIDTH/2-10;
+				pyPos = 30;
+				tft_color = tft_GREEN;
+				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 		   }
+
 	   }
     } //end while
     return 0;
