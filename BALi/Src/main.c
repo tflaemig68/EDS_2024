@@ -53,6 +53,8 @@ uint32_t    I2C_Timer = 0UL;
 void test_ascii_screen(void);
 void test_graphics(void);
 void StepperFollowsPitch(bool StepLenable, bool StepRenable);
+void dispMPUTemp(MPU6050_t* MPU1);
+
 
 uint8_t I2C_SCAN(I2C_TypeDef *i2c, uint8_t scanAddr);
 #define i2cAddr_RFID	0x50
@@ -74,8 +76,8 @@ MPU6050_t MPU1;
 
 struct Stepper StepL, StepR;
 const uint8_t iHold = 6;			// Stiffnes of Axis to Body rotation
-const int16_t rad2step =  530;		// Ratio step-counts (200 Full-Steps div 1/16 Steps) per rotation at rad:  509.4 =  200* 16 / (2 PI) or 1600/PI
-#define stepPosMax  200
+const int16_t rad2step =  520;		// Ratio step-counts (200 Full-Steps div 1/16 Steps) per rotation at rad:  509.4 =  200* 16 / (2 PI) or 1600/PI
+//#define stepPosMax  200
 
 #define StepPaCount 5
 char StepPaTitle[StepPaCount][5] = {"iRun", "iHold",	"vMin",	 "vMax",	"accel"};
@@ -132,12 +134,8 @@ struct RegPameter
 } RegPa;
 
 
-PIDContr_t 	PID_phi, 		// Pitch controll
-			PID_PosL,
-			PID_PosR;		// Position PID - closed Loop controller
+PIDContr_t 	PID_phi; 		// Pitch controll
 
-
-#define routeCount  2
 
 char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "poKP",		"poKI",		"poTP",	"Rot "};
 float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.75, 	0.058, 	0.27, 		0, 		0.01, 		0.01,		0};
@@ -166,9 +164,6 @@ void SetRegParameter(MPU6050_t* MPUa)
 	if (ParamValue[ParamCount-1] <0 ) { ParamValue[ParamCount-1] =0;}
 	if (ParamValue[ParamCount-1] > routeNumMax-1) { ParamValue[ParamCount-1] = routeNumMax-1;}
 	routeNum = ParamValue[ParamCount-1];
-	initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
-	initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
-
 }
 
 
@@ -209,7 +204,7 @@ void ParamEdit()
 /**
  *
  */
-void BalaRegler(int16_t* setPos, float* targetPos, float phi, int16_t motPosL, int16_t motPosR)
+void rotControl(int16_t* setPos, float* targetPos, float phi, int16_t motPosL, int16_t motPosR)
 {
 
 
@@ -217,20 +212,6 @@ void BalaRegler(int16_t* setPos, float* targetPos, float phi, int16_t motPosL, i
 	/int _iTargetPos = ((int)(rad2step)*(RegPa.KP* tan(phi) + (RegPa.KD* (phi - phi_old))));
 	phi_old = phi;
 	*/
-
-	float deltaPosL = targetPos[0]- motPosL;
-	float deltaPosR = targetPos[1]- motPosR;
-	float setPitch = (rad2step)* runPID(&PID_phi, phi);
-	if (deltaPosL > deltaPosR)
-	{
-		setPos[0] = (int16_t)	setPitch + runPID(&PID_PosL, deltaPosL);
-		setPos[1] = (int16_t) 	setPitch;
-	}
-	else
-	{
-		setPos[0] = (int16_t)	setPitch;
-		setPos[1] = (int16_t) 	setPitch + runPID(&PID_PosR, deltaPosR);
-	}
 }
 
 
@@ -253,31 +234,30 @@ int main(void)
 
 	bool StepLenable = false;
 	bool StepRenable = false;
-
-	MeanVal_t 	stepMVR,		// AccelPamping using MeanVal function
-				stepMVL;
-	stepMVR.sto_mw = 0;
-	stepMVL.sto_mw = 0;
+	bool resetStepL = true,
+		 resetStepR = true;
 
 
+	const float DivTimeTask= 0.01;
 
-    const int16_t endPos = 20000;
-    float BalaRot = 0;
     uint8_t MotionVar = 0;
 
 	char strX[8],strY[8],strZ[8],strT[32];
-	float Temp;
+
 
 
 /**	Menue for the Filter
  *
  */
 
-	int16_t posMotR=0, posMotL=0;
-	//float targetPos[2] = {0,0};
-	int16_t targetPosL =0, targetPosR =0, curMotR, curMotL;
-	float setPosMotR, setPosMotL;
-	float setMvMotR, setMvMotL;
+	int16_t posMotR=0, posMotL=0,
+			curMotR, curMotL;
+	int16_t deltaTra, deltaRot;
+
+	float 	tarPosL, tarPosR,
+			targetTra, targetRot,
+			incTra =0, incRot =0;
+
 	int pxPos, pyPos;
 	bool activeMove = false;
 	uint16_t tft_color;
@@ -377,7 +357,7 @@ int main(void)
 						   case i2cAddr_LIDAR:
 						   {
 							   enableLIDAR = true;
-							   tftPrint((char *)"TOF/LIADR\0",0,80,0);
+							   tftPrint((char *)"TOF/LIDAR\0",0,80,0);
 						   }
 						   break;
 						   case i2cAddr_MPU6050:
@@ -484,8 +464,8 @@ int main(void)
 						StepperIHold(true);										//IHold switched on
 						StepperResetPosition(&StepL);  		//resetPosition
 						StepperResetPosition(&StepR);
-						targetPosL = 0;
-						targetPosR = 0;
+						incRot = 0;
+						tarPosR = 0;
 						SetRegParameter(&MPU1);
 						// set MPU assemble
 						MPU1.RPY[0]= 2;				// MPU y Axis goes to the front
@@ -493,10 +473,6 @@ int main(void)
 						MPU1.RPY[2]= -1;			// MPU x-Axis goes down
 						MPU1.timebase = (float) (StepTaskTime+1) * 10e-4;  			// CycleTime for calc from Gyro to angle  fitting statt 10-3 wird 10-4 gesetzt
 						initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
-						initPID(&PID_PosL, ParamValue[7],ParamValue[8],0, 1);
-						initPID(&PID_PosR, ParamValue[7],ParamValue[8],0, 1);
-						clrMeanVal(&stepMVR, ParamValue[9]);
-						clrMeanVal(&stepMVL, ParamValue[9]);
 						RunInit = false;
 					}
 					gpioResetPin(LED_RED_ADR);
@@ -518,18 +494,14 @@ int main(void)
 						//initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
 						//initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
 						StepperIHold(false);
-						StepperSoftStop(&StepR);
-						StepperSoftStop(&StepL);			//softStop
-						StepperResetPosition(&StepL);
-						StepperResetPosition(&StepR);
-						targetPosL = 0;
-						targetPosR = 0;
+						//StepperSoftStop(&StepR);
+						//StepperSoftStop(&StepL);			//softStop
+						incRot = 0;
+						tarPosR = 0;
+					    resetStepL = true;
+					    resetStepR = true;
 						routeNum = ParamValue[ParamCount-1];
 						routeStep = 0;
-						clearPID(&PID_PosR);
-						clrMeanVal(&stepMVR, ParamValue[9]);
-						clearPID(&PID_PosL);
-						clrMeanVal(&stepMVL, ParamValue[9]);
 						MotionVar = 0;
 
 					}
@@ -554,30 +526,38 @@ int main(void)
 							if (StepRenable)
 							{
 								gpioSetPin(LED_RED_ADR);									// RED LED OFF
-								curMotR = StepperGetPos(&StepR);							// 1,177ms
-								setPosMotR = runPID(&PID_PosR,(float)(targetPosR-curMotR));
-								/*
-								if (setMotR > stepPosMax) { setMotR = stepPosMax;}
-								if (setMotR < -stepPosMax) { setMotR = -stepPosMax;}
-								*/
-								setMvMotR = runMeanVal(&stepMVR, setPosMotR);
-								//setMvMotR = setPosMotR;
-								posMotR = (int16_t)(setPitch + setMvMotR);
+								if (!resetStepR)
+								{
+									curMotR = (float)StepperGetPos(&StepR);							// 1,177ms
+								}
+								else
+								{
+									curMotR = 0;
+									StepperResetPosition(&StepR);
+									resetStepR = false;
+								}
+								tarPosR = curMotR + incRot + incTra;
+								posMotR = (int16_t)(setPitch + tarPosR);
 								StepperSetPos(&StepR, posMotR); //setPosition;
 								StepRenable = false;
+
 								gpioResetPin(LED_RED_ADR);									//RED LED ON
 							}
 							else
 							{
-								curMotL = StepperGetPos(&StepL);
-								setPosMotL = runPID(&PID_PosL, (float)(targetPosL-curMotL));
-								/*
-								if (setMotL- > stepPosMax) { setMotL = stepPosMax;}
-								if (setMotL < -stepPosMax) { setMotL = -stepPosMax;}
-								*/
-								setMvMotL = runMeanVal(&stepMVL, setPosMotL);
-								//setMvMotL = setPosMotL;
-								posMotL = (int16_t)(setPitch + setMvMotL);
+								if (!resetStepL)
+								{
+									curMotL = (float)StepperGetPos(&StepL);							// 1,177ms
+								}
+								else
+								{
+									curMotL = 0;
+									StepperResetPosition(&StepL);
+									resetStepL = false;
+								}
+								//curMotL = (float)StepperGetPos(&StepL);
+								tarPosL = curMotL - incRot + incTra;
+								posMotL = (int16_t)(setPitch + tarPosL);
 								StepperSetPos(&StepL, posMotL); //setPosition;
 								StepRenable = true;
 							}
@@ -612,43 +592,56 @@ int main(void)
 				{
 					case 0:  // Set TagetPos
 					{
-					  targetPosL = route[routeNum][routeStep][0];
-					  targetPosR = route[routeNum][routeStep][1];
-					  StepperResetPosition(&StepL);
-					  StepperResetPosition(&StepR);
-					  clearPID(&PID_PosR);
-					  clearPID(&PID_PosL);
-					  clrMeanVal(&stepMVR,ParamValue[9]);
-					  clrMeanVal(&stepMVL,ParamValue[9]);
-					  MotionVar = 1;
+					  targetTra = route[routeNum][routeStep][0];
+					  targetRot = route[routeNum][routeStep][1];
+					  //StepperResetPosition(&StepL);
+					  //StepperResetPosition(&StepR);
+					  resetStepL = true;
+					  resetStepR = true;
+					  incTra = targetTra * DivTimeTask;
+					  incRot = targetRot * DivTimeTask;
+					  if (incRot > incRotMax) { incRot = incRotMax;}
+					  if (incRot < -incRotMax) { incRot = -incRotMax;}
 
-					  sprintf(strT, "N%2i,%+6i,%+6i",routeNum, targetPosL, targetPosL);
+					  MotionVar = 1;
+					  sprintf(strT, "N%2i,%+5.0f,%+5.0f",routeNum, targetRot, targetTra);
 					  pxPos = 4;   pyPos = 40;	  tft_color = tft_YELLOW;
 					  tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 
 
 					}
 					break;
+
 					case 1:	// wait and check until target arrived
 					{
 
 					  if (
-							 ((fabs(posMotL - route[routeNum][routeStep][0]) < routeTol))
-							 &&
-							 ((fabs(posMotR - route[routeNum][routeStep][1]) < routeTol))
+							 //((fabs(((posMotL+posMotR)/2)- route[routeNum][routeStep][0]) < routeTol)) &&
+							 ((fabs((posMotR-posMotL) - route[routeNum][routeStep][1]) < rotTol))
 						 )
 					  {
 						 if (++routeStep >= routeStepMax)
 						 {
 							 routeStep = 0;
+							 dispMPUTemp(&MPU1);
 						 }
 						 MotionVar = 0;
 					  }  		// End position reached
-					  sprintf(strT, "S%2i,%+6i,%+6i",routeStep, posMotL, posMotR);
+					  else
+					  {
+
+						  deltaTra = (+targetTra - ((posMotL + posMotR))/2);
+						  incTra = (float)deltaTra * DivTimeTask;
+						  deltaRot = (+targetRot - (posMotR - posMotL));
+						  incRot = (float)deltaRot  * DivTimeTask;
+						  if (incRot > incRotMax) { incRot = incRotMax;}
+						  if (incRot < -incRotMax) { incRot = -incRotMax;}
+					  }
+
+					  //sprintf(strT, "S%2i,R%+5i,T+5%i",routeStep,deltaRot, deltaTra);
+					  sprintf(strT, "S%2i,%+5i",routeStep,deltaRot);
 					  pxPos = 4;   pyPos = 60;	  tft_color = tft_WHITE;
-					  tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
-
-
+					  //tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 					}
 					break;
 					default:
@@ -674,16 +667,23 @@ int main(void)
 				tft_color = tft_WHITE;
 				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 */
-				Temp = mpuTemp(&MPU1);
-				sprintf(strT, "%+3.1f", Temp);
-				pxPos = 10;// ST7735_TFTWIDTH/2-10;
-				pyPos = 110;
-				tft_color = tft_GREEN;
-				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
+
 		   }
 		}  // end if (isSystickExpired(DispTaskTimer))
     } //end while
     return 0;
+}
+
+
+void dispMPUTemp(MPU6050_t* pMPU1)
+{
+	char strT[10];
+	float Temp = mpuTemp(pMPU1);
+	sprintf(strT, "%+3.1f", Temp);
+	int pxPos = 10;// ST7735_TFTWIDTH/2-10;
+	int pyPos = 110;
+	uint16_t tft_color = tft_GREEN;
+	tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 }
 
 
