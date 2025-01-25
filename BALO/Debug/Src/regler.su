@@ -1,5 +1,8 @@
 ../Src/regler.c:49:13:getPID	16	static
 ../Src/regler.c:54:6:setPID	16	static
 ../Src/regler.c:64:6:initPID	32	static
-../Src/regler.c:75:7:runPID	24	static
-../Src/regler.c:120:6:LowPassFilt	32	static
+../Src/regler.c:74:6:clearPID	16	static
+../Src/regler.c:82:7:runPID	24	static
+../Src/regler.c:130:7:runMeanVal	24	static
+../Src/regler.c:144:6:clrMeanVal	16	static
+../Src/regler.c:151:6:LowPassFilt	32	static

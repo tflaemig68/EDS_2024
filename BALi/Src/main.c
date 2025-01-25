@@ -21,6 +21,7 @@
 #include <i2cMPU.h>
 #include <i2cAMIS.h>
 #include <regler.h>
+#include "route.h"
 
 #include "i2cDevices.h"
 
@@ -43,9 +44,9 @@ uint32_t    I2C_Timer = 0UL;
 #ifdef Oszi
 	#define StepTaskTime 20
 #else
-	#define StepTaskTime 6			// the communicatin to stepper takes 2,3ms therfor one ms in addition
+	#define StepTaskTime 6			// the communicatin to stepper takes 2,3ms therfor one ms in addition; in total StepTaskTime + 1 = 7ms
 #endif
-#define DispTaskTime 300
+#define DispTaskTime 700			// Task for Postion control and Display Status
 
 
 /* Private function prototypes -----------------------------------------------*/
@@ -74,10 +75,11 @@ MPU6050_t MPU1;
 struct Stepper StepL, StepR;
 const uint8_t iHold = 6;			// Stiffnes of Axis to Body rotation
 const int16_t rad2step =  530;		// Ratio step-counts (200 Full-Steps div 1/16 Steps) per rotation at rad:  509.4 =  200* 16 / (2 PI) or 1600/PI
+#define stepPosMax  200
 
 #define StepPaCount 5
 char StepPaTitle[StepPaCount][5] = {"iRun", "iHold",	"vMin",	 "vMax",	"accel"};
-uint8_t StepPaValue[StepPaCount] =  { 15, 		6, 		2, 		15,  	4 };		//Parameterset for DEKI Motor 35mm length
+uint8_t StepPaValue[StepPaCount] =  { 15, 		6, 		1, 		6,  	5 };		//Parameterset for DEKI Motor 35mm length
 const uint8_t stepMode = 3;
 const bool stepRotDir = true;
 
@@ -135,10 +137,13 @@ PIDContr_t 	PID_phi, 		// Pitch controll
 			PID_PosR;		// Position PID - closed Loop controller
 
 
-char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "poKP",	"poKI",		"poKD",	"Rot "};
-float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.5, 	0.056, 	0.27, 		0.01, 	0.02, 	0.0,		100};
-//								{ -0.05, 	0.9,		6, 		0.2,  	0.6, 	0, 	1.75, 	2};
-float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  100,		100, 	500,  	100, 	0.5};			//  increment stepsize is 1/Value
+#define routeCount  2
+
+char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "poKP",		"poKI",		"poTP",	"Rot "};
+float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.75, 	0.058, 	0.27, 		0, 		0.01, 		0.01,		0};
+//								{ 0.0, 		0.98, 		5, 		0.36,  	0.5, 	0.056, 	0.27, 		0.01, 	0.02, 		0.0,		1)   //
+float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  	100,		10, 	200,  		100, 		1};			//  increment stepsize is 1/Value
+
 
 
 
@@ -148,15 +153,22 @@ void SetRegParameter(MPU6050_t* MPUa)
 	MPUa->pitchZero = ParamValue[0];
 	MPUa->swLowPassFilt = ParamValue[3];
 	MPUa->pitchFilt = ParamValue[1];
-	//RegPa.KP = ParamValue[4];
+	initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
+	/*
 	PID_phi.KP = ParamValue[4];
 	PID_phi.KI = ParamValue[5];
-	//RegPa.KD = ParamValue[6];
 	PID_phi.KD = ParamValue[6];
+	 */
 	if (ParamValue[2] <0 ) { ParamValue[2] =0;}
 	if (ParamValue[2] >6 ) { ParamValue[2] =6;}
 	MPUa->LowPassFilt = tableLPFValue[(uint)ParamValue[2]];
 	mpuSetLpFilt(MPUa);
+	if (ParamValue[ParamCount-1] <0 ) { ParamValue[ParamCount-1] =0;}
+	if (ParamValue[ParamCount-1] > routeNumMax-1) { ParamValue[ParamCount-1] = routeNumMax-1;}
+	routeNum = ParamValue[ParamCount-1];
+	initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
+	initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
+
 }
 
 
@@ -241,23 +253,31 @@ int main(void)
 
 	bool StepLenable = false;
 	bool StepRenable = false;
-    const int16_t stepThreshold = 120;
+
+	MeanVal_t 	stepMVR,		// AccelPamping using MeanVal function
+				stepMVL;
+	stepMVR.sto_mw = 0;
+	stepMVL.sto_mw = 0;
+
+
+
     const int16_t endPos = 20000;
     float BalaRot = 0;
     uint8_t MotionVar = 0;
+
 	char strX[8],strY[8],strZ[8],strT[32];
 	float Temp;
-	//int16_t XYZraw[3],XYZMPU[3]; //XYZgMPU[3];
+
 
 /**	Menue for the Filter
  *
  */
 
-	int16_t pos_motR=0, pos_motL=0;
-	float targetPos[2] = {0,0};
-	//int16_t SetPos[2];
-
-	//float XYZ[3];
+	int16_t posMotR=0, posMotL=0;
+	//float targetPos[2] = {0,0};
+	int16_t targetPosL =0, targetPosR =0, curMotR, curMotL;
+	float setPosMotR, setPosMotL;
+	float setMvMotR, setMvMotL;
 	int pxPos, pyPos;
 	bool activeMove = false;
 	uint16_t tft_color;
@@ -464,8 +484,8 @@ int main(void)
 						StepperIHold(true);										//IHold switched on
 						StepperResetPosition(&StepL);  		//resetPosition
 						StepperResetPosition(&StepR);
-						targetPos[0] = 0;
-						targetPos[1] = 0;
+						targetPosL = 0;
+						targetPosR = 0;
 						SetRegParameter(&MPU1);
 						// set MPU assemble
 						MPU1.RPY[0]= 2;				// MPU y Axis goes to the front
@@ -473,8 +493,10 @@ int main(void)
 						MPU1.RPY[2]= -1;			// MPU x-Axis goes down
 						MPU1.timebase = (float) (StepTaskTime+1) * 10e-4;  			// CycleTime for calc from Gyro to angle  fitting statt 10-3 wird 10-4 gesetzt
 						initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
-						initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
-						initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
+						initPID(&PID_PosL, ParamValue[7],ParamValue[8],0, 1);
+						initPID(&PID_PosR, ParamValue[7],ParamValue[8],0, 1);
+						clrMeanVal(&stepMVR, ParamValue[9]);
+						clrMeanVal(&stepMVL, ParamValue[9]);
 						RunInit = false;
 					}
 					gpioResetPin(LED_RED_ADR);
@@ -493,15 +515,23 @@ int main(void)
 					{
 						activeMove = false;
 						initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
-						initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
-						initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
+						//initPID(&PID_PosL, ParamValue[7],ParamValue[8],ParamValue[9], 1);
+						//initPID(&PID_PosR, ParamValue[7],ParamValue[8],ParamValue[9], 1);
 						StepperIHold(false);
 						StepperSoftStop(&StepR);
 						StepperSoftStop(&StepL);			//softStop
 						StepperResetPosition(&StepL);
 						StepperResetPosition(&StepR);
-						targetPos[0] = 0;
-						targetPos[1] = 0;
+						targetPosL = 0;
+						targetPosR = 0;
+						routeNum = ParamValue[ParamCount-1];
+						routeStep = 0;
+						clearPID(&PID_PosR);
+						clrMeanVal(&stepMVR, ParamValue[9]);
+						clearPID(&PID_PosL);
+						clrMeanVal(&stepMVL, ParamValue[9]);
+						MotionVar = 0;
+
 					}
 					else
 					{
@@ -516,30 +546,39 @@ int main(void)
 							StepperIHold(true);
 						}
 
-						BalaRot = ParamValue[ParamCount-1];
+						//BalaRot = ParamValue[ParamCount-1];
 						if (activeMove == true)
 						{
 							float setPitch = (rad2step)* runPID(&PID_phi, MPU1.pitch);
+							//setPitch = 0;
 							if (StepRenable)
 							{
 								gpioSetPin(LED_RED_ADR);									// RED LED OFF
-								pos_motR = StepperGetPos(&StepR);							// 1,177ms
-								float setMotR = runPID(&PID_PosR, (int16_t) targetPos[1]-pos_motR);
-								if (setMotR > stepThreshold) ( setMotR = stepThreshold);
-								if (setMotR < -stepThreshold) ( setMotR = -stepThreshold);
-								pos_motR += (int16_t)(setPitch+setMotR);
-								StepperSetPos(&StepR, pos_motR); //setPosition;
+								curMotR = StepperGetPos(&StepR);							// 1,177ms
+								setPosMotR = runPID(&PID_PosR,(float)(targetPosR-curMotR));
+								/*
+								if (setMotR > stepPosMax) { setMotR = stepPosMax;}
+								if (setMotR < -stepPosMax) { setMotR = -stepPosMax;}
+								*/
+								setMvMotR = runMeanVal(&stepMVR, setPosMotR);
+								//setMvMotR = setPosMotR;
+								posMotR = (int16_t)(setPitch + setMvMotR);
+								StepperSetPos(&StepR, posMotR); //setPosition;
 								StepRenable = false;
 								gpioResetPin(LED_RED_ADR);									//RED LED ON
 							}
 							else
 							{
-								pos_motL = StepperGetPos(&StepL);
-								float setMotL = runPID(&PID_PosL, (int16_t) targetPos[0]-pos_motL);
-								if (setMotL > stepThreshold) ( setMotL = stepThreshold);
-								if (setMotL < -stepThreshold) ( setMotL = -stepThreshold);
-								pos_motL += (int16_t)(setPitch+setMotL);
-								StepperSetPos(&StepL, pos_motL); //setPosition;
+								curMotL = StepperGetPos(&StepL);
+								setPosMotL = runPID(&PID_PosL, (float)(targetPosL-curMotL));
+								/*
+								if (setMotL- > stepPosMax) { setMotL = stepPosMax;}
+								if (setMotL < -stepPosMax) { setMotL = -stepPosMax;}
+								*/
+								setMvMotL = runMeanVal(&stepMVL, setPosMotL);
+								//setMvMotL = setPosMotL;
+								posMotL = (int16_t)(setPitch + setMvMotL);
+								StepperSetPos(&StepL, posMotL); //setPosition;
 								StepRenable = true;
 							}
 						}
@@ -559,42 +598,70 @@ int main(void)
 					RunMode = 0;
 				}
 		   }  //end switch (RunMode)
-	   } // end if systickexp
-	   if (isSystickExpired(DispTaskTimer))
-	   {
-		  systickSetTicktime(&DispTaskTimer, DispTaskTime);   // Reset Disp timer
+	    } // end if(isSystickExpired(I2C_Timer))
 
-		  if ((activeMove == true) && (RunMode == 8 ))
-		  {
-			  switch (MotionVar)
-			  {
-					case 0:
+		/*
+		* Routine for Motion Control
+		*/
+		if (isSystickExpired(DispTaskTimer))
+		{
+			systickSetTicktime(&DispTaskTimer, DispTaskTime);   // Reset Disp timer
+			if ((activeMove == true) && (RunMode == 8 ))
+			{
+				switch (MotionVar)
+				{
+					case 0:  // Set TagetPos
 					{
-	            		targetPos[0] += (int16_t)BalaRot;
-	            		targetPos[1] -= (int16_t)BalaRot;
-	            		if ((pos_motR < -endPos) ||(pos_motL > endPos))
-	            		{
-	            			MotionVar = 1;
-	            		}
-					}break;
-					case 1:
+					  targetPosL = route[routeNum][routeStep][0];
+					  targetPosR = route[routeNum][routeStep][1];
+					  StepperResetPosition(&StepL);
+					  StepperResetPosition(&StepR);
+					  clearPID(&PID_PosR);
+					  clearPID(&PID_PosL);
+					  clrMeanVal(&stepMVR,ParamValue[9]);
+					  clrMeanVal(&stepMVL,ParamValue[9]);
+					  MotionVar = 1;
+
+					  sprintf(strT, "N%2i,%+6i,%+6i",routeNum, targetPosL, targetPosL);
+					  pxPos = 4;   pyPos = 40;	  tft_color = tft_YELLOW;
+					  tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
+
+
+					}
+					break;
+					case 1:	// wait and check until target arrived
 					{
-						targetPos[0] -= (int16_t)BalaRot;
-						targetPos[1] += (int16_t)BalaRot;
-						if ((pos_motR > endPos)||(pos_motL < -endPos))
-						{
-							MotionVar = 0;
-						}
-					}break;
+
+					  if (
+							 ((fabs(posMotL - route[routeNum][routeStep][0]) < routeTol))
+							 &&
+							 ((fabs(posMotR - route[routeNum][routeStep][1]) < routeTol))
+						 )
+					  {
+						 if (++routeStep >= routeStepMax)
+						 {
+							 routeStep = 0;
+						 }
+						 MotionVar = 0;
+					  }  		// End position reached
+					  sprintf(strT, "S%2i,%+6i,%+6i",routeStep, posMotL, posMotR);
+					  pxPos = 4;   pyPos = 60;	  tft_color = tft_WHITE;
+					  tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
+
+
+					}
+					break;
 					default:
 					{
-						MotionVar = 0;
+					  MotionVar = 0;
 					}
-			   }
-		  }
-	        if ((activeMove == false) && (RunMode == 8 ))
-	      	{
+				}		//end switch (MotionVar)
+			}  //end if ((activeMove == true) && (RunMode == 8 ))
 
+			//if ((activeMove == false) && (RunMode == 8 ))
+			if ((MotionVar == 0) && (RunMode == 8 ))
+			{
+/*
 				sprintf(strT, "%+6i", pos_motL);
 				pxPos = 0;
 				pyPos = 60;
@@ -606,16 +673,15 @@ int main(void)
 				pyPos = 60;
 				tft_color = tft_WHITE;
 				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
-
+*/
 				Temp = mpuTemp(&MPU1);
 				sprintf(strT, "%+3.1f", Temp);
 				pxPos = 10;// ST7735_TFTWIDTH/2-10;
-				pyPos = 30;
+				pyPos = 110;
 				tft_color = tft_GREEN;
 				tftPrintColor((char *)strT, pxPos, pyPos, tft_color);
 		   }
-
-	   }
+		}  // end if (isSystickExpired(DispTaskTimer))
     } //end while
     return 0;
 }
