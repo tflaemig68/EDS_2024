@@ -81,7 +81,7 @@ const int16_t rad2step =  520;		// Ratio step-counts (200 Full-Steps div 1/16 St
 
 #define StepPaCount 5
 char StepPaTitle[StepPaCount][5] = {"iRun", "iHold",	"vMin",	 "vMax",	"accel"};
-uint8_t StepPaValue[StepPaCount] =  { 15, 		6, 		1, 		6,  	5 };		//Parameterset for DEKI Motor 35mm length
+uint8_t StepPaValue[StepPaCount] =  { 15, 		6, 		1, 		3,  	3 };		//Parameterset for DEKI Motor 35mm length
 const uint8_t stepMode = 3;
 const bool stepRotDir = true;
 
@@ -256,7 +256,8 @@ int main(void)
 
 	float 	tarPosL, tarPosR,
 			targetTra, targetRot,
-			incTra =0, incRot =0;
+			incTra =0, incRot =0,
+			rampTra = 0, rampRot = 0;		// Ramp to increase speed for translation and rotation of the Balancer
 
 	int pxPos, pyPos;
 	bool activeMove = false;
@@ -503,6 +504,7 @@ int main(void)
 						routeNum = ParamValue[ParamCount-1];
 						routeStep = 0;
 						MotionVar = 0;
+						rampRot = 0;
 
 					}
 					else
@@ -522,6 +524,10 @@ int main(void)
 						if (activeMove == true)
 						{
 							float setPitch = (rad2step)* runPID(&PID_phi, MPU1.pitch);
+							if (rampRot < 1)
+							{
+								rampRot += 0.02;
+							}
 							//setPitch = 0;
 							if (StepRenable)
 							{
@@ -536,7 +542,7 @@ int main(void)
 									StepperResetPosition(&StepR);
 									resetStepR = false;
 								}
-								tarPosR = curMotR + incRot + incTra;
+								tarPosR = curMotR + incRot*rampRot + incTra;
 								posMotR = (int16_t)(setPitch + tarPosR);
 								StepperSetPos(&StepR, posMotR); //setPosition;
 								StepRenable = false;
@@ -556,7 +562,7 @@ int main(void)
 									resetStepL = false;
 								}
 								//curMotL = (float)StepperGetPos(&StepL);
-								tarPosL = curMotL - incRot + incTra;
+								tarPosL = curMotL - incRot*rampRot + incTra;
 								posMotL = (int16_t)(setPitch + tarPosL);
 								StepperSetPos(&StepL, posMotL); //setPosition;
 								StepRenable = true;
@@ -594,6 +600,7 @@ int main(void)
 					{
 					  targetTra = route[routeNum][routeStep][0];
 					  targetRot = route[routeNum][routeStep][1];
+					  rampRot = 0;
 					  //StepperResetPosition(&StepL);
 					  //StepperResetPosition(&StepR);
 					  resetStepL = true;
@@ -602,6 +609,7 @@ int main(void)
 					  incRot = targetRot * DivTimeTask;
 					  if (incRot > incRotMax) { incRot = incRotMax;}
 					  if (incRot < -incRotMax) { incRot = -incRotMax;}
+
 
 					  MotionVar = 1;
 					  sprintf(strT, "N%2i,%+5.0f,%+5.0f",routeNum, targetRot, targetTra);

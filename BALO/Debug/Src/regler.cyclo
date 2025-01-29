@@ -1,8 +1,0 @@
-regler.c:49:13:getPID	1
-regler.c:54:6:setPID	2
-regler.c:64:6:initPID	1
-regler.c:74:6:clearPID	1
-regler.c:82:7:runPID	2
-regler.c:130:7:runMeanVal	1
-regler.c:144:6:clrMeanVal	1
-regler.c:151:6:LowPassFilt	2
