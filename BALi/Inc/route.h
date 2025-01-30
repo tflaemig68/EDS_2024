@@ -21,7 +21,7 @@
 
 int16_t routeNum = 0;
 int16_t routeStep = 0;
-const float rotTol = 50;
+float posTol = 0, rotTol = 50;
 //const float incRotMax = 18;
 
 /*
@@ -33,17 +33,17 @@ int16_t route[routeNumMax][routeStepMax][2] =
 {
 	{		// route 1
 			{ 000, 000 },
-			{ 0,-10175 },		// turn left
-			{ 0,+20350 },		// turn 2x right
-			{ 0, +10175 },		// turn right
-			{ 0, -20350 },		// backward
+			{ 0,+3050 },		// turn 0.25 left
+			{ 0,-6100 },		// turn 0.5 right
+			{ 0, +12200 },		// turn 1 left
+			{ 0, -9150 },		// backward
 	},
 	{		// route 2
 			{ 000, 000 },
-			{ 0,120 },		// turn left
-			{ 00,-600 },		// turn right
-			{ 0,1200 },		// turn left
-			{ 0,-7200 },		// backward
+			{ 2000, 3050 },		// turn left
+			{ 00, 3050 },		// turn right
+			{ 2000,3050 },		// turn left
+			{ 0,-9150 },		// backward
 	},
 
 };
