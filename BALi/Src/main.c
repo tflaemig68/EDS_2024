@@ -81,7 +81,7 @@ const int16_t rad2step =  520;		// Ratio step-counts (200 Full-Steps div 1/16 St
 
 #define StepPaCount 5
 char StepPaTitle[StepPaCount][5] = {"iRun", "iHold",	"vMin",	 "vMax",	"accel"};
-uint8_t StepPaValue[StepPaCount] =  { 15, 		6, 		1, 		3,  	3 };		//Parameterset for DEKI Motor 35mm length
+uint8_t StepPaValue[StepPaCount] =  { 15, 		7, 		2, 		5,  	4 };		//Parameterset for DEKI Motor 35mm length
 const uint8_t stepMode = 3;
 const bool stepRotDir = true;
 
@@ -136,11 +136,18 @@ struct RegPameter
 
 PIDContr_t 	PID_phi; 		// Pitch controll
 
+enum
+{
+a_phiZ = 0,
+a_GyAc,a_HwLP,a_LP,a_piKP,a_piKI,a_piKD,a_raRo,a_maRo,a_Du,a_Rot
+} argParam;
 
-char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "poKP",		"poKI",		"poTP",	"Rot "};
-float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.75, 	0.058, 	0.27, 		0, 		0.01, 		0.01,		0};
+
+
+char ParamTitle[ParamCount][7] = {"phiZ","GyAc",	"HwLP",		"LP  ",	"piKP",	"piKI",	"piKD", "raRo",		"maRo",		"poTP",	"Cour"};
+float ParamValue[ParamCount] =  { 0.0, 		0.98, 		5, 		0.36,  	0.75, 	0.058, 	0.27, 		0.002, 		8, 		0.01,		0};
 //								{ 0.0, 		0.98, 		5, 		0.36,  	0.5, 	0.056, 	0.27, 		0.01, 	0.02, 		0.0,		1)   //
-float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  	100,		10, 	200,  		100, 		1};			//  increment stepsize is 1/Value
+float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  	100,		500, 	1,  		100, 		1};			//  increment stepsize is 1/Value
 
 
 
@@ -148,9 +155,9 @@ float ParamScale[ParamCount] = 	 { 100,   	100, 		1,		500, 	100, 	500,  	100,		1
 void SetRegParameter(MPU6050_t* MPUa)
 {
 	MPUlpbw tableLPFValue[7] = { LPBW_260, LPBW_184, LPBW_94, LPBW_44, LPBW_21, LPBW_10, LPBW_5};
-	MPUa->pitchZero = ParamValue[0];
-	MPUa->swLowPassFilt = ParamValue[3];
-	MPUa->pitchFilt = ParamValue[1];
+	MPUa->pitchZero = ParamValue[a_phiZ];
+	MPUa->swLowPassFilt = ParamValue[a_LP];
+	MPUa->pitchFilt = ParamValue[a_GyAc];
 	initPID(&PID_phi, ParamValue[4],ParamValue[5],ParamValue[6], 1);
 	/*
 	PID_phi.KP = ParamValue[4];
@@ -161,8 +168,8 @@ void SetRegParameter(MPU6050_t* MPUa)
 	if (ParamValue[2] >6 ) { ParamValue[2] =6;}
 	MPUa->LowPassFilt = tableLPFValue[(uint)ParamValue[2]];
 	mpuSetLpFilt(MPUa);
-	if (ParamValue[ParamCount-1] <0 ) { ParamValue[ParamCount-1] =0;}
-	if (ParamValue[ParamCount-1] > routeNumMax-1) { ParamValue[ParamCount-1] = routeNumMax-1;}
+	if (ParamValue[a_Rot] <0 ) { ParamValue[a_Rot] =0;}
+	if (ParamValue[a_Rot] > routeNumMax-1) { ParamValue[a_Rot] = routeNumMax-1;}
 	routeNum = ParamValue[ParamCount-1];
 }
 
@@ -238,7 +245,7 @@ int main(void)
 		 resetStepR = true;
 
 
-	const float DivTimeTask= 0.01;
+	const float DivTimeTask= 0.01;   // StepTask div PosTask
 
     uint8_t MotionVar = 0;
 
@@ -334,7 +341,7 @@ int main(void)
 							   tftPrint((char *)"<-Left STEP\0",0,110,0);
 								//StepL.init(... 						iRun,	iHold, 	vMin,  	vMax, 	stepMode, 							rotDir, acceleration, securePosition)
 							    StepperInit(&StepL, i2c, i2cAddr_motL,StepPaValue[0], StepPaValue[1], StepPaValue[2],StepPaValue[3],stepMode,(uint8_t)!stepRotDir,StepPaValue[4], 0);
-							    stepper.pwmFrequency.set(&StepL, 1);
+							    stepper.pwmFrequency.set(&StepL, 0);
 
 						   }
 						   break;
@@ -344,7 +351,7 @@ int main(void)
 							   tftPrint((char *)"Right->\0",94,110,0);
 								//StepL.init(... 						iRun,	iHold, 	vMin,  	vMax, 	stepMode, 							rotDir, acceleration, securePosition)
 							   StepperInit(&StepR, i2c, i2cAddr_motR,StepPaValue[0], StepPaValue[1], StepPaValue[2],StepPaValue[3],stepMode,(uint8_t)stepRotDir, StepPaValue[4], 0);
-							   stepper.pwmFrequency.set(&StepR, 1);
+							   stepper.pwmFrequency.set(&StepR, 0);
 
 						   }
 						   break;
@@ -526,7 +533,7 @@ int main(void)
 							float setPitch = (rad2step)* runPID(&PID_phi, MPU1.pitch);
 							if (rampRot < 1)
 							{
-								rampRot += 0.02;
+								rampRot += ParamValue[a_raRo];
 							}
 							//setPitch = 0;
 							if (StepRenable)
@@ -607,8 +614,8 @@ int main(void)
 					  resetStepR = true;
 					  incTra = targetTra * DivTimeTask;
 					  incRot = targetRot * DivTimeTask;
-					  if (incRot > incRotMax) { incRot = incRotMax;}
-					  if (incRot < -incRotMax) { incRot = -incRotMax;}
+					  if (incRot > ParamValue[a_maRo]) { incRot = ParamValue[a_maRo];}
+					  if (incRot < -ParamValue[a_maRo]) { incRot = -ParamValue[a_maRo];}
 
 
 					  MotionVar = 1;
@@ -640,10 +647,12 @@ int main(void)
 
 						  deltaTra = (+targetTra - ((posMotL + posMotR))/2);
 						  incTra = (float)deltaTra * DivTimeTask;
-						  deltaRot = (+targetRot - (posMotR - posMotL));
+						  deltaRot = (+targetRot - (posMotR - posMotL));		// changed to curMotX
 						  incRot = (float)deltaRot  * DivTimeTask;
-						  if (incRot > incRotMax) { incRot = incRotMax;}
-						  if (incRot < -incRotMax) { incRot = -incRotMax;}
+						  if (incRot > ParamValue[a_maRo])
+						  { incRot = ParamValue[a_maRo];}
+						  if (incRot < -ParamValue[a_maRo])
+						  { incRot = -ParamValue[a_maRo];}
 					  }
 
 					  //sprintf(strT, "S%2i,R%+5i,T+5%i",routeStep,deltaRot, deltaTra);

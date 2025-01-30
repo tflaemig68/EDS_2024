@@ -22,7 +22,7 @@
 int16_t routeNum = 0;
 int16_t routeStep = 0;
 const float rotTol = 50;
-const float incRotMax = 6;
+//const float incRotMax = 18;
 
 /*
  * Rot
