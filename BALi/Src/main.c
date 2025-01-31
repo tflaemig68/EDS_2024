@@ -1,10 +1,23 @@
+
 /**
- * I2C Device Scan
- * ST7735 TFT Display
- * ===========================
+ ******************************************************************************
+ * @file           : main.c
+ * @author         : Prof Flaemig
+ * @brief          : Balancer main Function
+ ******************************************************************************
+ * @attention
+ * Functions for Closed Loop Control for balancing two wheel demo
+ * Copyright (c) 2025 Prof T Flämig.
+ * All rights reserved.
  *
- * Ansteuerung eines TFT Display ueber SPI.
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+
  */
+#define SwVersion "DHBW Bala V1.0 (c)Fl"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -251,7 +264,7 @@ int main(void)
     uint8_t MotionVar = 0;
 
 	char strX[8],strY[8],strZ[8],strT[32];
-
+	char strV[20] ={SwVersion};
 
 
 /**	Menue for the Filter
@@ -264,8 +277,8 @@ int main(void)
 
 	float 	tarPosL, tarPosR,
 			targetTra, targetRot,
-			incTra =0, incRot =0,
-			rampTra = 0, rampRot = 0;		// Ramp to increase speed for translation and rotation of the Balancer
+			incRot =0,
+			rampRot = 0;		// Ramp to increase speed for translation and rotation of the Balancer
 
 	int pxPos, pyPos;
 	bool activeMove = false;
@@ -468,7 +481,8 @@ int main(void)
 					{
 						tftFillScreen(tft_BLACK);
 						tftSetColor(tft_RED, tft_WHITE);
-						tftPrint("DHBW BALANCER (c)Fl\0",0,0,0);
+						tftPrint(SwVersion,0,0,0);
+						//tftPrint("DHBW BALA %s (c)Fl\0",0,0,0);
 						tftSetColor(tft_GREEN, tft_BLACK);
 						StepperIHold(true);										//IHold switched on
 						StepperResetPosition(&StepL);  		//resetPosition
@@ -609,12 +623,10 @@ int main(void)
 					  targetTra = route[routeNum][routeStep][0];
 					  targetRot = route[routeNum][routeStep][1];
 					  rampRot = 0;
-					  rampTra = 0;
-					  //StepperResetPosition(&StepL);
-					  //StepperResetPosition(&StepR);
+					  //rampTra = 0;
 					  resetStepL = true;
 					  resetStepR = true;
-					  incTra = targetTra * DivTimeTask;
+					  //incTra = targetTra * DivTimeTask;
 					  incRot = targetRot * DivTimeTask;
 					  if (incRot > ParamValue[a_maRo]) { incRot = ParamValue[a_maRo];}
 					  if (incRot < -ParamValue[a_maRo]) { incRot = -ParamValue[a_maRo];}
@@ -648,8 +660,8 @@ int main(void)
 					  {
 
 						  deltaTra = (+targetTra - ((posMotL + posMotR))/2);
-						  incTra = (float)deltaTra * DivTimeTask;
-						  deltaRot = (+targetRot - (posMotR - posMotL));		// changed to curMotX
+						  //incTra = (float)deltaTra * DivTimeTask;
+						  deltaRot = (+targetRot - (curMotR - curMotL));		// changed to curMotX
 						  incRot = (float)deltaRot  * DivTimeTask;
 						  if (incRot > ParamValue[a_maRo])
 						  { incRot = ParamValue[a_maRo];}
