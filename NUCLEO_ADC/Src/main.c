@@ -20,7 +20,7 @@
 /**
  * Kommentar in der naechsten Zeile entfernen, wenn Sie die ADC_MCAL testen möchten.
  */
-//#define MCAL_ADC
+#define MCAL_ADC
 
 #include <mcalGPIO.h>
 #ifdef MCAL_ADC
