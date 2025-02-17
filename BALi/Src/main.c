@@ -17,7 +17,7 @@
  ******************************************************************************
 
  */
-#define SwVersion "DHBW Bala V1.2 (c)Fl"
+#define SwVersion "DHBW Bala-V1.2a(c)Fl"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>

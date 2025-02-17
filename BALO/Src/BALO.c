@@ -102,7 +102,7 @@ void adcActivate(void)
 /* Reading the ADC Value, restart conversion and returning the calculated Voltage*/
 BatStat_t getBatVolt(analogCh_t* pADChn)
 {
-    const float ratioCh1 = 0.0080586;  // R1/R2 10:1
+    const float ratioCh1 = 0.00888;  // coefficient for the ratio 11:1 (R1+R2)/R1 multiplied with 0.00080586 R1 =1k; R2 =10k
    /*
     * Variable for IC Temp measurement
     *  const float ratioCh16 = 0.00080586;
