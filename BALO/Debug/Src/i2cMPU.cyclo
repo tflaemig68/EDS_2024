@@ -3,7 +3,7 @@ i2cMPU.c:74:8:mpuInit	18
 i2cMPU.c:258:9:mpuGetAccel	2
 i2cMPU.c:310:9:mpuGetRPfromAccel	2
 i2cMPU.c:373:9:mpuGetGyro	2
-i2cMPU.c:393:9:mpuGetPitch	4
-i2cMPU.c:476:7:mpuGetTemp	2
-i2cMPU.c:493:7:mpuTemp	1
-i2cMPU.c:526:6:mpuSetLpFilt	1
+i2cMPU.c:394:9:mpuGetPitch	4
+i2cMPU.c:478:7:mpuGetTemp	2
+i2cMPU.c:495:7:mpuTemp	1
+i2cMPU.c:528:6:mpuSetLpFilt	1

@@ -3,7 +3,7 @@
 ../Src/i2cMPU.c:258:9:mpuGetAccel	48	static
 ../Src/i2cMPU.c:310:9:mpuGetRPfromAccel	48	static
 ../Src/i2cMPU.c:373:9:mpuGetGyro	32	static
-../Src/i2cMPU.c:393:9:mpuGetPitch	80	static
-../Src/i2cMPU.c:476:7:mpuGetTemp	32	static
-../Src/i2cMPU.c:493:7:mpuTemp	24	static
-../Src/i2cMPU.c:526:6:mpuSetLpFilt	16	static
+../Src/i2cMPU.c:394:9:mpuGetPitch	80	static
+../Src/i2cMPU.c:478:7:mpuGetTemp	32	static
+../Src/i2cMPU.c:495:7:mpuTemp	24	static
+../Src/i2cMPU.c:528:6:mpuSetLpFilt	16	static
