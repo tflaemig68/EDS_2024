@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := TestRegler
+BUILD_ARTIFACT_NAME := StepperAxis
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-TestRegler.elf \
+StepperAxis.elf \
 
 MAP_FILES += \
-TestRegler.map \
+StepperAxis.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-TestRegler.list \
+StepperAxis.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: TestRegler.elf secondary-outputs
+main-build: StepperAxis.elf secondary-outputs
 
 # Tool invocations
-TestRegler.elf TestRegler.map: $(OBJS) $(USER_OBJS) D:\GITHUB\SMT32F4\EDS_2024\TestRegler\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TestRegler.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\SMT32F4\EDS_2024\TestRegler\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TestRegler.map" -Wl,--gc-sections -static -L"D:\GITHUB\SMT32F4\EDS_2024\CMSIS\Debug" -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug" -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug\Src" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+StepperAxis.elf StepperAxis.map: $(OBJS) $(USER_OBJS) D:\GITHUB\SMT32F4\EDS_2024\StepperAxis\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "StepperAxis.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\SMT32F4\EDS_2024\StepperAxis\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="StepperAxis.map" -Wl,--gc-sections -static -L"D:\GITHUB\SMT32F4\EDS_2024\CMSIS\Debug" -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug" -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug\Src" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-TestRegler.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "TestRegler.list"
+StepperAxis.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "StepperAxis.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) TestRegler.elf TestRegler.list TestRegler.map default.size.stdout
+	-$(RM) StepperAxis.elf StepperAxis.list StepperAxis.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

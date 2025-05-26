@@ -37,17 +37,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00010022  00000000  00000000  00029bd8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00006d59  00000000  00000000  00039bfa  2**0
+ 17 .debug_line   00006da4  00000000  00000000  00039bfa  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00056966  00000000  00000000  00040953  2**0
+ 18 .debug_str    0005696a  00000000  00000000  0004099e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  000972b9  2**0
+ 19 .comment      00000050  00000000  00000000  00097308  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002ed0  00000000  00000000  0009730c  2**2
+ 20 .debug_frame  00002ed0  00000000  00000000  00097358  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .stab         000000cc  00000000  00000000  0009a1dc  2**2
+ 21 .stab         000000cc  00000000  00000000  0009a228  2**2
                   CONTENTS, READONLY, DEBUGGING
- 22 .stabstr      000001b9  00000000  00000000  0009a2a8  2**0
+ 22 .stabstr      000001b9  00000000  00000000  0009a2f4  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -6727,57 +6727,57 @@ I2C_RETURN_CODE_t i2cSetClkSpd(I2C_TypeDef *i2c, I2C_CLOCKSPEED_t spd)
     			}
     		case I2C_CLOCK_400:
     		{
-     			i2c->CCR |= 0x0014;				// Select 400 kHz bus clock
+    			//i2c->CCR |= I2C_CCR_FS; 	    // fast Mode
  80031ee:	687b      	ldr	r3, [r7, #4]
  80031f0:	69db      	ldr	r3, [r3, #28]
  80031f2:	f043 0214 	orr.w	r2, r3, #20
  80031f6:	687b      	ldr	r3, [r7, #4]
  80031f8:	61da      	str	r2, [r3, #28]
-    			break;
+    			i2c->CCR |= 0x0014;				// Select 400 kHz bus clock
  80031fa:	e019      	b.n	8003230 <i2cSetClkSpd+0xe8>
+    			break;
     		}
     		case I2C_CLOCK_1Mz:
 			{
-				i2c->CCR |= I2C_CCR_FS; 	    // fast Mode
  80031fc:	687b      	ldr	r3, [r7, #4]
  80031fe:	69db      	ldr	r3, [r3, #28]
  8003200:	f443 4200 	orr.w	r2, r3, #32768	; 0x8000
  8003204:	687b      	ldr	r3, [r7, #4]
  8003206:	61da      	str	r2, [r3, #28]
-				i2c->CCR |= 0x005;				// Select 800 kHz bus clock
+				i2c->CCR |= I2C_CCR_FS; 	    // fast Mode
  8003208:	687b      	ldr	r3, [r7, #4]
  800320a:	69db      	ldr	r3, [r3, #28]
  800320c:	f043 0205 	orr.w	r2, r3, #5
  8003210:	687b      	ldr	r3, [r7, #4]
  8003212:	61da      	str	r2, [r3, #28]
-				break;
+				i2c->CCR |= 0x005;				// Select 800 kHz bus clock
  8003214:	e00c      	b.n	8003230 <i2cSetClkSpd+0xe8>
+				break;
 			}
     		default:
     		{
-    			i2c->CCR &= ~I2C_CCR_FS_Msk;    // Select 100 kHz bus clock
  8003216:	687b      	ldr	r3, [r7, #4]
  8003218:	69db      	ldr	r3, [r3, #28]
  800321a:	f423 4200 	bic.w	r2, r3, #32768	; 0x8000
  800321e:	687b      	ldr	r3, [r7, #4]
  8003220:	61da      	str	r2, [r3, #28]
-    			i2c->CCR |= 0x0050;
+    			i2c->CCR &= ~I2C_CCR_FS_Msk;    // Select 100 kHz bus clock
  8003222:	687b      	ldr	r3, [r7, #4]
  8003224:	69db      	ldr	r3, [r3, #28]
  8003226:	f043 0250 	orr.w	r2, r3, #80	; 0x50
  800322a:	687b      	ldr	r3, [r7, #4]
  800322c:	61da      	str	r2, [r3, #28]
-    			break;
+    			i2c->CCR |= 0x0050;
  800322e:	bf00      	nop
+    			break;
     		}
     	}
-    	return I2C_OK;
  8003230:	2300      	movs	r3, #0
  8003232:	e001      	b.n	8003238 <i2cSetClkSpd+0xf0>
-    }
-    return I2C_INVALID_CLOCK_SPEED;
+    	 i2c->CR1 |= I2C_CR1_PE;            // Re-renable I2C component
+    	return I2C_OK;
  8003234:	f06f 033d 	mvn.w	r3, #61	; 0x3d
-}
+    }
  8003238:	4618      	mov	r0, r3
  800323a:	370c      	adds	r7, #12
  800323c:	46bd      	mov	sp, r7
@@ -6785,9 +6785,9 @@ I2C_RETURN_CODE_t i2cSetClkSpd(I2C_TypeDef *i2c, I2C_CLOCKSPEED_t spd)
  8003242:	4770      	bx	lr
 
 08003244 <i2cInitI2C>:
+    return I2C_INVALID_CLOCK_SPEED;
+}
 
-I2C_RETURN_CODE_t i2cInitI2C(I2C_TypeDef *i2c, I2C_DUTY_CYCLE_t duty, uint8_t trise, I2C_CLOCKSPEED_t clock)
-{
  8003244:	b580      	push	{r7, lr}
  8003246:	b084      	sub	sp, #16
  8003248:	af00      	add	r7, sp, #0
@@ -6801,8 +6801,8 @@ I2C_RETURN_CODE_t i2cInitI2C(I2C_TypeDef *i2c, I2C_DUTY_CYCLE_t duty, uint8_t tr
  8003258:	70bb      	strb	r3, [r7, #2]
  800325a:	4613      	mov	r3, r2
  800325c:	707b      	strb	r3, [r7, #1]
-	uint32_t pclock;
-	if (i2cVerifyDutyCycle(duty) != true)
+I2C_RETURN_CODE_t i2cInitI2C(I2C_TypeDef *i2c, I2C_DUTY_CYCLE_t duty, uint8_t trise, I2C_CLOCKSPEED_t clock)
+{
  800325e:	78fb      	ldrb	r3, [r7, #3]
  8003260:	4618      	mov	r0, r3
  8003262:	f7ff ff28 	bl	80030b6 <i2cVerifyDutyCycle>
@@ -6811,71 +6811,71 @@ I2C_RETURN_CODE_t i2cInitI2C(I2C_TypeDef *i2c, I2C_DUTY_CYCLE_t duty, uint8_t tr
  800326c:	b2db      	uxtb	r3, r3
  800326e:	2b00      	cmp	r3, #0
  8003270:	d002      	beq.n	8003278 <i2cInitI2C+0x34>
-    {
-        return I2C_INVALID_DUTY_CYCLE;
+	uint32_t pclock;
+	if (i2cVerifyDutyCycle(duty) != true)
  8003272:	f06f 033c 	mvn.w	r3, #60	; 0x3c
  8003276:	e02f      	b.n	80032d8 <i2cInitI2C+0x94>
+    {
+        return I2C_INVALID_DUTY_CYCLE;
     }
-
-    i2c->CR1 = I2C_CR1_SWRST;			// reset and clear reg
  8003278:	687b      	ldr	r3, [r7, #4]
  800327a:	f44f 4200 	mov.w	r2, #32768	; 0x8000
  800327e:	601a      	str	r2, [r3, #0]
-    i2c->CR1 = 0x0000;                  // Reset old CR1 settings
+
  8003280:	687b      	ldr	r3, [r7, #4]
  8003282:	2200      	movs	r2, #0
  8003284:	601a      	str	r2, [r3, #0]
-    i2c->CR1 &= ~I2C_CR1_PE_Msk;        // Disable I2C component
+    i2c->CR1 = I2C_CR1_SWRST;			// reset and clear reg
  8003286:	687b      	ldr	r3, [r7, #4]
  8003288:	681b      	ldr	r3, [r3, #0]
  800328a:	f023 0201 	bic.w	r2, r3, #1
  800328e:	687b      	ldr	r3, [r7, #4]
  8003290:	601a      	str	r2, [r3, #0]
-
-    pclock = rccGetPclk1Freq();
+    i2c->CR1 = 0x0000;                  // Reset old CR1 settings
+    i2c->CR1 &= ~I2C_CR1_PE_Msk;        // Disable I2C component
  8003292:	f000 f967 	bl	8003564 <rccGetPclk1Freq>
  8003296:	60f8      	str	r0, [r7, #12]
-    i2c->CR2 = pclock / 1000000;		//
+
  8003298:	68fb      	ldr	r3, [r7, #12]
  800329a:	4a11      	ldr	r2, [pc, #68]	; (80032e0 <i2cInitI2C+0x9c>)
  800329c:	fba2 2303 	umull	r2, r3, r2, r3
  80032a0:	0c9a      	lsrs	r2, r3, #18
  80032a2:	687b      	ldr	r3, [r7, #4]
  80032a4:	605a      	str	r2, [r3, #4]
-
-    i2c->TRISE = 0x0011;                // Set max. rise time
+    pclock = rccGetPclk1Freq();
+    i2c->CR2 = pclock / 1000000;		//
  80032a6:	687b      	ldr	r3, [r7, #4]
  80032a8:	2211      	movs	r2, #17
  80032aa:	621a      	str	r2, [r3, #32]
 
-    i2c->OAR1 |= (0x00 << 1);			 // set own address to 00 - not really used in master mode
+    i2c->TRISE = trise;                // Set max. rise time
  80032ac:	687b      	ldr	r3, [r7, #4]
  80032ae:	689a      	ldr	r2, [r3, #8]
  80032b0:	687b      	ldr	r3, [r7, #4]
  80032b2:	609a      	str	r2, [r3, #8]
-    i2c->OAR1 |= (1 << 14); 			// bit 14 should be kept at 1 according to the datasheet
+
  80032b4:	687b      	ldr	r3, [r7, #4]
  80032b6:	689b      	ldr	r3, [r3, #8]
  80032b8:	f443 4280 	orr.w	r2, r3, #16384	; 0x4000
  80032bc:	687b      	ldr	r3, [r7, #4]
  80032be:	609a      	str	r2, [r3, #8]
-
-    i2cSetClkSpd(i2c, clock);			// set I2C Clockrate
+    i2c->OAR1 |= (0x00 << 1);			 // set own address to 00 - not really used in master mode
+    i2c->OAR1 |= (1 << 14); 			// bit 14 should be kept at 1 according to the datasheet
  80032c0:	787b      	ldrb	r3, [r7, #1]
  80032c2:	4619      	mov	r1, r3
  80032c4:	6878      	ldr	r0, [r7, #4]
  80032c6:	f7ff ff3f 	bl	8003148 <i2cSetClkSpd>
 
-    i2c->CR1 |= I2C_CR1_PE;            // Re-renable I2C component
+    i2cSetClkSpd(i2c, clock);			// set I2C Clockrate
  80032ca:	687b      	ldr	r3, [r7, #4]
  80032cc:	681b      	ldr	r3, [r3, #0]
  80032ce:	f043 0201 	orr.w	r2, r3, #1
  80032d2:	687b      	ldr	r3, [r7, #4]
  80032d4:	601a      	str	r2, [r3, #0]
 
-    return I2C_OK;
+    //i2c->CR1 |= I2C_CR1_PE;            // Re-renable I2C component
  80032d6:	2300      	movs	r3, #0
-}
+
  80032d8:	4618      	mov	r0, r3
  80032da:	3710      	adds	r7, #16
  80032dc:	46bd      	mov	sp, r7
@@ -6883,25 +6883,25 @@ I2C_RETURN_CODE_t i2cInitI2C(I2C_TypeDef *i2c, I2C_DUTY_CYCLE_t duty, uint8_t tr
  80032e0:	431bde83 	.word	0x431bde83
 
 080032e4 <i2cEnableDevice>:
+ *          <td>CR1</td>
+ *          <td rowspan="1">PE</td>
  *          <td rowspan="1">0</td>
  *      </tr>
  * </table>
  */
-I2C_RETURN_CODE_t i2cEnableDevice(I2C_TypeDef *i2c)
-{
  80032e4:	b480      	push	{r7}
  80032e6:	b083      	sub	sp, #12
  80032e8:	af00      	add	r7, sp, #0
  80032ea:	6078      	str	r0, [r7, #4]
-    i2c->CR1 |= I2C_CR1_PE;
+I2C_RETURN_CODE_t i2cEnableDevice(I2C_TypeDef *i2c)
  80032ec:	687b      	ldr	r3, [r7, #4]
  80032ee:	681b      	ldr	r3, [r3, #0]
  80032f0:	f043 0201 	orr.w	r2, r3, #1
  80032f4:	687b      	ldr	r3, [r7, #4]
  80032f6:	601a      	str	r2, [r3, #0]
-    return I2C_OK;
+{
  80032f8:	2300      	movs	r3, #0
-}
+    i2c->CR1 |= I2C_CR1_PE;
  80032fa:	4618      	mov	r0, r3
  80032fc:	370c      	adds	r7, #12
  80032fe:	46bd      	mov	sp, r7
