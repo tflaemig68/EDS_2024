@@ -51,11 +51,117 @@ bool timerTrigger = false;
 // 				ST7725_Timer delay Counter
 uint32_t	Timer1 = 0UL;
 uint32_t    ST7735_Timer = 0UL;
-uint32_t    I2C_Timer = 0UL;
+uint32_t    Timer100ms = 0UL;
+
+uint8_t *convDecByteToHex(uint8_t byte)
+{
+    static  uint8_t hex[2] = { 0 };
+
+    uint8_t temp;
+
+    temp = byte % 16;
+    if (temp < 10)
+    {
+        temp += '0';
+    }
+    else
+    {
+        temp += '7';
+    }
+    hex[1] = temp;
+
+    temp = byte / 16;
+    if (temp < 10)
+    {
+        temp += '0';
+    }
+    else
+    {
+        temp += '7';
+    }
+    hex[0] = temp;
+
+    return hex;
+}
+
+uint8_t I2C_SCAN(I2C_TypeDef *i2c, uint8_t scanAddr)
+{
+	uint8_t 	*outString2 = (uint8_t *) "Addr at: \0";
+	uint8_t     port, *result;
+#define yPosBase 18
+	uint8_t foundAddr = 0;
+	static int xPos[2] = {0,100};
+	static int yPos[2] = {yPosBase, yPosBase};
+
+	if (i2c == I2C1)
+    {
+	   port = 0;
+    }
+    else
+    {
+	   port = 1;
+    }
+    if (scanAddr == 0)
+    {
+    yPos[0] = yPosBase;
+    yPos[1] = yPosBase;
+    }
+
+	foundAddr = i2cFindSlaveAddr(i2c, scanAddr);
+	if (yPos[port] == 0)
+	{
+		tftPrint((char *)outString2,xPos[port],yPos[port],0);
+		yPos[port] = 66;
+	}
+	result = convDecByteToHex(scanAddr);
+	if (foundAddr != 0)
+	{
+		//outString = outString2;
+		tftPrint((char *)result,xPos[port],yPos[port],0);
+		yPos[port] = (int) 14 + yPos[port];
+		if (yPos[port] > 100)
+		{
+			yPos[port] = yPosBase;
+		}
+	}
+	else
+	{
+	//	tftPrint((char *)result,xPos,14,0);
+	}
+	return foundAddr;
+
+}
 
 
-// StepTask Time for the main process with the period of xx ms
-#define StepTaskTime 6
+
+// TaskRoutine with 100ms cycletime
+int Task100ms(void)
+{
+
+	float AlphaBeta[2];  // Wertepaar
+
+	if (getRotaryPushButton() != 0)
+	{
+	  setRotaryPosition(0);
+	  //initPID(&PID_Pos, 0.5, 0.5, 0.1, (float)0.0001*TaskTime100ms);
+	}
+
+   AlphaBeta[0] = (float)getRotaryPosition()/50;
+   LED_blue_on;
+	   //AlphaBeta[1] = runPID(&PID_Pos,AlphaBeta[0]);
+   //LED_blue_off;
+
+   if ((AlphaBeta[1] < -1) || (AlphaBeta[1] > 1))
+   {
+	   setRotaryColor(LED_RED);
+   }
+   else
+   {
+	   setRotaryColor(LED_YELLOW);
+   }
+   AlBeOszi(AlphaBeta);
+   return(0);
+}
 
 
 int main(void)
@@ -67,20 +173,20 @@ int main(void)
 		I2C_TypeDef   *i2c  = I2C1;
 		I2C_TypeDef   *i2c2  = I2C2;
 	*/
-	uint32_t   i2cTaskTime = 50UL;
+	uint32_t   TaskTime100ms = 100UL;
 
-	float AlphaBeta[2];  // Wertepaar
+
 
 
 	// This is the Array, of all Timer-Variables
-    uint32_t *timerList[] = { &I2C_Timer, &ST7735_Timer /*, additional timer */ };
+    uint32_t *timerList[] = { &Timer100ms, &ST7735_Timer /*, additional timer */ };
 	// size of the array  are calculated
 	size_t    arraySize = sizeof(timerList)/sizeof(timerList[0]);
 
 	    BALOsetup();
 	    LED_red_on;
 
-	    struct PIDContr PID_Pos;
+	   // struct PIDContr PID_Pos;
 
 
 		// Inits needed for TFT Display
@@ -97,7 +203,7 @@ int main(void)
 	    /* initialize the rotary push button module */
 	    initRotaryPushButton();
 
-	    systickSetMillis(&I2C_Timer, i2cTaskTime);
+	    systickSetMillis(&Timer100ms, TaskTime100ms);
 
 	    LED_red_off;
 	    tftPrintColor((char *)"StepperAxis \0",0,0,tft_MAGENTA);
@@ -110,32 +216,11 @@ int main(void)
 		   {
 				systickUpdateTimerList((uint32_t *) timerList, arraySize);
 		   }
-		   if (isSystickExpired(I2C_Timer))
+		   if (isSystickExpired(Timer100ms))
 		   {
-			   systickSetTicktime(&I2C_Timer, i2cTaskTime);
-
-			   if (getRotaryPushButton() != 0)
-			   {
-				   setRotaryPosition(0);
-				   //initPID(&PID_Pos, 0.5, 0.5, 0.1, (float)0.0001*i2cTaskTime);
-			   }
-
-			   AlphaBeta[0] = (float)getRotaryPosition()/50;
-			   LED_blue_on;
-			   //AlphaBeta[1] = runPID(&PID_Pos,AlphaBeta[0]);
-			   LED_blue_off;
-			   if ((AlphaBeta[1] < -1) || (AlphaBeta[1] > 1))
-			   {
-				   setRotaryColor(LED_RED);
-			   }
-			   else
-			   {
-				   setRotaryColor(LED_YELLOW);
-			   }
-			   AlBeOszi(AlphaBeta);
-
-
-		   } // end if systickexp
+			   systickSetTicktime(&Timer100ms, TaskTime100ms);
+			   Task100ms();
+		   }
 	    } //end while
 	    return 0;
 

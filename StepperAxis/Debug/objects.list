@@ -1,6 +1,7 @@
 "./Src/BALO.o"
 "./Src/RotaryPushButton.o"
 "./Src/ST7735.o"
+"./Src/i2cAMIS.o"
 "./Src/main.o"
 "./Src/regler.o"
 "./Src/system_stm32f4xx.o"

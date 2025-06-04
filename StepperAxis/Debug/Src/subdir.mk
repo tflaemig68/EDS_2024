@@ -8,6 +8,7 @@ C_SRCS += \
 ../Src/BALO.c \
 ../Src/RotaryPushButton.c \
 ../Src/ST7735.c \
+../Src/i2cAMIS.c \
 ../Src/main.c \
 ../Src/regler.c \
 ../Src/system_stm32f4xx.c 
@@ -16,6 +17,7 @@ OBJS += \
 ./Src/BALO.o \
 ./Src/RotaryPushButton.o \
 ./Src/ST7735.o \
+./Src/i2cAMIS.o \
 ./Src/main.o \
 ./Src/regler.o \
 ./Src/system_stm32f4xx.o 
@@ -24,6 +26,7 @@ C_DEPS += \
 ./Src/BALO.d \
 ./Src/RotaryPushButton.d \
 ./Src/ST7735.d \
+./Src/i2cAMIS.d \
 ./Src/main.d \
 ./Src/regler.d \
 ./Src/system_stm32f4xx.d 
@@ -36,7 +39,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/BALO.cyclo ./Src/BALO.d ./Src/BALO.o ./Src/BALO.su ./Src/RotaryPushButton.cyclo ./Src/RotaryPushButton.d ./Src/RotaryPushButton.o ./Src/RotaryPushButton.su ./Src/ST7735.cyclo ./Src/ST7735.d ./Src/ST7735.o ./Src/ST7735.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/regler.cyclo ./Src/regler.d ./Src/regler.o ./Src/regler.su ./Src/system_stm32f4xx.cyclo ./Src/system_stm32f4xx.d ./Src/system_stm32f4xx.o ./Src/system_stm32f4xx.su
+	-$(RM) ./Src/BALO.cyclo ./Src/BALO.d ./Src/BALO.o ./Src/BALO.su ./Src/RotaryPushButton.cyclo ./Src/RotaryPushButton.d ./Src/RotaryPushButton.o ./Src/RotaryPushButton.su ./Src/ST7735.cyclo ./Src/ST7735.d ./Src/ST7735.o ./Src/ST7735.su ./Src/i2cAMIS.cyclo ./Src/i2cAMIS.d ./Src/i2cAMIS.o ./Src/i2cAMIS.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/regler.cyclo ./Src/regler.d ./Src/regler.o ./Src/regler.su ./Src/system_stm32f4xx.cyclo ./Src/system_stm32f4xx.d ./Src/system_stm32f4xx.o ./Src/system_stm32f4xx.su
 
 .PHONY: clean-Src
 
