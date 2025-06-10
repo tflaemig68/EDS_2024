@@ -41,6 +41,21 @@
 // used Rot-Push Buttom
 #include <RotaryPushButton.h>
 #include <BALO.h>
+#include "i2cAMIS.h"
+
+
+#define i2cAddr_mot 0x60
+struct Stepper Step;
+const uint8_t iHold = 6;			// Stiffnes of Axis to Body rotation
+const int16_t rad2step =  520;		// Ratio step-counts (200 Full-Steps div 1/16 Steps) per rotation at rad:  509.4 =  200* 16 / (2 PI) or 1600/PI
+//#define stepPosMax  200
+
+I2C_TypeDef   *i2c  = I2C1;
+#define StepPaCount 5
+char StepPaTitle[StepPaCount][5] = {"iRun", "iHold",	"vMin",	 "vMax",	"accel"};
+uint8_t StepPaValue[StepPaCount] =  { 15, 		7, 		2, 		5,  	4 };		//Parameterset for DEKI Motor 35mm length
+const uint8_t stepMode = 0;				// 0 Half; 1 1/4; ..
+const bool stepRotDir = true;
 
 
 /* declaration for the timer events to schedule the process (-es)
@@ -83,6 +98,10 @@ uint8_t *convDecByteToHex(uint8_t byte)
 
     return hex;
 }
+
+
+
+
 
 uint8_t I2C_SCAN(I2C_TypeDef *i2c, uint8_t scanAddr)
 {
@@ -135,32 +154,64 @@ uint8_t I2C_SCAN(I2C_TypeDef *i2c, uint8_t scanAddr)
 
 
 // TaskRoutine with 100ms cycletime
-int Task100ms(void)
+int Task100ms(int RunMode)
 {
-
 	float AlphaBeta[2];  // Wertepaar
+	uint8_t foundAddr = 0;
+	switch (RunMode)
+    {
+   	   case 0:  //I2C Scan
+   	   {
+   		   LED_red_off;
+   		//   foundAddr = i2cFindSlaveAddr(i2c, i2cAddr_mot);
+   		   if ( foundAddr == 0)
+   		   {
+   			   tftPrint((char *)"Active\0",110,0,0);
+   			   //StepL.init(... 						iRun,	iHold, 	vMin,  	vMax, 	stepMode, 							rotDir, acceleration, securePosition)
+   			   StepperInit(&Step, i2c, i2cAddr_mot,StepPaValue[0], StepPaValue[1], StepPaValue[2],StepPaValue[3],stepMode,(uint8_t)!stepRotDir,StepPaValue[4], 0);
+   			   stepper.pwmFrequency.set(&Step, 0);
 
-	if (getRotaryPushButton() != 0)
-	{
-	  setRotaryPosition(0);
-	  //initPID(&PID_Pos, 0.5, 0.5, 0.1, (float)0.0001*TaskTime100ms);
-	}
+   			RunMode = 1;
+   			LED_green_on;
+   		   }
+   		   else
+   		   {
+   			LED_red_on;
 
-   AlphaBeta[0] = (float)getRotaryPosition()/50;
-   LED_blue_on;
-	   //AlphaBeta[1] = runPID(&PID_Pos,AlphaBeta[0]);
-   //LED_blue_off;
+   		   }
+   	   }
+   	   break;
+   	   case 1: // Set Motorpos from Rot
+   	   {
+   		if (getRotaryPushButton() != 0)
+   			{
+   			  setRotaryPosition(0);
+   			  //initPID(&PID_Pos, 0.5, 0.5, 0.1, (float)0.0001*TaskTime100ms);
+   			}
 
-   if ((AlphaBeta[1] < -1) || (AlphaBeta[1] > 1))
-   {
-	   setRotaryColor(LED_RED);
-   }
-   else
-   {
-	   setRotaryColor(LED_YELLOW);
-   }
-   AlBeOszi(AlphaBeta);
-   return(0);
+   			StepperSetPos(&Step, (int16_t)getRotaryPosition()*200);
+   		    AlphaBeta[0] = (float)getRotaryPosition()/400;
+   		    LED_blue_on;
+   			   //AlphaBeta[1] = runPID(&PID_Pos,AlphaBeta[0]);
+   		   //LED_blue_off;
+
+   		   if ((AlphaBeta[1] < -1) || (AlphaBeta[1] > 1))
+   		   {
+   			   setRotaryColor(LED_RED);
+   		   }
+   		   else
+   		   {
+   			   setRotaryColor(LED_YELLOW);
+   		   }
+   		   AlBeOszi(AlphaBeta);
+   	   }
+   	   break;
+   	   default:
+	   {
+
+	   }
+    }
+    return(RunMode);
 }
 
 
@@ -174,7 +225,7 @@ int main(void)
 		I2C_TypeDef   *i2c2  = I2C2;
 	*/
 	uint32_t   TaskTime100ms = 100UL;
-
+	int RunMode = 0;
 
 
 
@@ -185,6 +236,7 @@ int main(void)
 
 	    BALOsetup();
 	    LED_red_on;
+
 
 	   // struct PIDContr PID_Pos;
 
@@ -219,7 +271,7 @@ int main(void)
 		   if (isSystickExpired(Timer100ms))
 		   {
 			   systickSetTicktime(&Timer100ms, TaskTime100ms);
-			   Task100ms();
+			   RunMode= Task100ms(RunMode);
 		   }
 	    } //end while
 	    return 0;

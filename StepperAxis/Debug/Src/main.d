@@ -14,7 +14,8 @@ Src/main.o: ../Src/main.c \
  D:/GITHUB/SMT32F4/EDS_2024/MCAL/Inc/mcalSPI.h \
  D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/ST7735.h \
  D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/BALO.h \
- D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/RotaryPushButton.h
+ D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/RotaryPushButton.h \
+ D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/i2cAMIS.h
 D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/regler.h:
 D:/GITHUB/SMT32F4/EDS_2024/MCAL/Inc/mcalSysTick.h:
 D:/GITHUB/SMT32F4/EDS_2024/MCAL/Inc/mcalGPIO.h:
@@ -31,3 +32,4 @@ D:/GITHUB/SMT32F4/EDS_2024/MCAL/Inc/mcalSPI.h:
 D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/ST7735.h:
 D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/BALO.h:
 D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/RotaryPushButton.h:
+D:/GITHUB/SMT32F4/EDS_2024/StepperAxis/Inc/i2cAMIS.h:
