@@ -1,5 +1,0 @@
-regler.c:49:13:getPID	1
-regler.c:54:6:setPID	2
-regler.c:64:6:initPID	1
-regler.c:75:7:runPID	1
-regler.c:113:6:LowPassFilt	2

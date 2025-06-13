@@ -20,7 +20,7 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 */
-
+#define SWVerTxt "StAxis1.0 \0"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -41,6 +41,7 @@
 // used Rot-Push Buttom
 #include <RotaryPushButton.h>
 #include <BALO.h>
+#include <mcalADC.h>
 #include "i2cAMIS.h"
 
 
@@ -68,148 +69,132 @@ uint32_t	Timer1 = 0UL;
 uint32_t    ST7735_Timer = 0UL;
 uint32_t    Timer100ms = 0UL;
 
-uint8_t *convDecByteToHex(uint8_t byte)
+float adcMeas(ADC_TypeDef   *adc)
 {
-    static  uint8_t hex[2] = { 0 };
 
-    uint8_t temp;
+	static float adcValue = 0;
+	const uint16_t adcMax = 4095;
+	const float kFilt = 0.1;
+	uint16_t adcRaw;
+	char strT[8];
 
-    temp = byte % 16;
-    if (temp < 10)
-    {
-        temp += '0';
-    }
-    else
-    {
-        temp += '7';
-    }
-    hex[1] = temp;
-
-    temp = byte / 16;
-    if (temp < 10)
-    {
-        temp += '0';
-    }
-    else
-    {
-        temp += '7';
-    }
-    hex[0] = temp;
-
-    return hex;
-}
-
-
-
-
-
-uint8_t I2C_SCAN(I2C_TypeDef *i2c, uint8_t scanAddr)
-{
-	uint8_t 	*outString2 = (uint8_t *) "Addr at: \0";
-	uint8_t     port, *result;
-#define yPosBase 18
-	uint8_t foundAddr = 0;
-	static int xPos[2] = {0,100};
-	static int yPos[2] = {yPosBase, yPosBase};
-
-	if (i2c == I2C1)
-    {
-	   port = 0;
-    }
-    else
-    {
-	   port = 1;
-    }
-    if (scanAddr == 0)
-    {
-    yPos[0] = yPosBase;
-    yPos[1] = yPosBase;
-    }
-
-	foundAddr = i2cFindSlaveAddr(i2c, scanAddr);
-	if (yPos[port] == 0)
-	{
-		tftPrint((char *)outString2,xPos[port],yPos[port],0);
-		yPos[port] = 66;
-	}
-	result = convDecByteToHex(scanAddr);
-	if (foundAddr != 0)
-	{
-		//outString = outString2;
-		tftPrint((char *)result,xPos[port],yPos[port],0);
-		yPos[port] = (int) 14 + yPos[port];
-		if (yPos[port] > 100)
+	if (adcIsConversionFinished(adc))
 		{
-			yPos[port] = yPosBase;
+			adcRaw = adcGetConversionResult(adc);
+			adcStartConversion(adc);
+			adcValue *= (1-kFilt);
+			adcValue += ((float)adcRaw * kFilt/ adcMax);
 		}
-	}
-	else
-	{
-	//	tftPrint((char *)result,xPos,14,0);
-	}
-	return foundAddr;
-
+		//sprintf(strT, "%3.2f", adcValue);
+		sprintf(strT, "%2.0f%%", 100*adcValue);
+		tftPrintColor((char *)strT,78,0,tft_YELLOW);
+		return(adcValue);
 }
-
-
-
 // TaskRoutine with 100ms cycletime
 int Task100ms(int RunMode)
 {
+
+	static float ADC_offset = 0;
+	ADC_TypeDef   *adc    = ADC1;
+	const int16_t secPos = 00;
+	const int16_t manStep = 800;			// viertel Umdrehung
+	const float maxStep = 32000;
+	int16_t setPos = 0, setPosOld = 0;
+	char strT[8];
+	float ADC_0;
 	float AlphaBeta[2];  // Wertepaar
 	uint8_t foundAddr = 0;
 	switch (RunMode)
     {
    	   case 0:  //I2C Scan
    	   {
-   		   LED_red_off;
+
+   		   setRotaryColor(LED_BLUE);
+   		   ADC_CHANNEL_t chnList[] = { ADC_CHN_0 };
+
+   		    // Anzahl der Listenelemente berechnen
+   		    size_t         listSize = sizeof(chnList) / sizeof(chnList[0]);
+
+   		    adcSelectADC(adc);                     // ADC1: Bustakt aktivieren
+
+   		    // Konfiguration der Sequenz und Eintrag der Laenge von chnList[]
+   		    adcSetChannelSequence(adc, chnList, listSize);
+   		    adcEnableADC(adc);
+   		    adcStartConversion(adc);
+
    		//   foundAddr = i2cFindSlaveAddr(i2c, i2cAddr_mot);
    		   if ( foundAddr == 0)
    		   {
    			   tftPrint((char *)"Active\0",110,0,0);
    			   //StepL.init(... 						iRun,	iHold, 	vMin,  	vMax, 	stepMode, 							rotDir, acceleration, securePosition)
-   			   StepperInit(&Step, i2c, i2cAddr_mot,StepPaValue[0], StepPaValue[1], StepPaValue[2],StepPaValue[3],stepMode,(uint8_t)!stepRotDir,StepPaValue[4], 0);
+   			   StepperInit(&Step, i2c, i2cAddr_mot,StepPaValue[0], StepPaValue[1], StepPaValue[2],StepPaValue[3],stepMode,(uint8_t)!stepRotDir,StepPaValue[4], secPos);
    			   stepper.pwmFrequency.set(&Step, 0);
 
    			RunMode = 1;
-   			LED_green_on;
+   			setRotaryColor(LED_GREEN);
    		   }
    		   else
    		   {
-   			LED_red_on;
-
+   			  setRotaryColor(LED_CYAN);
    		   }
    	   }
    	   break;
-   	   case 1: // Set Motorpos from Rot
+   	   case 1: // Set Motorpos from ADC
+	   {
+			if (getRotaryPushButton() != 0)
+			{
+			  setRotaryPosition(0);
+			  setRotaryColor(LED_MAGENTA);
+			  tftPrintColor("Manual\0",110,0,tft_MAGENTA);
+			  RunMode = 2;
+			}
+
+			ADC_0 = adcMeas(adc);
+			setPos = (int16_t)((ADC_0-ADC_offset)*maxStep);
+			StepperSetPos(&Step, setPos);
+			AlphaBeta[0] = ADC_0;
+			AlphaBeta[1] = (float)StepperGetPos(&Step)/maxStep;
+			AlBeOszi(AlphaBeta);
+	   }
+	   break;
+
+   	   case 2: // Reset Motorpos with Manual Rot
    	   {
-   		if (getRotaryPushButton() != 0)
-   			{
-   			  setRotaryPosition(0);
-   			  //initPID(&PID_Pos, 0.5, 0.5, 0.1, (float)0.0001*TaskTime100ms);
-   			}
+			if (getRotaryPushButton() != 0)
+			{
+			  setRotaryPosition(0);
+			  StepperResetPosition(&Step);
+			  ADC_offset = ADC_0;
+			  setRotaryColor(LED_GREEN);
+			  tftPrint((char *)"Active\0",110,0,0);
+			  RunMode = 1;
 
-   			StepperSetPos(&Step, (int16_t)getRotaryPosition()*200);
-   		    AlphaBeta[0] = (float)getRotaryPosition()/400;
-   		    LED_blue_on;
-   			   //AlphaBeta[1] = runPID(&PID_Pos,AlphaBeta[0]);
-   		   //LED_blue_off;
+			}
+			setPos = (int16_t)getRotaryPosition()*manStep;
+			if (setPos != setPosOld)
+			{
+				StepperSetPos(&Step, setPos);
+				setPosOld = setPos;
+				sprintf(strT, "%+6i", setPos);
+				tftPrintColor((char *)strT,110,0,tft_MAGENTA);
+				//tftPrintLong(setPos, 80, 0, 0);
+			}
+			ADC_0 = adcMeas(adc);
 
-   		   if ((AlphaBeta[1] < -1) || (AlphaBeta[1] > 1))
-   		   {
-   			   setRotaryColor(LED_RED);
-   		   }
-   		   else
-   		   {
-   			   setRotaryColor(LED_YELLOW);
-   		   }
-   		   AlBeOszi(AlphaBeta);
-   	   }
+			AlphaBeta[0] = (float)getRotaryPosition()/40;
+			AlphaBeta[1] = (float)StepperGetPos(&Step)/32000;
+			AlBeOszi(AlphaBeta);
+
+	   }
    	   break;
+
    	   default:
 	   {
 
+
 	   }
+
+
     }
     return(RunMode);
 }
@@ -258,7 +243,7 @@ int main(void)
 	    systickSetMillis(&Timer100ms, TaskTime100ms);
 
 	    LED_red_off;
-	    tftPrintColor((char *)"StepperAxis \0",0,0,tft_MAGENTA);
+	    tftPrintColor((char *)SWVerTxt,0,0,tft_RED);
 
 	    //initPID(&PID_Pos, 0.5, 0.5, 0.1, (float)0.0001*i2cTaskTime);  // Init der PID-Koeffizienten des Positions-Regler
 
