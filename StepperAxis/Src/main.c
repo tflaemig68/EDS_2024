@@ -20,7 +20,7 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 */
-#define SWVerTxt "StAxis1.0 \0"
+#define SWVerTxt "StAxis1.1 \0"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -54,9 +54,20 @@ const int16_t rad2step =  520;		// Ratio step-counts (200 Full-Steps div 1/16 St
 I2C_TypeDef   *i2c  = I2C1;
 #define StepPaCount 5
 char StepPaTitle[StepPaCount][5] = {"iRun", "iHold",	"vMin",	 "vMax",	"accel"};
-uint8_t StepPaValue[StepPaCount] =  { 15, 		7, 		2, 		5,  	4 };		//Parameterset for DEKI Motor 35mm length
+uint8_t StepPaValue[StepPaCount] =  { 15, 		5, 		2, 		9,  	3 };		//Parameterset for NEMEA32 20mm length
 const uint8_t stepMode = 0;				// 0 Half; 1 1/4; ..
 const bool stepRotDir = true;
+
+
+
+typedef enum
+{
+	ParamInit = 0,
+	ResetPos,
+	InitRun,
+	AutoRun,
+	ManualRun
+} TaskModus;
 
 
 /* declaration for the timer events to schedule the process (-es)
@@ -74,7 +85,7 @@ float adcMeas(ADC_TypeDef   *adc)
 
 	static float adcValue = 0;
 	const uint16_t adcMax = 4095;
-	const float kFilt = 0.1;
+	const float kFilt = 0.05;
 	uint16_t adcRaw;
 	char strT[8];
 
@@ -91,22 +102,23 @@ float adcMeas(ADC_TypeDef   *adc)
 		return(adcValue);
 }
 // TaskRoutine with 100ms cycletime
-int Task100ms(int RunMode)
+TaskModus Task100ms(TaskModus RunMode)
 {
 
 	static float ADC_offset = 0;
 	ADC_TypeDef   *adc    = ADC1;
+	const int16_t minStepPos = -32000;
 	const int16_t secPos = 00;
 	const int16_t manStep = 800;			// viertel Umdrehung
 	const float maxStep = 32000;
-	int16_t setPos = 0, setPosOld = 0;
+	static int16_t setPos = 0, setPosOld = 0;
 	char strT[8];
 	float ADC_0;
 	float AlphaBeta[2];  // Wertepaar
 	uint8_t foundAddr = 0;
 	switch (RunMode)
     {
-   	   case 0:  //I2C Scan
+   	   case ParamInit:  //I2C Scan
    	   {
 
    		   setRotaryColor(LED_BLUE);
@@ -130,8 +142,8 @@ int Task100ms(int RunMode)
    			   StepperInit(&Step, i2c, i2cAddr_mot,StepPaValue[0], StepPaValue[1], StepPaValue[2],StepPaValue[3],stepMode,(uint8_t)!stepRotDir,StepPaValue[4], secPos);
    			   stepper.pwmFrequency.set(&Step, 0);
 
-   			RunMode = 1;
-   			setRotaryColor(LED_GREEN);
+   			RunMode = ResetPos;
+   			setRotaryColor(LED_YELLOW);
    		   }
    		   else
    		   {
@@ -139,35 +151,62 @@ int Task100ms(int RunMode)
    		   }
    	   }
    	   break;
-   	   case 1: // Set Motorpos from ADC
+   	   case ResetPos: // Set Motorpos from ADC
+	   {
+			StepperSetPos(&Step, minStepPos);
+			RunMode = InitRun;
+			setRotaryColor(LED_RED);
+			tftPrintColor("INIT  \0",110,0,tft_RED);
+
+	   }
+	   break;
+	   case InitRun: // Set MotorPos to minimal Pos. for calibration run
 	   {
 			if (getRotaryPushButton() != 0)
 			{
-			  setRotaryPosition(0);
+				setRotaryPosition(0);
+				setRotaryColor(LED_MAGENTA);
+				tftPrintColor("Manual\0",110,0,tft_MAGENTA);
+				StepperSoftStop (&Step);
+				//StepperResetPosition(&Step);
+				RunMode = ManualRun;
+
+			}
+			if (StepperGetPos(&Step) == minStepPos)
+			{
+				setRotaryColor(LED_GREEN);
+				tftPrint((char *)"Active\0",110,0,0);
+				RunMode = AutoRun;
+			}
+	   }
+	   break;
+
+   	   case AutoRun: // Set Motoraxis-position from ADC (Range 0..4095) from minStepPos to maxStep
+	   {
+			if (getRotaryPushButton() != 0)
+			{
+			  setRotaryPosition((int16_t)setPos/manStep);
 			  setRotaryColor(LED_MAGENTA);
 			  tftPrintColor("Manual\0",110,0,tft_MAGENTA);
-			  RunMode = 2;
+			  RunMode = ManualRun;
 			}
 
 			ADC_0 = adcMeas(adc);
-			setPos = (int16_t)((ADC_0-ADC_offset)*maxStep);
+			setPos = (int16_t)((ADC_0-ADC_offset)*(maxStep-minStepPos))+minStepPos;
 			StepperSetPos(&Step, setPos);
-			AlphaBeta[0] = ADC_0;
+			AlphaBeta[0] = ADC_0*2-1;			// AD Value ist display form Minimim -1 till Max +1 OSzi
 			AlphaBeta[1] = (float)StepperGetPos(&Step)/maxStep;
 			AlBeOszi(AlphaBeta);
 	   }
 	   break;
 
-   	   case 2: // Reset Motorpos with Manual Rot
+   	   case ManualRun: // Reset Motorpos with Manual Rot
    	   {
 			if (getRotaryPushButton() != 0)
 			{
-			  setRotaryPosition(0);
-			  StepperResetPosition(&Step);
-			  ADC_offset = ADC_0;
-			  setRotaryColor(LED_GREEN);
 			  tftPrint((char *)"Active\0",110,0,0);
-			  RunMode = 1;
+			  setRotaryColor(LED_GREEN);
+			  RunMode = AutoRun;
 
 			}
 			setPos = (int16_t)getRotaryPosition()*manStep;
@@ -182,7 +221,7 @@ int Task100ms(int RunMode)
 			ADC_0 = adcMeas(adc);
 
 			AlphaBeta[0] = (float)getRotaryPosition()/40;
-			AlphaBeta[1] = (float)StepperGetPos(&Step)/32000;
+			AlphaBeta[1] = (float)StepperGetPos(&Step)/maxStep;
 			AlBeOszi(AlphaBeta);
 
 	   }
