@@ -17,7 +17,7 @@
  ******************************************************************************
 
  */
-#define SwVersion "DHBW Bala-V1.2b(c)Fl"
+#define SwVersion "DHBW Bala-V1.3b(c)Fl"
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -41,9 +41,23 @@
 
 
 /* uncomment the following line #define oszi
- * for display pitzch value
+ * for display pitch value
 */
 //#define Oszi
+
+/**
+ * type def for Task-Modes
+ * to DO 2025-07-06
+ */
+typedef enum
+{
+	ParamInit = 0,  //
+	ResetPos,
+	InitRun,
+	AutoRun,
+	ManualRun
+} TaskModus;
+
 
 
 bool timerTrigger = false;
@@ -293,6 +307,8 @@ int main(void)
 
 	static uint8_t RunMode = 1;
 	static bool RunInit = true;
+
+
 
        // Dies ist das Array, das die Adressen aller Timer-Variablen enthaelt.
        // Auch die Groesse des Arrays wird berechnet.

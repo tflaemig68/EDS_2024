@@ -1,3 +1,3 @@
-../Src/main.c:83:7:adcMeas	40	static
-../Src/main.c:105:11:Task100ms	120	static
-../Src/main.c:242:5:main	32	static
+../Src/main.c:85:7:adcMeas	40	static
+../Src/main.c:107:11:Task100ms	128	static
+../Src/main.c:261:5:main	32	static
