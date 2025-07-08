@@ -6,4 +6,5 @@
 ../Src/BALO.c:170:6:BALOsetup	8	static
 ../Src/BALO.c:181:10:AlBeOszi	32	static
 ../Src/BALO.c:223:10:convDecByteToHex	24	static
-../Src/BALO.c:254:9:I2C_SCAN	32	static
+../Src/BALO.c:261:9:I2C_SCAN	32	static
+../Src/BALO.c:309:6:low_pass	32	static

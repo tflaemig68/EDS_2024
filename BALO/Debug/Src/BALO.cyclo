@@ -6,4 +6,5 @@ BALO.c:151:6:ledActivate	1
 BALO.c:170:6:BALOsetup	1
 BALO.c:181:10:AlBeOszi	7
 BALO.c:223:10:convDecByteToHex	3
-BALO.c:254:9:I2C_SCAN	6
+BALO.c:261:9:I2C_SCAN	6
+BALO.c:309:6:low_pass	2
