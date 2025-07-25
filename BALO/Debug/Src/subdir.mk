@@ -11,6 +11,7 @@ C_SRCS += \
 ../Src/i2cAMIS.c \
 ../Src/i2cMPU.c \
 ../Src/i2cRFID.c \
+../Src/i2cTOF.c \
 ../Src/regler.c 
 
 OBJS += \
@@ -20,6 +21,7 @@ OBJS += \
 ./Src/i2cAMIS.o \
 ./Src/i2cMPU.o \
 ./Src/i2cRFID.o \
+./Src/i2cTOF.o \
 ./Src/regler.o 
 
 C_DEPS += \
@@ -29,6 +31,7 @@ C_DEPS += \
 ./Src/i2cAMIS.d \
 ./Src/i2cMPU.d \
 ./Src/i2cRFID.d \
+./Src/i2cTOF.d \
 ./Src/regler.d 
 
 
@@ -39,7 +42,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/BALO.cyclo ./Src/BALO.d ./Src/BALO.o ./Src/BALO.su ./Src/RotaryPushButton.cyclo ./Src/RotaryPushButton.d ./Src/RotaryPushButton.o ./Src/RotaryPushButton.su ./Src/ST7735.cyclo ./Src/ST7735.d ./Src/ST7735.o ./Src/ST7735.su ./Src/i2cAMIS.cyclo ./Src/i2cAMIS.d ./Src/i2cAMIS.o ./Src/i2cAMIS.su ./Src/i2cMPU.cyclo ./Src/i2cMPU.d ./Src/i2cMPU.o ./Src/i2cMPU.su ./Src/i2cRFID.cyclo ./Src/i2cRFID.d ./Src/i2cRFID.o ./Src/i2cRFID.su ./Src/regler.cyclo ./Src/regler.d ./Src/regler.o ./Src/regler.su
+	-$(RM) ./Src/BALO.cyclo ./Src/BALO.d ./Src/BALO.o ./Src/BALO.su ./Src/RotaryPushButton.cyclo ./Src/RotaryPushButton.d ./Src/RotaryPushButton.o ./Src/RotaryPushButton.su ./Src/ST7735.cyclo ./Src/ST7735.d ./Src/ST7735.o ./Src/ST7735.su ./Src/i2cAMIS.cyclo ./Src/i2cAMIS.d ./Src/i2cAMIS.o ./Src/i2cAMIS.su ./Src/i2cMPU.cyclo ./Src/i2cMPU.d ./Src/i2cMPU.o ./Src/i2cMPU.su ./Src/i2cRFID.cyclo ./Src/i2cRFID.d ./Src/i2cRFID.o ./Src/i2cRFID.su ./Src/i2cTOF.cyclo ./Src/i2cTOF.d ./Src/i2cTOF.o ./Src/i2cTOF.su ./Src/regler.cyclo ./Src/regler.d ./Src/regler.o ./Src/regler.su
 
 .PHONY: clean-Src
 

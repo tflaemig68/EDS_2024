@@ -1,0 +1,3 @@
+../Src/Balancer.c:18:6:i2cActivate	16	static
+../Src/Balancer.c:69:6:ledActivate	8	static
+../Src/Balancer.c:92:6:BalaHWsetup	8	static

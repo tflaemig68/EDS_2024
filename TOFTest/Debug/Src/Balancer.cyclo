@@ -1,0 +1,3 @@
+Balancer.c:18:6:i2cActivate	1
+Balancer.c:69:6:ledActivate	1
+Balancer.c:92:6:BalaHWsetup	1

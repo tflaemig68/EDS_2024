@@ -1,0 +1,16 @@
+Sensor3DG.c:174:8:sensor_presCheck	2
+Sensor3DG.c:191:8:sensor_init	4
+Sensor3DG.c:210:6:setBMA020_Bandwidth	1
+Sensor3DG.c:222:9:setBMA020_Range	6
+Sensor3DG.c:267:8:i2cBMA020_init	7
+Sensor3DG.c:313:9:i2cBMA020XYZ	4
+Sensor3DG.c:353:8:i2cLIS3DH_init	11
+Sensor3DG.c:431:9:i2cLIS3DH_XYZ	1
+Sensor3DG.c:454:8:i2cLIS3DH_Temp	1
+Sensor3DG.c:476:6:i2cMPU6050LpFilt	1
+Sensor3DG.c:482:8:i2cMPU6050_init	9
+Sensor3DG.c:538:9:i2cMPU6050XYZ	1
+Sensor3DG.c:550:9:i2cMPU6050GYRO	1
+Sensor3DG.c:562:6:getAngleFromAcc	5
+Sensor3DG.c:587:6:getFiltertAccData	2
+Sensor3DG.c:596:6:getAccData	5
