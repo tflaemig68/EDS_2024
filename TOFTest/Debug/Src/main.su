@@ -2,4 +2,4 @@
 ../Src/main.c:331:6:initBala	8	static
 ../Src/main.c:371:6:initSubMenu	16	static
 ../Src/main.c:410:6:i2cScanAndInit	24	static
-../Src/main.c:520:7:fastMean	32	static
+../Src/main.c:518:7:fastMean	32	static

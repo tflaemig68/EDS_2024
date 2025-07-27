@@ -35,19 +35,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_ranges 000007a8  00000000  00000000  0002c038  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_line   000083e1  00000000  00000000  0002c7e0  2**0
+ 16 .debug_line   000083e0  00000000  00000000  0002c7e0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_str    00058bbc  00000000  00000000  00034bc1  2**0
+ 17 .debug_str    00058bb7  00000000  00000000  00034bc0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .comment      00000050  00000000  00000000  0008d77d  2**0
+ 18 .comment      00000050  00000000  00000000  0008d777  2**0
                   CONTENTS, READONLY
- 19 .debug_frame  000037e8  00000000  00000000  0008d7d0  2**2
+ 19 .debug_frame  000037e8  00000000  00000000  0008d7c8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_macro  0000ffd8  00000000  00000000  00090fb8  2**0
+ 20 .debug_macro  0000ffd8  00000000  00000000  00090fb0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .stab         000000cc  00000000  00000000  000a0f90  2**2
+ 21 .stab         000000cc  00000000  00000000  000a0f88  2**2
                   CONTENTS, READONLY, DEBUGGING
- 22 .stabstr      000001b9  00000000  00000000  000a105c  2**0
+ 22 .stabstr      000001b9  00000000  00000000  000a1054  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1242,8 +1242,8 @@ int main(void)
  8000ed8:	f887 304f 	strb.w	r3, [r7, #79]	; 0x4f
 
 	// variables to store the distance
-	uint16_t TOF_DISTANCE_1 = 10;
- 8000edc:	230a      	movs	r3, #10
+	uint16_t TOF_DISTANCE_1 = 100;
+ 8000edc:	2364      	movs	r3, #100	; 0x64
  8000ede:	f8a7 304c 	strh.w	r3, [r7, #76]	; 0x4c
 	//uint16_t olddistance = TOF_VL53L0X_OUT_OF_RANGE;
 
@@ -1279,22 +1279,22 @@ int main(void)
 	TOFSensor_t TOF_Sensor_1;
 
 	// Initialisieren des TOF-Sensors
-	initializeTOFSensor(&TOF_Sensor_1, I2C1, TOF_ADDR_VL53LOX, TOF_DEFAULT_MODE_D, TOF_DISTANCE_1);
+	initTOFSensorData(&TOF_Sensor_1, I2C1, TOF_ADDR_VL53LOX, TOF_DEFAULT_MODE_D, TOF_DISTANCE_1);
  8000f08:	1d38      	adds	r0, r7, #4
  8000f0a:	f8b7 304c 	ldrh.w	r3, [r7, #76]	; 0x4c
  8000f0e:	9300      	str	r3, [sp, #0]
  8000f10:	2301      	movs	r3, #1
  8000f12:	2229      	movs	r2, #41	; 0x29
  8000f14:	4985      	ldr	r1, [pc, #532]	; (800112c <main+0x270>)
- 8000f16:	f002 fa4b 	bl	80033b0 <initializeTOFSensor>
+ 8000f16:	f002 fa4b 	bl	80033b0 <initTOFSensorData>
 
 	// Konfigurieren und Aktivieren des Sensors
-	configureTOFSensor(&TOF_Sensor_1, TOF_DEFAULT_MODE_D, true);
+	configTOFSensor(&TOF_Sensor_1, TOF_DEFAULT_MODE_D, true);
  8000f1a:	1d3b      	adds	r3, r7, #4
  8000f1c:	2201      	movs	r2, #1
  8000f1e:	2101      	movs	r1, #1
  8000f20:	4618      	mov	r0, r3
- 8000f22:	f002 fa68 	bl	80033f6 <configureTOFSensor>
+ 8000f22:	f002 fa68 	bl	80033f6 <configTOFSensor>
 	//TOF_set_ranging_profile(&TOF_Sensor_1);
 
 
@@ -1536,12 +1536,12 @@ int main(void)
  800109e:	2b00      	cmp	r3, #0
  80010a0:	d03e      	beq.n	8001120 <main+0x264>
 				{
-					configureTOFSensor(&TOF_Sensor_1, MODE, true);
+					configTOFSensor(&TOF_Sensor_1, MODE, true);
  80010a2:	f8b7 1046 	ldrh.w	r1, [r7, #70]	; 0x46
  80010a6:	1d3b      	adds	r3, r7, #4
  80010a8:	2201      	movs	r2, #1
  80010aa:	4618      	mov	r0, r3
- 80010ac:	f002 f9a3 	bl	80033f6 <configureTOFSensor>
+ 80010ac:	f002 f9a3 	bl	80033f6 <configTOFSensor>
 					//TOF_set_ranging_profile(&TOF_Sensor_1);
 
 					switch(MODE){		//change timerexecution time to recommended +3ms to make shure works
@@ -1556,9 +1556,9 @@ int main(void)
  80010c8:	080010e1 	.word	0x080010e1
  80010cc:	080010e9 	.word	0x080010e9
 					case 1:
-						timeTimerExec = 30;
+						timeTimerExec = 35;
  80010d0:	4b1d      	ldr	r3, [pc, #116]	; (8001148 <main+0x28c>)
- 80010d2:	221e      	movs	r2, #30
+ 80010d2:	2223      	movs	r2, #35	; 0x23
  80010d4:	801a      	strh	r2, [r3, #0]
 						break;
  80010d6:	e00f      	b.n	80010f8 <main+0x23c>
@@ -1858,7 +1858,7 @@ void initSubMenu(SCREEN_PAGES_t page, TOFSensor_t* TOFSENS)
  800128e:	701a      	strb	r2, [r3, #0]
 		i2cInitAttempts = I2C_MAXATTEMPTS;
  8001290:	4b09      	ldr	r3, [pc, #36]	; (80012b8 <initSubMenu+0x60>)
- 8001292:	2202      	movs	r2, #2
+ 8001292:	2201      	movs	r2, #1
  8001294:	701a      	strb	r2, [r3, #0]
 
 		// reset sensor initialization
@@ -1978,7 +1978,7 @@ void i2cScanAndInit(TOFSensor_t *TOFSENS) //
  8001320:	701a      	strb	r2, [r3, #0]
 		scanAddr = I2C_MAXADRESS;
  8001322:	4b26      	ldr	r3, [pc, #152]	; (80013bc <i2cScanAndInit+0xfc>)
- 8001324:	227f      	movs	r2, #127	; 0x7f
+ 8001324:	222f      	movs	r2, #47	; 0x2f
  8001326:	701a      	strb	r2, [r3, #0]
 
 		if(i2cInitAttempts < 1)
@@ -1993,7 +1993,7 @@ void i2cScanAndInit(TOFSensor_t *TOFSENS) //
  8001334:	701a      	strb	r2, [r3, #0]
 			i2cInitAttempts = I2C_MAXATTEMPTS;
  8001336:	4b24      	ldr	r3, [pc, #144]	; (80013c8 <i2cScanAndInit+0x108>)
- 8001338:	2202      	movs	r2, #2
+ 8001338:	2201      	movs	r2, #1
  800133a:	701a      	strb	r2, [r3, #0]
  800133c:	e005      	b.n	800134a <i2cScanAndInit+0x8a>
 		}
@@ -2033,13 +2033,11 @@ void i2cScanAndInit(TOFSensor_t *TOFSENS) //
  8001366:	68fb      	ldr	r3, [r7, #12]
  8001368:	6013      	str	r3, [r2, #0]
 
-		InitResult = TOF_init(TOFSENS);		//Funktion in welcher der MCAL Fehler auftritt
+		InitResult = TOF_init(TOFSENS);
  800136a:	6878      	ldr	r0, [r7, #4]
  800136c:	f003 fa60 	bl	8004830 <TOF_init>
  8001370:	4603      	mov	r3, r0
  8001372:	72bb      	strb	r3, [r7, #10]
-
-		//ToDo Fehler in der MCAL beheben
 
 		// check if init was successful
 		if(InitResult)
@@ -2087,7 +2085,7 @@ void i2cScanAndInit(TOFSensor_t *TOFSENS) //
 
 		scanAddr = I2C_MAXADRESS;
  80013a8:	4b04      	ldr	r3, [pc, #16]	; (80013bc <i2cScanAndInit+0xfc>)
- 80013aa:	227f      	movs	r2, #127	; 0x7f
+ 80013aa:	222f      	movs	r2, #47	; 0x2f
  80013ac:	701a      	strb	r2, [r3, #0]
 		i2cInitPort = I2C_2;
  80013ae:	4b08      	ldr	r3, [pc, #32]	; (80013d0 <i2cScanAndInit+0x110>)
@@ -4066,8 +4064,8 @@ void i2cActivate()
  80021c0:	6878      	ldr	r0, [r7, #4]
  80021c2:	f003 fc9f 	bl	8005b04 <gpioSetOutputType>
     // Initialisierung des I2C-Controllers
-    i2cInitI2C(i2c2, IC2_DUTY_CYCLE_16_9, 15, I2C_CLOCK_1Mz);
- 80021c6:	2304      	movs	r3, #4
+    i2cInitI2C(i2c2, IC2_DUTY_CYCLE_16_9, 15, I2C_CLOCK_200);
+ 80021c6:	2302      	movs	r3, #2
  80021c8:	220f      	movs	r2, #15
  80021ca:	2101      	movs	r1, #1
  80021cc:	68b8      	ldr	r0, [r7, #8]
@@ -6864,13 +6862,13 @@ uint8_t tftGetHeight()
  80033aa:	4770      	bx	lr
  80033ac:	2000001e 	.word	0x2000001e
 
-080033b0 <initializeTOFSensor>:
-
+080033b0 <initTOFSensorData>:
 //--------------------- SENSOR FUNCTIONS ------------------------
 
 // Function to initialize the TOF sensor
 // Initializes the sensor with given address, I2C interface, ranging profile, and measurement range.
-void initializeTOFSensor(TOFSensor_t* sensor, I2C_TypeDef *i2c_tof, uint16_t TOF_address_used, uint16_t Ranging_Profiles_t, uint16_t measuredRange) {
+void initTOFSensorData(TOFSensor_t* sensor, I2C_TypeDef *i2c_tof, uint16_t TOF_address_used, uint16_t Ranging_Profiles_t, uint16_t measuredRange)
+{
  80033b0:	b480      	push	{r7}
  80033b2:	b085      	sub	sp, #20
  80033b4:	af00      	add	r7, sp, #0
@@ -6913,11 +6911,11 @@ void initializeTOFSensor(TOFSensor_t* sensor, I2C_TypeDef *i2c_tof, uint16_t TOF
  80033f0:	f85d 7b04 	ldr.w	r7, [sp], #4
  80033f4:	4770      	bx	lr
 
-080033f6 <configureTOFSensor>:
+080033f6 <configTOFSensor>:
 
 // Function to configure the TOF sensor
 // Configures the sensor's ranging profile and whether the sensor should be enabled or disabled.
-void configureTOFSensor(TOFSensor_t* sensor, uint16_t Ranging_Profiles_t, bool enable) {
+void configTOFSensor(TOFSensor_t* sensor, uint16_t Ranging_Profiles_t, bool enable) {
  80033f6:	b580      	push	{r7, lr}
  80033f8:	b082      	sub	sp, #8
  80033fa:	af00      	add	r7, sp, #0
@@ -6938,7 +6936,7 @@ void configureTOFSensor(TOFSensor_t* sensor, uint16_t Ranging_Profiles_t, bool e
  8003412:	687b      	ldr	r3, [r7, #4]
  8003414:	7c1b      	ldrb	r3, [r3, #16]
  8003416:	2b00      	cmp	r3, #0
- 8003418:	d002      	beq.n	8003420 <configureTOFSensor+0x2a>
+ 8003418:	d002      	beq.n	8003420 <configTOFSensor+0x2a>
     {
     	TOF_set_ranging_profile(sensor);
  800341a:	6878      	ldr	r0, [r7, #4]
@@ -7456,15 +7454,16 @@ bool TOF_get_spad_info_from_nvm(TOFSensor_t* TOFSENS, uint8_t * count, bool * ty
  8003786:	2307      	movs	r3, #7
  8003788:	22ff      	movs	r2, #255	; 0xff
  800378a:	f002 fc01 	bl	8005f90 <i2cSendByteToSlaveReg>
-	i2cSendByteToSlaveReg(TOF_i2c, TOF_address_used, TOF_REG_INTERNAL_CONFIG_0x83, 0x01);
+	i2cSendByteToSlaveReg(TOF_i2c, TOF_address_used, TOF_REG_SYSTEM_HISTOGRAM_NON, 0x01);
  800378e:	4b62      	ldr	r3, [pc, #392]	; (8003918 <TOF_get_spad_info_from_nvm+0x240>)
  8003790:	6818      	ldr	r0, [r3, #0]
  8003792:	4b60      	ldr	r3, [pc, #384]	; (8003914 <TOF_get_spad_info_from_nvm+0x23c>)
  8003794:	f993 3000 	ldrsb.w	r3, [r3]
  8003798:	b2d9      	uxtb	r1, r3
  800379a:	2301      	movs	r3, #1
- 800379c:	2283      	movs	r2, #131	; 0x83
+ 800379c:	2281      	movs	r2, #129	; 0x81
  800379e:	f002 fbf7 	bl	8005f90 <i2cSendByteToSlaveReg>
+	//TF01 i2cSendByteToSlaveReg(TOF_i2c, TOF_address_used, TOF_REG_INTERNAL_CONFIG_0x83, 0x01);
 
 	i2cSendByteToSlaveReg(TOF_i2c, TOF_address_used, TOF_REG_POWER_MANAGEMENT_GO1_POWER_FORCE, 0x01);
  80037a2:	4b5d      	ldr	r3, [pc, #372]	; (8003918 <TOF_get_spad_info_from_nvm+0x240>)
@@ -8459,13 +8458,13 @@ bool TOF_load_default_tuning_settings(TOFSensor_t* TOFSENS)
  8003f7e:	7bfb      	ldrb	r3, [r7, #15]
  8003f80:	4013      	ands	r3, r2
  8003f82:	73fb      	strb	r3, [r7, #15]
-    success &= i2cSendByteToSlaveReg(TOF_i2c, TOF_address_used, TOF_REG_INTERNAL_CONFIG_0x7A, TOF_DEFAULT_0xA0);
+    success &= i2cSendByteToSlaveReg(TOF_i2c, TOF_address_used, TOF_REG_INTERNAL_CONFIG_0x7A, TOF_DEFAULT_0x0A);  //TF01 change form, 0xA0 to 0x0A
  8003f84:	4b71      	ldr	r3, [pc, #452]	; (800414c <TOF_load_default_tuning_settings+0x65c>)
  8003f86:	6818      	ldr	r0, [r3, #0]
  8003f88:	4b6f      	ldr	r3, [pc, #444]	; (8004148 <TOF_load_default_tuning_settings+0x658>)
  8003f8a:	f993 3000 	ldrsb.w	r3, [r3]
  8003f8e:	b2d9      	uxtb	r1, r3
- 8003f90:	23a0      	movs	r3, #160	; 0xa0
+ 8003f90:	230a      	movs	r3, #10
  8003f92:	227a      	movs	r2, #122	; 0x7a
  8003f94:	f001 fffc 	bl	8005f90 <i2cSendByteToSlaveReg>
  8003f98:	4603      	mov	r3, r0
@@ -9484,7 +9483,7 @@ bool TOF_init_device(TOFSensor_t* TOFSENS)
  80046f8:	e017      	b.n	800472a <TOF_init_device+0xa2>
 	}
 
-	if (!TOF_set_sequence_steps_enabled(TOFSENS, TOF_RANGE_SEQUENCE_STEP_DSS + TOF_RANGE_SEQUENCE_STEP_PRE_RANGE + TOF_RANGE_SEQUENCE_STEP_FINAL_RANGE)) {
+	if (!TOF_set_sequence_steps_enabled(TOFSENS,
  80046fa:	21e8      	movs	r1, #232	; 0xe8
  80046fc:	6878      	ldr	r0, [r7, #4]
  80046fe:	f7ff fecd 	bl	800449c <TOF_set_sequence_steps_enabled>
@@ -9493,6 +9492,9 @@ bool TOF_init_device(TOFSensor_t* TOFSENS)
  8004708:	b2db      	uxtb	r3, r3
  800470a:	2b00      	cmp	r3, #0
  800470c:	d001      	beq.n	8004712 <TOF_init_device+0x8a>
+			TOF_RANGE_SEQUENCE_STEP_DSS +
+			TOF_RANGE_SEQUENCE_STEP_PRE_RANGE +
+			TOF_RANGE_SEQUENCE_STEP_FINAL_RANGE)) {
 		return false;
  800470e:	2300      	movs	r3, #0
  8004710:	e00b      	b.n	800472a <TOF_init_device+0xa2>

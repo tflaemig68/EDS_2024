@@ -2,4 +2,4 @@ main.c:93:5:main	28
 main.c:331:6:initBala	1
 main.c:371:6:initSubMenu	4
 main.c:410:6:i2cScanAndInit	10
-main.c:520:7:fastMean	2
+main.c:518:7:fastMean	2

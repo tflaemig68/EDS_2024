@@ -1,0 +1,16 @@
+SensorTOF.c:53:6:TOF_configure_interrupt	5
+SensorTOF.c:104:6:TOF_init_address	2
+SensorTOF.c:136:6:TOF_data_init	4
+SensorTOF.c:188:6:TOF_get_spad_info_from_nvm	3
+SensorTOF.c:248:6:TOF_set_spads_from_nvm	7
+SensorTOF.c:303:6:TOF_load_default_tuning_settings	2
+SensorTOF.c:401:6:TOF_set_sequence_steps_enabled	2
+SensorTOF.c:424:6:TOF_perform_single_ref_calibration	10
+SensorTOF.c:486:6:TOF_perform_ref_calibration	4
+SensorTOF.c:510:6:TOF_init_device	7
+SensorTOF.c:553:6:TOF_getMeasurement	8
+SensorTOF.c:611:6:TOF_init	3
+SensorTOF.c:642:6:TOF_startContinuous	4
+SensorTOF.c:709:6:TOF_stopContinuous	2
+SensorTOF.c:738:6:TOF_ReadContinuousDistance	3
+SensorTOF.c:762:6:TOF_ReadSingleDistance	6

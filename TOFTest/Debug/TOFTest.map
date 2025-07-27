@@ -7,7 +7,7 @@ D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(RotaryPushButton.o)
 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(ST7735.o)
                               ./Src/visualisation.o (delayms)
 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
-                              ./Src/main.o (initializeTOFSensor)
+                              ./Src/main.o (initTOFSensorData)
 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalADC.o)
                               D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(BALO.o) (adcSelectADC)
 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalEXTI.o)
@@ -1682,12 +1682,12 @@ LOAD c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
  .text.tftGetHeight
                 0x0000000008003398       0x18 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(ST7735.o)
                 0x0000000008003398                tftGetHeight
- .text.initializeTOFSensor
+ .text.initTOFSensorData
                 0x00000000080033b0       0x46 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
-                0x00000000080033b0                initializeTOFSensor
- .text.configureTOFSensor
+                0x00000000080033b0                initTOFSensorData
+ .text.configTOFSensor
                 0x00000000080033f6       0x32 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
-                0x00000000080033f6                configureTOFSensor
+                0x00000000080033f6                configTOFSensor
  .text.TOF_configure_interrupt
                 0x0000000008003428       0xcc D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
                 0x0000000008003428                TOF_configure_interrupt
@@ -2776,50 +2776,50 @@ LOAD c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_ranges  0x0000000000000730       0x60 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSysTick.o)
  .debug_ranges  0x0000000000000790       0x18 D:\GITHUB\STM32\EDS_2024\CMSIS\Debug\libCMSIS.a(system_stm32f4xx.o)
 
-.debug_line     0x0000000000000000     0x83e1
+.debug_line     0x0000000000000000     0x83e0
  .debug_line    0x0000000000000000      0x617 ./Src/main.o
  .debug_line    0x0000000000000617      0x7c5 ./Src/visualisation.o
  .debug_line    0x0000000000000ddc       0x84 ./Startup/startup_stm32f401retx.o
  .debug_line    0x0000000000000e60      0x9cc D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(BALO.o)
  .debug_line    0x000000000000182c      0x70d D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(RotaryPushButton.o)
  .debug_line    0x0000000000001f39     0x13e6 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(ST7735.o)
- .debug_line    0x000000000000331f     0x1334 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
- .debug_line    0x0000000000004653      0x71c D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalEXTI.o)
- .debug_line    0x0000000000004d6f      0xa93 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalGPIO.o)
- .debug_line    0x0000000000005802      0xaf4 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalI2C.o)
- .debug_line    0x00000000000062f6      0xa02 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalRCC.o)
- .debug_line    0x0000000000006cf8      0xb78 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSPI.o)
- .debug_line    0x0000000000007870      0x646 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSysTick.o)
- .debug_line    0x0000000000007eb6      0x52b D:\GITHUB\STM32\EDS_2024\CMSIS\Debug\libCMSIS.a(system_stm32f4xx.o)
+ .debug_line    0x000000000000331f     0x1333 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
+ .debug_line    0x0000000000004652      0x71c D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalEXTI.o)
+ .debug_line    0x0000000000004d6e      0xa93 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalGPIO.o)
+ .debug_line    0x0000000000005801      0xaf4 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalI2C.o)
+ .debug_line    0x00000000000062f5      0xa02 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalRCC.o)
+ .debug_line    0x0000000000006cf7      0xb78 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSPI.o)
+ .debug_line    0x000000000000786f      0x646 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSysTick.o)
+ .debug_line    0x0000000000007eb5      0x52b D:\GITHUB\STM32\EDS_2024\CMSIS\Debug\libCMSIS.a(system_stm32f4xx.o)
 
-.debug_str      0x0000000000000000    0x58bbc
- .debug_str     0x0000000000000000      0x93c ./Src/main.o
-                                        0xa98 (size before relaxing)
- .debug_str     0x000000000000093c      0x1f0 ./Src/visualisation.o
+.debug_str      0x0000000000000000    0x58bb7
+ .debug_str     0x0000000000000000      0x937 ./Src/main.o
+                                        0xa93 (size before relaxing)
+ .debug_str     0x0000000000000937      0x1f0 ./Src/visualisation.o
                                         0x7cb (size before relaxing)
- .debug_str     0x0000000000000b2c       0x31 ./Startup/startup_stm32f401retx.o
+ .debug_str     0x0000000000000b27       0x31 ./Startup/startup_stm32f401retx.o
                                          0x58 (size before relaxing)
- .debug_str     0x0000000000000b5d    0x54242 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(BALO.o)
+ .debug_str     0x0000000000000b58    0x54242 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(BALO.o)
                                       0x54669 (size before relaxing)
- .debug_str     0x0000000000054d9f      0x9ca D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(RotaryPushButton.o)
+ .debug_str     0x0000000000054d9a      0x9ca D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(RotaryPushButton.o)
                                       0x50385 (size before relaxing)
- .debug_str     0x0000000000055769      0xe9d D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(ST7735.o)
+ .debug_str     0x0000000000055764      0xe9d D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(ST7735.o)
                                       0x54ffa (size before relaxing)
- .debug_str     0x0000000000056606     0x1726 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
-                                      0x5178b (size before relaxing)
- .debug_str     0x0000000000057d2c      0x14e D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalEXTI.o)
+ .debug_str     0x0000000000056601     0x1726 D:\GITHUB\STM32\EDS_2024\BALO\Debug\libBALO.a(i2cTOF.o)
+                                      0x51786 (size before relaxing)
+ .debug_str     0x0000000000057d27      0x14e D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalEXTI.o)
                                       0x4f845 (size before relaxing)
- .debug_str     0x0000000000057e7a      0x133 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalGPIO.o)
+ .debug_str     0x0000000000057e75      0x133 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalGPIO.o)
                                       0x4f927 (size before relaxing)
- .debug_str     0x0000000000057fad      0x446 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalI2C.o)
+ .debug_str     0x0000000000057fa8      0x446 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalI2C.o)
                                       0x4fb6d (size before relaxing)
- .debug_str     0x00000000000583f3      0x3f8 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalRCC.o)
+ .debug_str     0x00000000000583ee      0x3f8 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalRCC.o)
                                       0x4fbcf (size before relaxing)
- .debug_str     0x00000000000587eb      0x1da D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSPI.o)
+ .debug_str     0x00000000000587e6      0x1da D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSPI.o)
                                       0x4fb3c (size before relaxing)
- .debug_str     0x00000000000589c5      0x135 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSysTick.o)
+ .debug_str     0x00000000000589c0      0x135 D:\GITHUB\STM32\EDS_2024\MCAL\Debug\libMCAL.a(mcalSysTick.o)
                                       0x4faa1 (size before relaxing)
- .debug_str     0x0000000000058afa       0xc2 D:\GITHUB\STM32\EDS_2024\CMSIS\Debug\libCMSIS.a(system_stm32f4xx.o)
+ .debug_str     0x0000000000058af5       0xc2 D:\GITHUB\STM32\EDS_2024\CMSIS\Debug\libCMSIS.a(system_stm32f4xx.o)
                                       0x4f5ef (size before relaxing)
 
 .comment        0x0000000000000000       0x50
