@@ -1,5 +1,5 @@
-#ifndef BALO_H_
-#define BALO_H_
+#ifndef ADCBAT_H_
+#define ADCBAT_H_
 
 #include <stm32f4xx.h>
 
@@ -76,4 +76,4 @@ extern void low_pass(int16_t raw_data[3], int16_t filt_data[3], int16_t _tp);
 
 
 
-#endif /* BALO_H_ */
+#endif /* ADCBAT_H_ */

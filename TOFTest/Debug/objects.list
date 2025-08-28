@@ -1,3 +1,5 @@
+"./Src/ST7735.o"
+"./Src/graphics.o"
 "./Src/main.o"
 "./Src/visualisation.o"
 "./Startup/startup_stm32f401retx.o"

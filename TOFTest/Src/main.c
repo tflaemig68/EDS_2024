@@ -31,14 +31,15 @@
 #include <mcalRCC.h>
 
 // Balancer includes
-#include <BALO.h>
+
 #include <RotaryPushButton.h>
-#include <ST7735.h>
+
 #include <i2cMPU.h>
 #include <i2cTOF.h>
 
 // includes of visualization and own header
 #include "visualisation.h"
+#include "ST7735.h"
 #include "main.h"
 
 // Time timer to check Button input, execute

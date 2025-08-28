@@ -31,7 +31,7 @@
 #include <mcalADC.h>
 #include <ST7735.h>
 #include <RotaryPushButton.h>
-#include <BALO.h>
+#include <adcBat.h>
 #include <i2cMPU.h>
 #include <i2cAMIS.h>
 #include <i2cTOF.h>

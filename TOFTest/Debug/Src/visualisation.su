@@ -1,0 +1,14 @@
+../Src/visualisation.c:50:6:visualisationStart	8	static
+../Src/visualisation.c:79:6:visualisationHeader	8	static
+../Src/visualisation.c:92:6:visualisationMenuGrid	40	static
+../Src/visualisation.c:136:6:visualisationMenuGridFocus	40	static
+../Src/visualisation.c:178:6:visualisationMenu	24	static
+../Src/visualisation.c:271:6:visualisationClearBody	24	static
+../Src/visualisation.c:283:6:visualisationShowError	32	static
+../Src/visualisation.c:317:6:visualisationTOF	120	static
+../Src/visualisation.c:347:6:visualisationRangingProfileTOF	16	static
+../Src/visualisation.c:473:6:visualisationSensorRecognized	16	static
+../Src/visualisation.c:508:6:visualisationI2CScanDone	16	static
+../Src/visualisation.c:538:6:visualisationSensorInit	16	static
+../Src/visualisation.c:561:6:visualisationFlip	32	static
+../Src/visualisation.c:592:6:visualisationI2C2	8	static
