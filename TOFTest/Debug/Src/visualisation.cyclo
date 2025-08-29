@@ -1,0 +1,13 @@
+visualisation.c:50:6:visualisationStart	1
+visualisation.c:79:6:visualisationHeader	1
+visualisation.c:92:6:visualisationMenuGrid	6
+visualisation.c:136:6:visualisationMenuGridFocus	5
+visualisation.c:178:6:visualisationMenu	11
+visualisation.c:271:6:visualisationClearBody	1
+visualisation.c:283:6:visualisationShowError	3
+visualisation.c:317:6:visualisationTOF	3
+visualisation.c:347:6:visualisationRangingProfileTOF	5
+visualisation.c:473:6:visualisationSensorRecognized	6
+visualisation.c:508:6:visualisationI2CScanDone	2
+visualisation.c:538:6:visualisationSensorInit	3
+visualisation.c:561:6:visualisationFlip	3

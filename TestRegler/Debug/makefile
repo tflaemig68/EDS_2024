@@ -59,8 +59,8 @@ all: main-build
 main-build: TestRegler.elf secondary-outputs
 
 # Tool invocations
-TestRegler.elf TestRegler.map: $(OBJS) $(USER_OBJS) C:\GITHUB\STM32\EDS_2024\TestRegler\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "TestRegler.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\GITHUB\STM32\EDS_2024\TestRegler\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TestRegler.map" -Wl,--gc-sections -static -L"C:\GITHUB\STM32\EDS_2024\CMSIS\Debug" -L"C:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"C:\GITHUB\STM32\EDS_2024\MCAL\Debug\Src" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+TestRegler.elf TestRegler.map: $(OBJS) $(USER_OBJS) D:\GITHUB\SMT32F4\EDS_2024\TestRegler\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "TestRegler.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\SMT32F4\EDS_2024\TestRegler\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TestRegler.map" -Wl,--gc-sections -static -L"D:\GITHUB\SMT32F4\EDS_2024\CMSIS\Debug" -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug" -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug\Src" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
