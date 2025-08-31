@@ -1,0 +1,2 @@
+../Src/i2cDeivces.c:17:6:activateI2C1	16	static
+../Src/i2cDeivces.c:42:6:activateI2C2	16	static

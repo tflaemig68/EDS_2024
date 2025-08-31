@@ -1,0 +1,7 @@
+adcBAT.c:30:6:ADCInit	3
+adcBAT.c:46:6:activateADC	1
+adcBAT.c:66:11:getBatVolt	5
+adcBAT.c:110:10:AlBeOszi	7
+adcBAT.c:152:10:convDecByteToHex	3
+adcBAT.c:190:9:I2C_SCAN	6
+adcBAT.c:238:6:low_pass	2

@@ -59,7 +59,7 @@ all: main-build
 main-build: GyroSensorTest.elf secondary-outputs
 
 dependents:
-	-cd D:/GITHUB/STM32/EDS_2024/BALO/Debug && $(MAKE) clean all
+	-cd D:/GITHUB/STM32/EDS_2024/BALO/Debug && $(MAKE) all
 
 # Tool invocations
 GyroSensorTest.elf GyroSensorTest.map: $(OBJS) $(USER_OBJS) D:/GITHUB/STM32/EDS_2024/BALO/Debug/libBALO.a D:\GITHUB\STM32\EDS_2024\GyroSensorTest\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)

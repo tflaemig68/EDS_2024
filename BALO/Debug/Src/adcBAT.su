@@ -1,0 +1,7 @@
+../Src/adcBAT.c:30:6:ADCInit	24	static
+../Src/adcBAT.c:46:6:activateADC	48	static
+../Src/adcBAT.c:66:11:getBatVolt	24	static
+../Src/adcBAT.c:110:10:AlBeOszi	32	static
+../Src/adcBAT.c:152:10:convDecByteToHex	24	static
+../Src/adcBAT.c:190:9:I2C_SCAN	32	static
+../Src/adcBAT.c:238:6:low_pass	32	static
