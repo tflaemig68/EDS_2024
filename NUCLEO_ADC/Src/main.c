@@ -33,7 +33,7 @@ int main(void)
     ADC_TypeDef   *adc    = ADC1;
     uint16_t       result = 0;
 
-    const uint16_t threshold = 4095/2;		// Half of the full scale 12Bit value
+    const uint16_t threshold = 4096/4;		// 1/4 of the full scale 12Bit value
 
 #define 	LED_GPIO		GPIOB
 #define 	LED_red			PIN3

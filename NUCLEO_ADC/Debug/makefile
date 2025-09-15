@@ -59,8 +59,8 @@ all: main-build
 main-build: NUCLEO_ADC.elf secondary-outputs
 
 # Tool invocations
-NUCLEO_ADC.elf NUCLEO_ADC.map: $(OBJS) $(USER_OBJS) fail-specified-linker-script-missing makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "NUCLEO_ADC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 --specs=nosys.specs -Wl,-Map="NUCLEO_ADC.map" -Wl,--gc-sections -static -L"D:\GITHUB\STM32\EDS_2024\MCAL\Debug" -L"\CMSIS\Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+NUCLEO_ADC.elf NUCLEO_ADC.map: $(OBJS) $(USER_OBJS) D:\GITHUB\SMT32F4\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "NUCLEO_ADC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\GITHUB\SMT32F4\EDS_2024\NUCLEO_LED_100usTimer\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO_ADC.map" -Wl,--gc-sections -static -L"D:\GITHUB\SMT32F4\EDS_2024\MCAL\Debug" -L"\CMSIS\Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
