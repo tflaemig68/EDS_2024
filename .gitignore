@@ -2,3 +2,6 @@
 /.metadata/.plugins
 *.o
 *.xml
+*.xml
+/BALO/.settings
+/NUCLEO_ADC/Debug
